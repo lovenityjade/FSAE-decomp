@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-18T07:52:34Z",
+  "generated_at": "2026-07-18T07:55:07Z",
   "build": {
-    "id": "arm9-02065f5c-32f-7520b",
-    "commit": "c9395433d9e3c2c4fe658517e50a1e59aaec8e36",
-    "published_at": "2026-07-18T07:52:34Z",
+    "id": "arm9-02007f14-32f-10112b",
+    "commit": "7933920765bfa881303d0d73f5825068c0ab440e",
+    "published_at": "2026-07-18T07:55:07Z",
     "last_error": null
   },
   "project": {
@@ -13,19 +13,19 @@
   },
   "refresh_seconds": 5,
   "overall": {
-    "percent": 74.8,
+    "percent": 75.29,
     "basis": "bytes",
     "metrics": {
       "units": {
-        "covered": 3693,
-        "total": 3693
+        "covered": 3698,
+        "total": 3698
       },
       "functions": {
-        "covered": 7823,
+        "covered": 7852,
         "total": 10949
       },
       "bytes": {
-        "covered": 1246453,
+        "covered": 1254566,
         "total": 1666308
       }
     },
@@ -48,19 +48,19 @@
       }
     },
     "analysis": {
-      "percent": 74.8,
+      "percent": 75.29,
       "basis": "bytes",
       "metrics": {
         "units": {
-          "covered": 3693,
-          "total": 3693
+          "covered": 3698,
+          "total": 3698
         },
         "functions": {
-          "covered": 7823,
+          "covered": 7852,
           "total": 10949
         },
         "bytes": {
-          "covered": 1246453,
+          "covered": 1254566,
           "total": 1666308
         }
       }
@@ -69,10 +69,10 @@
       "source": 4,
       "sdk": 2,
       "fallback": 0,
-      "unmatched": 3693
+      "unmatched": 3698
     },
     "pipeline_units": {
-      "probe": 3699,
+      "probe": 3704,
       "promoted": 6,
       "rejected": 0
     },
@@ -87,19 +87,19 @@
       "include_in_total": true,
       "optional": false,
       "available": true,
-      "percent": 64.82,
+      "percent": 65.5,
       "basis": "bytes",
       "metrics": {
         "units": {
-          "covered": 1151,
-          "total": 1151
+          "covered": 1156,
+          "total": 1156
         },
         "functions": {
-          "covered": 5154,
+          "covered": 5183,
           "total": 8280
         },
         "bytes": {
-          "covered": 773618,
+          "covered": 781731,
           "total": 1193472
         }
       },
@@ -123,19 +123,19 @@
         "evidence_records": 0
       },
       "analysis": {
-        "percent": 64.82,
+        "percent": 65.5,
         "basis": "bytes",
         "metrics": {
           "units": {
-            "covered": 1151,
-            "total": 1151
+            "covered": 1156,
+            "total": 1156
           },
           "functions": {
-            "covered": 5154,
+            "covered": 5183,
             "total": 8280
           },
           "bytes": {
-            "covered": 773618,
+            "covered": 781731,
             "total": 1193472
           }
         },
@@ -145,10 +145,10 @@
         "source": 0,
         "sdk": 0,
         "fallback": 0,
-        "unmatched": 1151
+        "unmatched": 1156
       },
       "pipeline_units": {
-        "probe": 1151,
+        "probe": 1156,
         "promoted": 0,
         "rejected": 0
       },
@@ -457,19 +457,19 @@
       "include_in_total": false,
       "optional": true,
       "available": true,
-      "percent": 61.21,
+      "percent": 61.96,
       "basis": "bytes",
       "metrics": {
         "units": {
-          "covered": 180,
-          "total": 180
+          "covered": 185,
+          "total": 185
         },
         "functions": {
-          "covered": 4212,
+          "covered": 4241,
           "total": 7338
         },
         "bytes": {
-          "covered": 662524,
+          "covered": 670637,
           "total": 1082378
         }
       },
@@ -493,19 +493,19 @@
         "evidence_records": 0
       },
       "analysis": {
-        "percent": 61.21,
+        "percent": 61.96,
         "basis": "bytes",
         "metrics": {
           "units": {
-            "covered": 180,
-            "total": 180
+            "covered": 185,
+            "total": 185
           },
           "functions": {
-            "covered": 4212,
+            "covered": 4241,
             "total": 7338
           },
           "bytes": {
-            "covered": 662524,
+            "covered": 670637,
             "total": 1082378
           }
         },
@@ -515,10 +515,10 @@
         "source": 0,
         "sdk": 0,
         "fallback": 0,
-        "unmatched": 180
+        "unmatched": 185
       },
       "pipeline_units": {
-        "probe": 180,
+        "probe": 185,
         "promoted": 0,
         "rejected": 0
       },
@@ -608,7 +608,7 @@
       "section": "arm9",
       "task": "Récupération du pilote de menu glyphes 0x020AEA40 (1504 octets)",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 7726,
+      "age_seconds": 7879,
       "stale": true
     },
     {
@@ -619,7 +619,7 @@
       "section": "arm9",
       "task": "Récupération sémantique et tests de la fonction 0x020B19D8 (1944 octets) terminés",
       "updated_at": "2026-07-18T06:19:35Z",
-      "age_seconds": 5579,
+      "age_seconds": 5732,
       "stale": true
     },
     {
@@ -630,7 +630,7 @@
       "section": "arm9",
       "task": "B2190-B2A90: analyse bloc contigu, 13 fonctions",
       "updated_at": "2026-07-18T06:07:10Z",
-      "age_seconds": 6324,
+      "age_seconds": 6477,
       "stale": true
     },
     {
@@ -641,11 +641,30 @@
       "section": "arm9",
       "task": "Lot glyphes AE280-AEA17: 19 fonctions / 1768 octets; intégration des gros lots agents",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 7726,
+      "age_seconds": 7879,
       "stale": true
     }
   ],
   "recent_changes": [
+    {
+      "id": "evidence:coordinator-arm9-ghidra-catalog",
+      "summary": "Ghidra exported 3669 game candidates; 572 functions / 101860 body bytes now have reviewed semantic C",
+      "section": "arm9",
+      "worker": "coordinator",
+      "track": "analysis",
+      "updated_at": "2026-07-18T07:54:29Z",
+      "source": "evidence",
+      "provenance": "unmatched",
+      "matching_credited": false
+    },
+    {
+      "id": "change-0046381babe6",
+      "summary": "Bloc ARM9 0x02007F14: 32 fonctions / 10112 octets de corps et 200 octets de pools récupérés; linkage en attente",
+      "section": "arm9",
+      "worker": "rom-pipeline",
+      "updated_at": "2026-07-18T07:54:29Z",
+      "source": "change"
+    },
     {
       "id": "change-44344ae49ea2",
       "summary": "Bloc ARM9 0x02065F5C: 32 fonctions / 7520 octets de corps et 728 octets de pools vérifiés; linkage en attente",
@@ -653,17 +672,6 @@
       "worker": "progress-site",
       "updated_at": "2026-07-18T07:52:13Z",
       "source": "change"
-    },
-    {
-      "id": "evidence:coordinator-arm9-ghidra-catalog",
-      "summary": "Ghidra exported 3669 game candidates; 543 functions / 92368 body bytes now have reviewed semantic C",
-      "section": "arm9",
-      "worker": "coordinator",
-      "track": "analysis",
-      "updated_at": "2026-07-18T07:48:53Z",
-      "source": "evidence",
-      "provenance": "unmatched",
-      "matching_credited": false
     },
     {
       "id": "change-028e71549f69",
@@ -736,21 +744,13 @@
       "worker": "coordinator",
       "updated_at": "2026-07-18T04:50:38Z",
       "source": "change"
-    },
-    {
-      "id": "ghidra-datalink-clamp-431",
-      "summary": "Game_ClampDatalinkSignedByte 0x020AC898 finalisé sans linking sur 28 octets: clamp signé int8 min/max, SHA ROM 484bcdbe19509b533fcdb3775dd219a8390667f4a799847ab23307b41e2c31b8, tests hôte/ROM/ARM946E-S validés, Ghidra 431 idempotent",
-      "section": "arm9",
-      "worker": "coordinator",
-      "updated_at": "2026-07-18T04:46:58Z",
-      "source": "change"
     }
   ],
   "issues": [],
   "sources": {
     "evidence": 9,
     "workers": 4,
-    "changes": 141,
+    "changes": 142,
     "legacy_inputs": 4,
     "matching_linked": 3,
     "matching_rejected": 0,
