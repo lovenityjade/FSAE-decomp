@@ -100,7 +100,6 @@ public-test:
 	$(PYTHON) -m unittest discover -s tools/toolchain/tests -v
 	$(PYTHON) -m unittest discover -s tools/windows/tests -v
 	$(PYTHON) -m unittest discover -s tools/release/tests -v
-	$(PYTHON) -m unittest discover -s tools/decomp/tests -v
 	$(PYTHON) -m unittest discover -s tools/build/tests -v
 
 link-bootstrap:

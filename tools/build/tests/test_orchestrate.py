@@ -338,6 +338,12 @@ class OrchestrationTestCase(unittest.TestCase):
         }
         self.assertEqual(set(orchestrate.TEST_SUITES), discovered)
 
+    def test_public_make_target_excludes_private_rom_proofs(self) -> None:
+        makefile = (PROJECT_ROOT / "Makefile").read_text(encoding="utf-8")
+        public_recipe = makefile.split("public-test:", 1)[1].split("\n\n", 1)[0]
+        self.assertNotIn("tools/decomp/tests", public_recipe)
+        self.assertIn("tools/decomp/tests", orchestrate.TEST_SUITES)
+
 
 if __name__ == "__main__":
     unittest.main()
