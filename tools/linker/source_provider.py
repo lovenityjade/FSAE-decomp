@@ -290,9 +290,9 @@ def load_source_promotions(
             project_output = output.relative_to(project_root).as_posix()
             command = [COMPILER_TOKEN, *COMMON_FLAGS]
             for include in include_dirs:
-                command.extend(("-I", include))
+                command.append(f"-I+{include}")
             for define in defines:
-                command.extend(("-D", define))
+                command.extend(("-define", define))
             command.extend(("-c", source["path"], "-o", project_output))
             commands.append(command)
             objects.append(output_relative)

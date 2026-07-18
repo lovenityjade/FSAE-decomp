@@ -122,6 +122,11 @@ class SourceProviderTests(unittest.TestCase):
         self.assertEqual(command[0], "mwccarm")
         self.assertIn("-proc", command)
         self.assertIn("arm946e", command)
+        self.assertIn("-I+include", command)
+        self.assertNotIn("-I", command)
+        self.assertIn("-define", command)
+        self.assertEqual(command[command.index("-define") + 1], "UNIT_BUILD=1")
+        self.assertNotIn("-D", command)
         self.assertIn("src/unit.c", command)
         self.assertNotIn("/private", json.dumps(first))
 

@@ -109,6 +109,8 @@ class PublicSourcePromotionsTests(unittest.TestCase):
             }],
         )
         self.assertEqual(unit["commands"][0][0], "mwccarm")
+        self.assertIn("-I+include", unit["commands"][0])
+        self.assertNotIn("-I", unit["commands"][0])
         self.assertIn(SOURCE, unit["commands"][0])
         on_disk = json.loads(
             (self.build / "source-provider/plan.v1.json").read_text(

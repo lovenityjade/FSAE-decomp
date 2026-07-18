@@ -65,12 +65,13 @@ stale proofs and batches above 16 KiB are rejected.
 The command profile is fixed and deterministic:
 
 ```text
-mwccarm -proc arm946e -nothumb -nopic -nopid -interworking -lang c99 ... -c SOURCE -o OBJECT
+mwccarm -proc arm946e -nothumb -nopic -nopid -interworking -lang c99 -I+PATH -define NAME=VALUE ... -c SOURCE -o OBJECT
 ```
 
-Include directories and defines are sorted before command generation. The
-private compiler path is substituted only at execution and is never retained
-in reports.
+CodeWarrior ARM 4.0 requires its concatenated `-I+PATH` include form; defines
+use `-define NAME[=VALUE]`. Include directories and defines are sorted before
+command generation. The private compiler path is substituted only at execution
+and is never retained in reports.
 
 ## Workflow
 
