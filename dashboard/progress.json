@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-18T07:50:09Z",
+  "generated_at": "2026-07-18T07:52:34Z",
   "build": {
-    "id": "arm9-0206402c-sdk-arm9i",
-    "commit": "1306a6857e7e01d336bfa923afbb49782370a4e3",
-    "published_at": "2026-07-18T07:50:09Z",
+    "id": "arm9-02065f5c-32f-7520b",
+    "commit": "c9395433d9e3c2c4fe658517e50a1e59aaec8e36",
+    "published_at": "2026-07-18T07:52:34Z",
     "last_error": null
   },
   "project": {
@@ -608,7 +608,7 @@
       "section": "arm9",
       "task": "Récupération du pilote de menu glyphes 0x020AEA40 (1504 octets)",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 7581,
+      "age_seconds": 7726,
       "stale": true
     },
     {
@@ -619,7 +619,7 @@
       "section": "arm9",
       "task": "Récupération sémantique et tests de la fonction 0x020B19D8 (1944 octets) terminés",
       "updated_at": "2026-07-18T06:19:35Z",
-      "age_seconds": 5434,
+      "age_seconds": 5579,
       "stale": true
     },
     {
@@ -630,7 +630,7 @@
       "section": "arm9",
       "task": "B2190-B2A90: analyse bloc contigu, 13 fonctions",
       "updated_at": "2026-07-18T06:07:10Z",
-      "age_seconds": 6179,
+      "age_seconds": 6324,
       "stale": true
     },
     {
@@ -641,11 +641,19 @@
       "section": "arm9",
       "task": "Lot glyphes AE280-AEA17: 19 fonctions / 1768 octets; intégration des gros lots agents",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 7581,
+      "age_seconds": 7726,
       "stale": true
     }
   ],
   "recent_changes": [
+    {
+      "id": "change-44344ae49ea2",
+      "summary": "Bloc ARM9 0x02065F5C: 32 fonctions / 7520 octets de corps et 728 octets de pools vérifiés; linkage en attente",
+      "section": "arm9",
+      "worker": "progress-site",
+      "updated_at": "2026-07-18T07:52:13Z",
+      "source": "change"
+    },
     {
       "id": "evidence:coordinator-arm9-ghidra-catalog",
       "summary": "Ghidra exported 3669 game candidates; 543 functions / 92368 body bytes now have reviewed semantic C",
@@ -736,21 +744,13 @@
       "worker": "coordinator",
       "updated_at": "2026-07-18T04:46:58Z",
       "source": "change"
-    },
-    {
-      "id": "ghidra-datalink-graphics-linkop-430",
-      "summary": "Sept symboles ARM9 finalisés sans linking: Game_LoadDatalinkBackgroundResources 0x020AC428 sur 364 octets, helpers Datalink graphics 0x020AC594/0x020AC64C/0x020AC6B0/0x020AC7DC sur 772 octets, et LinkOperation 0x020B2A90/0x020B2AAC sur 28 octets; hashes ROM, harness hôte, ARM946E-S, Ghidra 430 idempotent et tests decomp/progress validés",
-      "section": "arm9",
-      "worker": "coordinator",
-      "updated_at": "2026-07-18T04:43:29Z",
-      "source": "change"
     }
   ],
   "issues": [],
   "sources": {
     "evidence": 9,
     "workers": 4,
-    "changes": 140,
+    "changes": 141,
     "legacy_inputs": 4,
     "matching_linked": 3,
     "matching_rejected": 0,
