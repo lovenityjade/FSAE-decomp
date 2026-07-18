@@ -4586,6 +4586,16 @@
       ],
       "confidence": "verified",
       "rationale": "The complete conversion helper transforms IEEE-754 binary64 words into an unsigned 64-bit integer result and owns the following exponent literal."
+    },
+    {
+      "address": "0x0200de04",
+      "name": "Game_RuntimeNoOp_0200de04",
+      "expected_names": [
+        "FUN_0200de04",
+        "Game_RuntimeNoOp_0200de04"
+      ],
+      "confidence": "verified",
+      "rationale": "The exact standalone four-byte BX LR postlude sits between the preceding software conversion runtime and the TwlSDK syscall wrappers."
     }
   ]
 }

@@ -7,20 +7,20 @@
   "section": "arm9",
   "metrics": {
     "units": {
-      "covered": 190,
-      "total": 190
+      "covered": 191,
+      "total": 191
     },
     "functions": {
-      "covered": 4302,
+      "covered": 4303,
       "total": 7338
     },
     "bytes": {
-      "covered": 681349,
+      "covered": 681352,
       "total": 1082378
     }
   },
-  "updated_at": "2026-07-18T08:28:41Z",
+  "updated_at": "2026-07-18T08:43:08Z",
   "category": "game",
   "worker": "coordinator",
-  "summary": "Ghidra exported 3669 game candidates; 633 functions / 114392 body bytes now have reviewed semantic C"
+  "summary": "Ghidra exported 3669 game candidates; 634 functions / 114396 body bytes now have reviewed semantic C"
 }

@@ -104,5 +104,6 @@ uint64_t Game_DoubleBitsToUint64_0200dd78(
     uint32_t value_low,
     uint32_t value_high
 );
+void Game_RuntimeNoOp_0200de04(void);
 
 #endif /* FSAE_GAME_RUNTIME_SUPPORT_H */

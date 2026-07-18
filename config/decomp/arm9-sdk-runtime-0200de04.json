@@ -1,0 +1,980 @@
+{
+  "schema_version": 1,
+  "id": "arm9-sdk-runtime-0200de04",
+  "selection": {
+    "entry_min": "0x0200de04",
+    "entry_max": "0x0200e76c",
+    "last_body_end": "0x0200e7c0",
+    "next_entry": "0x0200e7c0",
+    "catalog_function_count": 32,
+    "actual_function_count": 36,
+    "runtime_function_count": 1,
+    "sdk_function_count": 35,
+    "catalog_body_bytes": 2276,
+    "embedded_function_bytes": 100,
+    "non_function_gap_bytes": 116,
+    "span_bytes": 2492,
+    "closure": "32-catalog-entry checkpoint with four SDK functions recovered inside catalog gaps"
+  },
+  "inputs": {
+    "catalog": "build/decomp/arm9/catalog.json",
+    "catalog_sha256": "4f92163a9e2f9939a1f85215fffc8fd8daae89da3878a5bdaca986d3505edf19",
+    "target": "build/rom/sections/arm9.bin",
+    "target_sha256": "8bee49eedfb268c79ab371d3d2152c4e25f433d46daecd5dab2c0378a27300aa",
+    "sdk_signatures": "config/sdk-signatures-arm9.json",
+    "sdk_signatures_sha256": "749a9ccc1eed9af681caf24d991623c8195443d2711548c1b835844bf09f3ee7",
+    "arm9i_analysis": "build/arm9i/analysis.json",
+    "patch4_policy": "config/sdk-patch4.json"
+  },
+  "functions": [
+    {
+      "address": "0x0200de04",
+      "name": "Game_RuntimeNoOp_0200de04",
+      "catalog_name": "FUN_0200de04",
+      "catalog_classification": "game_candidate",
+      "ownership": "runtime_semantic",
+      "body_bytes": 4,
+      "body_end": "0x0200de08",
+      "next_entry": "0x0200de08",
+      "body_sha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f",
+      "extent_sha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f",
+      "gap": {
+        "address": "0x0200de08",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "semantic_source",
+        "source": "src/arm9/game/runtime_postlude.c"
+      }
+    },
+    {
+      "address": "0x0200de08",
+      "name": "SVC_InitSignHeap",
+      "catalog_name": "FUN_0200de08",
+      "catalog_classification": "game_candidate",
+      "ownership": "sdk",
+      "body_bytes": 32,
+      "body_end": "0x0200de28",
+      "next_entry": "0x0200de28",
+      "body_sha256": "8b39df371b7db9a5a5d04ab62d34e734526c472341a2273972d7da240d81d254",
+      "extent_sha256": "8b39df371b7db9a5a5d04ab62d34e734526c472341a2273972d7da240d81d254",
+      "gap": {
+        "address": "0x0200de28",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "target": "0x021876f4",
+      "provenance": {
+        "kind": "sdk_archive_symbol",
+        "library": "libsyscall.twl.a",
+        "object": "syscall_twl.o",
+        "archive_path": "lib/ARM9-TS/etc/libsyscall.twl.a"
+      }
+    },
+    {
+      "address": "0x0200de28",
+      "name": "SVC_DecryptSign",
+      "catalog_name": "FUN_0200de28",
+      "catalog_classification": "game_candidate",
+      "ownership": "sdk",
+      "body_bytes": 36,
+      "body_end": "0x0200de4c",
+      "next_entry": "0x0200dea0",
+      "body_sha256": "25919adce4bd3837e33ba333b2555fe9b3a62f1461cf7476c491df1eeba9c4de",
+      "extent_sha256": "f85e9fbca1d82df26599f3c13e4b7bb01477b06fe276ed12f13de304e1cdcecb",
+      "gap": {
+        "address": "0x0200de4c",
+        "bytes": 84,
+        "sha256": "03fb4f878445d82273403a4b4f829056c1765a23ad46094db34b341b32eb996f",
+        "kind": "embedded_sdk_functions"
+      },
+      "target": "0x02187720",
+      "provenance": {
+        "kind": "sdk_archive_symbol",
+        "library": "libsyscall.twl.a",
+        "object": "syscall_twl.o",
+        "archive_path": "lib/ARM9-TS/etc/libsyscall.twl.a"
+      }
+    },
+    {
+      "address": "0x0200dea0",
+      "name": "SVC_CalcSHA1",
+      "catalog_name": "FUN_0200dea0",
+      "catalog_classification": "game_candidate",
+      "ownership": "sdk",
+      "body_bytes": 32,
+      "body_end": "0x0200dec0",
+      "next_entry": "0x0200dec0",
+      "body_sha256": "9cad5cb38d28d1fd96770e202957286060e0c0fe2879b72159efb81e876015e7",
+      "extent_sha256": "9cad5cb38d28d1fd96770e202957286060e0c0fe2879b72159efb81e876015e7",
+      "gap": {
+        "address": "0x0200dec0",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "target": "0x02187718",
+      "provenance": {
+        "kind": "sdk_archive_symbol",
+        "library": "libsyscall.twl.a",
+        "object": "syscall_twl.o",
+        "archive_path": "lib/ARM9-TS/etc/libsyscall.twl.a"
+      }
+    },
+    {
+      "address": "0x0200dec0",
+      "name": "SVC_CompareSHA1",
+      "catalog_name": "FUN_0200dec0",
+      "catalog_classification": "game_candidate",
+      "ownership": "sdk",
+      "body_bytes": 28,
+      "body_end": "0x0200dedc",
+      "next_entry": "0x0200dedc",
+      "body_sha256": "7a94b7c064252e93c246d9bbf64a1f9b5a048a27c4eadc867b9688c2376becb3",
+      "extent_sha256": "7a94b7c064252e93c246d9bbf64a1f9b5a048a27c4eadc867b9688c2376becb3",
+      "gap": {
+        "address": "0x0200dedc",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "target": "0x0218771c",
+      "provenance": {
+        "kind": "sdk_archive_symbol",
+        "library": "libsyscall.twl.a",
+        "object": "syscall_twl.o",
+        "archive_path": "lib/ARM9-TS/etc/libsyscall.twl.a"
+      }
+    },
+    {
+      "address": "0x0200dedc",
+      "name": "RTCEXi_CommonCallback",
+      "catalog_name": "RTCEXi_CommonCallback",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 116,
+      "body_end": "0x0200df50",
+      "next_entry": "0x0200df54",
+      "body_sha256": "a2726f9050313a92ab88f0cdf06c7f3a1874c0914480276322e1d1a16e662076",
+      "extent_sha256": "1faabea2bcccfef9164663e62f3f3edcb8208f3076ef17591bd2128275e3793a",
+      "gap": {
+        "address": "0x0200df50",
+        "bytes": 4,
+        "sha256": "2d23854cf5a124e1fa95504d18285a6201d5dc3f26cddde2d00b502553f1e074",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "RTCEXi_CommonCallback",
+        "signature_size": 120,
+        "sources": [
+          {
+            "library": "librtcex.TWL.LTD.a",
+            "object": "external_ex.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200df54",
+      "name": "NWMi_CheckInitialized",
+      "catalog_name": "NWMi_CheckInitialized",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 24,
+      "body_end": "0x0200df6c",
+      "next_entry": "0x0200df70",
+      "body_sha256": "380350c39c00bee08e5bc17c759bf3f24d91069dde022423362d3786298d62ec",
+      "extent_sha256": "5fba6d47efbf1257a3298e78b9af7e6090570a4a4c952967b9e36237f0f8030e",
+      "gap": {
+        "address": "0x0200df6c",
+        "bytes": 4,
+        "sha256": "47c68f7e079cd6838ed494a720b9db5d2ef9d7b2eb05740b16689acb6bebb7e0",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "NWMi_CheckInitialized",
+        "signature_size": 28,
+        "sources": [
+          {
+            "library": "libnwm.TWL.LTD.a",
+            "object": "nwm_init.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200df70",
+      "name": "STDi_GetUnicodeConversionTableThunk_0200df70",
+      "catalog_name": "STDi_GetUnicodeConversionTable",
+      "catalog_classification": "game_candidate",
+      "ownership": "sdk",
+      "body_bytes": 8,
+      "body_end": "0x0200df78",
+      "next_entry": "0x0200df7c",
+      "body_sha256": "e8c968b1c0e2eb8c47edf56001d7a29395359d831cfa8528bd272323b413e77c",
+      "extent_sha256": "3facc2af4024a4cab89b73920b86425b5dc74fc393e84c6ebd8c792c9fa3fef2",
+      "gap": {
+        "address": "0x0200df78",
+        "bytes": 4,
+        "sha256": "27a4bb944bfa9f6c60a208610cc77a4a800a41d52365d6cda8f66536ed2a5b42",
+        "kind": "sdk_relocation_literals"
+      },
+      "target": "0x0201e498",
+      "provenance": {
+        "kind": "linker_generated_sdk_veneer",
+        "target": "0x0201e498"
+      }
+    },
+    {
+      "address": "0x0200df7c",
+      "name": "FATFSi_InitRequest",
+      "catalog_name": "FATFSi_InitRequest",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 116,
+      "body_end": "0x0200dff0",
+      "next_entry": "0x0200e000",
+      "body_sha256": "a0756171b741ccaf7a1be4676b85df8dd2ed00b596b88d986ad5fb1a3c9cc0f8",
+      "extent_sha256": "5f9a29ec5ea522392fa133d33b8cd071f72857ab1c03fbe62fe6835914bb0c32",
+      "gap": {
+        "address": "0x0200dff0",
+        "bytes": 16,
+        "sha256": "110bd04a61ec4a9f2f1bc9cfa89505ac95c800ee8020cf847e4616c8588e49fc",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_InitRequest",
+        "signature_size": 132,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_request.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e000",
+      "name": "FATFSi_SendToPXI",
+      "catalog_name": "FATFSi_SendToPXI",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 56,
+      "body_end": "0x0200e038",
+      "next_entry": "0x0200e038",
+      "body_sha256": "f0e17c2b683a357ed65d0fd9b0244f9f8956dd99a991063d71f5ef1a30915d3d",
+      "extent_sha256": "f0e17c2b683a357ed65d0fd9b0244f9f8956dd99a991063d71f5ef1a30915d3d",
+      "gap": {
+        "address": "0x0200e038",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_SendToPXI",
+        "signature_size": 56,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_request.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e038",
+      "name": "FATFSi_PXICallback",
+      "catalog_name": "FATFSi_PXICallback",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 40,
+      "body_end": "0x0200e060",
+      "next_entry": "0x0200e060",
+      "body_sha256": "2f9c14e8a75408b38eab11ba51939a8c021a945729e42d557007d2ee1db1a635",
+      "extent_sha256": "2f9c14e8a75408b38eab11ba51939a8c021a945729e42d557007d2ee1db1a635",
+      "gap": {
+        "address": "0x0200e060",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_PXICallback",
+        "signature_size": 40,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_request.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e060",
+      "name": "FATFSi_GetThreadHandle",
+      "catalog_name": "FATFSi_GetThreadHandle",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 28,
+      "body_end": "0x0200e07c",
+      "next_entry": "0x0200e080",
+      "body_sha256": "0988522372b1e54277b5e9450fba468aa47b4488cf63e76e30f148bf873c3a0a",
+      "extent_sha256": "0dbb445f26151cdec694ef9db3c1c2364573c616ce9ff63a271def83bb97173c",
+      "gap": {
+        "address": "0x0200e07c",
+        "bytes": 4,
+        "sha256": "8518dc05aadaa4ca7e81985146a292954cf9e3bca796dbc78d00ee1e0da5c48d",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_GetThreadHandle",
+        "signature_size": 32,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_request.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e080",
+      "name": "FATFSi_SetRequestBuffer",
+      "catalog_name": "FATFSi_SetRequestBuffer",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 68,
+      "body_end": "0x0200e0c4",
+      "next_entry": "0x0200e0c8",
+      "body_sha256": "342331598fc9b373c711105490a60924d78315da172c23570acba94854594a7f",
+      "extent_sha256": "64c2b980d83f43e4bac2533064a365e933d36749777ea34aaa504f167cbb9c23",
+      "gap": {
+        "address": "0x0200e0c4",
+        "bytes": 4,
+        "sha256": "0dbdbd8f4f9a8af324aeec10dd553cffc78688206a158d21022544abde345aec",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_SetRequestBuffer",
+        "signature_size": 72,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_request.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e0c8",
+      "name": "FATFSi_AllocateCommandBuffer",
+      "catalog_name": "FATFSi_AllocateCommandBuffer",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 212,
+      "body_end": "0x0200e19c",
+      "next_entry": "0x0200e1a4",
+      "body_sha256": "eeecbbc52163da1188906b60deedfb5b613331b7bcdf854d75cb02697adf34d9",
+      "extent_sha256": "1137a2dd60044e9c5edb8387404353226f8255d43504eba92c76315579ff65ea",
+      "gap": {
+        "address": "0x0200e19c",
+        "bytes": 8,
+        "sha256": "2a6422090faf8f4083261ae11ad04e8b837bd56665498b8427079aab2101de76",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_AllocateCommandBuffer",
+        "signature_size": 220,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_request.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e1a4",
+      "name": "FATFSi_AllocateEmergencyCommandBuffer",
+      "catalog_name": "FATFSi_AllocateEmergencyCommandBuffer",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 68,
+      "body_end": "0x0200e1e8",
+      "next_entry": "0x0200e1ec",
+      "body_sha256": "1225398365560b9fed43b2371e2078dca0cdccd1916c621f5fd9f1e9a1e30d64",
+      "extent_sha256": "99130c6ec1e1defe778f409f8f75d96e6885b48902223e0e0b77d842c71dabe7",
+      "gap": {
+        "address": "0x0200e1e8",
+        "bytes": 4,
+        "sha256": "0dbdbd8f4f9a8af324aeec10dd553cffc78688206a158d21022544abde345aec",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_AllocateEmergencyCommandBuffer",
+        "signature_size": 72,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_request.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e1ec",
+      "name": "FATFSi_FreeCommandBuffer",
+      "catalog_name": "FATFSi_FreeCommandBuffer",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 32,
+      "body_end": "0x0200e20c",
+      "next_entry": "0x0200e214",
+      "body_sha256": "e421ce366351fbe89e8ad1b8c4304a5d73b6cce2e167347c766314907845307c",
+      "extent_sha256": "e350abf1b3eae0c2f86f661c05b7181c72fd366e5ffd5941a7675dd758984c86",
+      "gap": {
+        "address": "0x0200e20c",
+        "bytes": 8,
+        "sha256": "2a6422090faf8f4083261ae11ad04e8b837bd56665498b8427079aab2101de76",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_FreeCommandBuffer",
+        "signature_size": 40,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_request.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e214",
+      "name": "FATFSi_SendToPXIThunk_0200e214",
+      "catalog_name": "FATFSi_SendToPXI",
+      "catalog_classification": "game_candidate",
+      "ownership": "sdk",
+      "body_bytes": 8,
+      "body_end": "0x0200e21c",
+      "next_entry": "0x0200e220",
+      "body_sha256": "e8c968b1c0e2eb8c47edf56001d7a29395359d831cfa8528bd272323b413e77c",
+      "extent_sha256": "2fd95c6b656243cbb4ec387661da627098a08a339a57676e7ae1786d89b44b85",
+      "gap": {
+        "address": "0x0200e21c",
+        "bytes": 4,
+        "sha256": "0cb3a64f4c17c6b8b5a242ef23ae3b765a54c845542cb1d7ae1528f6caac3d72",
+        "kind": "sdk_relocation_literals"
+      },
+      "target": "0x0200e000",
+      "provenance": {
+        "kind": "linker_generated_sdk_veneer",
+        "target": "0x0200e000"
+      }
+    },
+    {
+      "address": "0x0200e220",
+      "name": "FATFSi_NotifyRequestCompletion",
+      "catalog_name": "FATFSi_NotifyRequestCompletion",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 252,
+      "body_end": "0x0200e31c",
+      "next_entry": "0x0200e32c",
+      "body_sha256": "23829fbe77f3229d2ff9dbb9c8f4dc354a3388d247dbe04d06d4448446c42bc8",
+      "extent_sha256": "32e58fcec4b7dab678fc0bfd9752fcf76844012d9705f5eaac6589d932416489",
+      "gap": {
+        "address": "0x0200e31c",
+        "bytes": 16,
+        "sha256": "167f9496dc1daa886abaa04040dcc87891fa207d711731cf713bb2dacc8c2811",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_NotifyRequestCompletion",
+        "signature_size": 268,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_request.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e32c",
+      "name": "FATFSi_WaitForRequest",
+      "catalog_name": "FATFSi_WaitForRequest",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 168,
+      "body_end": "0x0200e3d4",
+      "next_entry": "0x0200e3e0",
+      "body_sha256": "b214c8ae40ec4ec5d4b0c7732a88b1fc494a77d8eabcfa9f70e0afec75a54cbe",
+      "extent_sha256": "271cedddec8a61ebc5d8268bc1f6b167bebe850f81c63c868ec19ae1ce2d7c4f",
+      "gap": {
+        "address": "0x0200e3d4",
+        "bytes": 12,
+        "sha256": "b40c148d5d41c04f328c3f674c743cec54e9bc397e7f5d22136a545ad3fdc87b",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_WaitForRequest",
+        "signature_size": 180,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_request.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e3e0",
+      "name": "FATFSi_SyncInitialization",
+      "catalog_name": "FATFSi_SyncInitialization",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 76,
+      "body_end": "0x0200e42c",
+      "next_entry": "0x0200e42c",
+      "body_sha256": "fc9fa947a8ea91cd740600ec0ce87ebf166d91edfe2498e98cd4fafec0bf5fe9",
+      "extent_sha256": "fc9fa947a8ea91cd740600ec0ce87ebf166d91edfe2498e98cd4fafec0bf5fe9",
+      "gap": {
+        "address": "0x0200e42c",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_SyncInitialization",
+        "signature_size": 76,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_request.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e42c",
+      "name": "FATFS_RegisterResultBuffer",
+      "catalog_name": "FATFS_RegisterResultBuffer",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 124,
+      "body_end": "0x0200e4a8",
+      "next_entry": "0x0200e4b4",
+      "body_sha256": "95cdafa9a92d16324b59b7d333babf6bfa65163cc5aa10dff1d9ae603f5212bd",
+      "extent_sha256": "171b4b0ba046f700e2afb1967c0f8343613986466e411d2686297cecb2d4b623",
+      "gap": {
+        "address": "0x0200e4a8",
+        "bytes": 12,
+        "sha256": "ecf7a658a287ee96151167f18dce5bb5b59cf0252ca4e9ce6e35ff435c9bdcf7",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFS_RegisterResultBuffer",
+        "signature_size": 136,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_request.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e4b4",
+      "name": "FATFSi_CopyString",
+      "catalog_name": "FATFSi_CopyString",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 32,
+      "body_end": "0x0200e4d4",
+      "next_entry": "0x0200e4d4",
+      "body_sha256": "68f979ca33f634f08947158396d55ce270ee90975f8ce40923e870fe87272b0c",
+      "extent_sha256": "68f979ca33f634f08947158396d55ce270ee90975f8ce40923e870fe87272b0c",
+      "gap": {
+        "address": "0x0200e4d4",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_CopyString",
+        "signature_size": 32,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_api.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e4d4",
+      "name": "FATFSi_ConvertArcnameToSjis",
+      "catalog_name": "FATFSi_ConvertArcnameToSjis",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 76,
+      "body_end": "0x0200e520",
+      "next_entry": "0x0200e520",
+      "body_sha256": "566a5c03c03f918e79d084de6cebb168ab75b28d673eacce714af4c94c871450",
+      "extent_sha256": "566a5c03c03f918e79d084de6cebb168ab75b28d673eacce714af4c94c871450",
+      "gap": {
+        "address": "0x0200e520",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_ConvertArcnameToSjis",
+        "signature_size": 76,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_api.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e520",
+      "name": "FATFSi_CopyUnicodeString",
+      "catalog_name": "FATFSi_CopyUnicodeString",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 72,
+      "body_end": "0x0200e568",
+      "next_entry": "0x0200e568",
+      "body_sha256": "2a47dfb89c778ab80a5e4af11fa2973bb5af1b3874e702b5e000d4b835e8f0f8",
+      "extent_sha256": "2a47dfb89c778ab80a5e4af11fa2973bb5af1b3874e702b5e000d4b835e8f0f8",
+      "gap": {
+        "address": "0x0200e568",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFSi_CopyUnicodeString",
+        "signature_size": 72,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_api.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e568",
+      "name": "FATFSi_IsInitialized",
+      "catalog_name": "FUN_0200e568",
+      "catalog_classification": "game_candidate",
+      "ownership": "sdk",
+      "body_bytes": 12,
+      "body_end": "0x0200e574",
+      "next_entry": "0x0200e578",
+      "body_sha256": "f65c720bf9f01608272b8642a87a2673dbfba0339c2c62eb328500eaa84f5f75",
+      "extent_sha256": "fb445b050e717262ec4db74cc0fa07a894ee5fbcdf0b4716dbdebbbc8a54ac83",
+      "gap": {
+        "address": "0x0200e574",
+        "bytes": 4,
+        "sha256": "d268cfbd6b09e6692ddc2ca9bc21733b2337244445580f2a8b6a1e38f69daef4",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "sdk_archive_symbol",
+        "library": "libfatfs.TWL.LTD.a",
+        "object": "fatfs_api.o",
+        "archive_path": "lib/ARM9-TS/Rom/libfatfs.TWL.LTD.a"
+      }
+    },
+    {
+      "address": "0x0200e578",
+      "name": "FATFS_Init",
+      "catalog_name": "FATFS_Init",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 116,
+      "body_end": "0x0200e5ec",
+      "next_entry": "0x0200e608",
+      "body_sha256": "a979d346d3d6b4d429d16f53992091c3d65554addf27a6c0031659c80077769b",
+      "extent_sha256": "bfe47e8e76f92d1c4489c54f864ffee5f82e88e5695e8050b40c564f43672bac",
+      "gap": {
+        "address": "0x0200e5ec",
+        "bytes": 28,
+        "sha256": "c694bb2ef8dd1faf7531118c3e3e01ef02e81115ba49c44095d647369eca2b69",
+        "kind": "literals_then_embedded_sdk_function"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFS_Init",
+        "signature_size": 128,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_api.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e608",
+      "name": "FATFS_FlushAll",
+      "catalog_name": "FATFS_FlushAll",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 60,
+      "body_end": "0x0200e644",
+      "next_entry": "0x0200e644",
+      "body_sha256": "6f477600fcf40bcb647b68f25c7d4ae04524d97ef0a7406403148e5aeef22e56",
+      "extent_sha256": "6f477600fcf40bcb647b68f25c7d4ae04524d97ef0a7406403148e5aeef22e56",
+      "gap": {
+        "address": "0x0200e644",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFS_FlushAll",
+        "signature_size": 60,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_api.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e644",
+      "name": "FATFS_UnmountAll",
+      "catalog_name": "FATFS_UnmountAll",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 60,
+      "body_end": "0x0200e680",
+      "next_entry": "0x0200e680",
+      "body_sha256": "952a094d9651abf12a5d4dae5ba822f0e794afec8a92cfb2f0ab2c3ff715cf08",
+      "extent_sha256": "952a094d9651abf12a5d4dae5ba822f0e794afec8a92cfb2f0ab2c3ff715cf08",
+      "gap": {
+        "address": "0x0200e680",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFS_UnmountAll",
+        "signature_size": 60,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_api.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e680",
+      "name": "FATFS_CloseFile",
+      "catalog_name": "FATFS_CloseFile",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 68,
+      "body_end": "0x0200e6c4",
+      "next_entry": "0x0200e6c4",
+      "body_sha256": "0ae4c6772acdf09d0c07404080e356cb6de95de18f68af9f18de6d7a4f071009",
+      "extent_sha256": "0ae4c6772acdf09d0c07404080e356cb6de95de18f68af9f18de6d7a4f071009",
+      "gap": {
+        "address": "0x0200e6c4",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFS_CloseFile",
+        "signature_size": 68,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_api.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e6c4",
+      "name": "FATFS_ReadFile",
+      "catalog_name": "FATFS_ReadFile",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 84,
+      "body_end": "0x0200e718",
+      "next_entry": "0x0200e718",
+      "body_sha256": "608570cfeebb7051951a1bc789af6c6660e8968b040c463820787961a8c67fb1",
+      "extent_sha256": "608570cfeebb7051951a1bc789af6c6660e8968b040c463820787961a8c67fb1",
+      "gap": {
+        "address": "0x0200e718",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFS_ReadFile",
+        "signature_size": 84,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_api.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e718",
+      "name": "FATFS_WriteFile",
+      "catalog_name": "FATFS_WriteFile",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 84,
+      "body_end": "0x0200e76c",
+      "next_entry": "0x0200e76c",
+      "body_sha256": "5d09d22c9eb6f730dc4be55cf273564a476da004655eb050903e3a7240bb4178",
+      "extent_sha256": "5d09d22c9eb6f730dc4be55cf273564a476da004655eb050903e3a7240bb4178",
+      "gap": {
+        "address": "0x0200e76c",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFS_WriteFile",
+        "signature_size": 84,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_api.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200e76c",
+      "name": "FATFS_SetSeekCache",
+      "catalog_name": "FATFS_SetSeekCache",
+      "catalog_classification": "sdk",
+      "ownership": "sdk",
+      "body_bytes": 84,
+      "body_end": "0x0200e7c0",
+      "next_entry": "0x0200e7c0",
+      "body_sha256": "f6d9bded42d5c11bfb8e7cdc6ee8379eebb797736cc6615ef3f0ad7e13d265bd",
+      "extent_sha256": "f6d9bded42d5c11bfb8e7cdc6ee8379eebb797736cc6615ef3f0ad7e13d265bd",
+      "gap": {
+        "address": "0x0200e7c0",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_name": "FATFS_SetSeekCache",
+        "signature_size": 84,
+        "sources": [
+          {
+            "library": "libfatfs.TWL.LTD.a",
+            "object": "fatfs_api.o"
+          }
+        ]
+      }
+    }
+  ],
+  "embedded_functions": [
+    {
+      "address": "0x0200de4c",
+      "name": "SVC_SHA1Init",
+      "end": "0x0200de64",
+      "bytes": 24,
+      "sha256": "4284a7fae01c34af4dc4959950ec375645f71d1b9cdfd9ece57059ba87eeb44d",
+      "ownership": "sdk",
+      "provenance": {
+        "kind": "sdk_archive_symbol",
+        "library": "libsyscall.twl.a",
+        "object": "syscall_twl.o",
+        "archive_path": "lib/ARM9-TS/etc/libsyscall.twl.a"
+      },
+      "target": "0x021876fc"
+    },
+    {
+      "address": "0x0200de64",
+      "name": "SVC_SHA1Update",
+      "end": "0x0200de84",
+      "bytes": 32,
+      "sha256": "05f50a1bea85a943c455ffc8022e0dc70c518727229473b3f433f4b8e028c93d",
+      "ownership": "sdk",
+      "provenance": {
+        "kind": "sdk_archive_symbol",
+        "library": "libsyscall.twl.a",
+        "object": "syscall_twl.o",
+        "archive_path": "lib/ARM9-TS/etc/libsyscall.twl.a"
+      },
+      "target": "0x02187708"
+    },
+    {
+      "address": "0x0200de84",
+      "name": "SVC_SHA1GetHash",
+      "end": "0x0200dea0",
+      "bytes": 28,
+      "sha256": "0895440bf3a7af5bb7e9d5def41c2e9cde09129952ddca66e656485f5ab269d8",
+      "ownership": "sdk",
+      "provenance": {
+        "kind": "sdk_archive_symbol",
+        "library": "libsyscall.twl.a",
+        "object": "syscall_twl.o",
+        "archive_path": "lib/ARM9-TS/etc/libsyscall.twl.a"
+      },
+      "target": "0x0218770c"
+    },
+    {
+      "address": "0x0200e5f8",
+      "name": "FATFSi_GetArcnameList",
+      "end": "0x0200e608",
+      "bytes": 16,
+      "sha256": "97dbe8bc1be1055f30767e7e9c4d327a3fb3479bd0dd1302e2ea6404708cb952",
+      "ownership": "sdk",
+      "provenance": {
+        "kind": "sdk_archive_symbol",
+        "library": "libfatfs.TWL.LTD.a",
+        "object": "fatfs_api.o",
+        "archive_path": "lib/ARM9-TS/Rom/libfatfs.TWL.LTD.a"
+      }
+    }
+  ]
+}
