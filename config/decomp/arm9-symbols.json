@@ -3866,6 +3866,209 @@
       "expected_names": ["FUN_020b2ab0", "Game_CompleteDatalinkLobbyNetworkTransition_020b2ab0"],
       "confidence": "descriptive",
       "rationale": "The complete 156-byte routine waits for the host or client completion predicate, publishes lobby result two and phase eight, selects display state 1/3 and disables all 32 tween records."
+    },
+    {
+      "address": "0x02008080",
+      "name": "Game_VSNPrintf_02008080",
+      "expected_names": ["FUN_02008080", "Game_VSNPrintf_02008080"],
+      "confidence": "verified",
+      "rationale": "The complete bounded narrow-output wrapper invokes the recovered formatter through the 0x02007F14 sink and always applies the retail terminator policy."
+    },
+    {
+      "address": "0x020080e4",
+      "name": "Game_SPrintf_020080e4",
+      "expected_names": ["FUN_020080e4", "Game_SPrintf_020080e4"],
+      "confidence": "verified",
+      "rationale": "The complete variadic wrapper forwards an effectively unbounded capacity to the recovered narrow formatter."
+    },
+    {
+      "address": "0x02008110",
+      "name": "Game_RaiseFormatConstraint_02008110",
+      "expected_names": ["FUN_02008110", "Game_RaiseFormatConstraint_02008110"],
+      "confidence": "verified",
+      "rationale": "The complete constraint dispatcher invokes the registered handler or the adjacent SDK default handler."
+    },
+    {
+      "address": "0x02008138",
+      "name": "Game_DefaultFormatConstraintHandler_02008138",
+      "expected_names": ["FUN_02008138", "Game_DefaultFormatConstraintHandler_02008138"],
+      "confidence": "verified",
+      "rationale": "The exact four-byte BX LR body is the default no-op constraint handler."
+    },
+    {
+      "address": "0x02008264",
+      "name": "Game_StringLength_02008264",
+      "expected_names": ["FUN_02008264", "Game_StringLength_02008264"],
+      "confidence": "verified",
+      "rationale": "The complete routine counts bytes through the first narrow-string terminator."
+    },
+    {
+      "address": "0x02008280",
+      "name": "Game_CopyString_02008280",
+      "expected_names": ["FUN_02008280", "Game_CopyString_02008280"],
+      "confidence": "verified",
+      "rationale": "The complete word-optimized narrow-string copy includes the terminator and excludes its two zero-detection constants."
+    },
+    {
+      "address": "0x02008348",
+      "name": "Game_CopyStringBounded_02008348",
+      "expected_names": ["FUN_02008348", "Game_CopyStringBounded_02008348"],
+      "confidence": "verified",
+      "rationale": "The complete bounded narrow copy pads the unused destination extent with zero bytes."
+    },
+    {
+      "address": "0x02008398",
+      "name": "Game_FindCharacter_02008398",
+      "expected_names": ["FUN_02008398", "Game_FindCharacter_02008398"],
+      "confidence": "verified",
+      "rationale": "The complete narrow-string search returns the matching byte, including a requested terminator."
+    },
+    {
+      "address": "0x020083d0",
+      "name": "Game_LogPrepareStream",
+      "expected_names": ["FUN_020083d0", "Game_LogPrepareStream"],
+      "confidence": "verified",
+      "rationale": "The complete SDK stream-orientation helper establishes or queries byte and wide orientation bits used by the recovered logging caller."
+    },
+    {
+      "address": "0x02008440",
+      "name": "Game_CopyWideUnits_02008440",
+      "expected_names": ["FUN_02008440", "Game_CopyWideUnits_02008440"],
+      "confidence": "verified",
+      "rationale": "The complete wrapper copies an exact count of UTF-16 units through the recovered memory-copy entry point."
+    },
+    {
+      "address": "0x02008450",
+      "name": "Game_FindWideUnit_02008450",
+      "expected_names": ["FUN_02008450", "Game_FindWideUnit_02008450"],
+      "confidence": "verified",
+      "rationale": "The complete bounded UTF-16 search returns the first requested code unit."
+    },
+    {
+      "address": "0x02008478",
+      "name": "Game_ParseWideFormatConversion_02008478",
+      "expected_names": ["FUN_02008478", "Game_ParseWideFormatConversion_02008478"],
+      "confidence": "verified",
+      "rationale": "The complete UTF-16 format parser mirrors the recovered narrow descriptor policy and owns its three-word literal pool."
+    },
+    {
+      "address": "0x02008990",
+      "name": "Game_FormatWideInteger32_02008990",
+      "expected_names": ["FUN_02008990", "Game_FormatWideInteger32_02008990"],
+      "confidence": "verified",
+      "rationale": "The complete 32-bit UTF-16 integer formatter handles signs, bases, alternate prefixes, precision and padding."
+    },
+    {
+      "address": "0x02008bdc",
+      "name": "Game_FormatWideInteger64_02008bdc",
+      "expected_names": ["FUN_02008bdc", "Game_FormatWideInteger64_02008bdc"],
+      "confidence": "verified",
+      "rationale": "The complete 64-bit UTF-16 integer formatter is the wide counterpart of the recovered narrow helper."
+    },
+    {
+      "address": "0x02008eb4",
+      "name": "Game_FormatWideHexFloat_02008eb4",
+      "expected_names": ["FUN_02008eb4", "Game_FormatWideHexFloat_02008eb4"],
+      "confidence": "verified",
+      "rationale": "The complete UTF-16 hexadecimal floating formatter owns its 14-word IEEE-754 constant pool."
+    },
+    {
+      "address": "0x02009274",
+      "name": "Game_RoundWideDecimalDigits_02009274",
+      "expected_names": ["FUN_02009274", "Game_RoundWideDecimalDigits_02009274"],
+      "confidence": "verified",
+      "rationale": "The complete decimal rounding body is byte-identical to the recovered narrow-format helper at 0x02006E14."
+    },
+    {
+      "address": "0x02009388",
+      "name": "Game_FormatWideDecimalFloat_02009388",
+      "expected_names": ["FUN_02009388", "Game_FormatWideDecimalFloat_02009388"],
+      "confidence": "verified",
+      "rationale": "The complete UTF-16 decimal floating formatter owns its eleven-word conversion constant pool."
+    },
+    {
+      "address": "0x02009980",
+      "name": "Game_RunWideFormatter_02009980",
+      "expected_names": ["FUN_02009980", "Game_RunWideFormatter_02009980"],
+      "confidence": "verified",
+      "rationale": "The complete callback-driven UTF-16 formatter parses conversions, consumes varargs, dispatches numeric helpers and streams padded fields."
+    },
+    {
+      "address": "0x0200a2e4",
+      "name": "GameWideFormatBuffer_Write_0200a2e4",
+      "expected_names": ["FUN_0200a2e4", "GameWideFormatBuffer_Write_0200a2e4"],
+      "confidence": "verified",
+      "rationale": "The complete bounded UTF-16 sink copies the available prefix while retaining the full logical output length."
+    },
+    {
+      "address": "0x0200a324",
+      "name": "NtmvM2d_FormatWideText_0200a324",
+      "expected_names": ["FUN_0200a324", "NtmvM2d_FormatWideText_0200a324"],
+      "confidence": "verified",
+      "rationale": "The complete variadic UTF-16 wrapper matches the established NTMV consumer contract and forwards to the adjacent va_list implementation."
+    },
+    {
+      "address": "0x0200a34c",
+      "name": "Game_VSNPrintfWide_0200a34c",
+      "expected_names": ["FUN_0200a34c", "Game_VSNPrintfWide_0200a34c"],
+      "confidence": "verified",
+      "rationale": "The complete bounded UTF-16 wrapper invokes the recovered wide sink and returns minus one after truncation."
+    },
+    {
+      "address": "0x0200a3ac",
+      "name": "Game_WideStringLength_0200a3ac",
+      "expected_names": ["FUN_0200a3ac", "Game_WideStringLength_0200a3ac"],
+      "confidence": "verified",
+      "rationale": "The complete routine counts UTF-16 units through the first terminator."
+    },
+    {
+      "address": "0x0200a3c8",
+      "name": "Game_CopyWideString_0200a3c8",
+      "expected_names": ["FUN_0200a3c8", "Game_CopyWideString_0200a3c8"],
+      "confidence": "verified",
+      "rationale": "The complete UTF-16 string copy includes the terminating code unit."
+    },
+    {
+      "address": "0x0200a3e8",
+      "name": "Game_FindWideCharacter_0200a3e8",
+      "expected_names": ["FUN_0200a3e8", "Game_FindWideCharacter_0200a3e8"],
+      "confidence": "verified",
+      "rationale": "The complete UTF-16 string search returns the matching unit, including a requested terminator."
+    },
+    {
+      "address": "0x0200a41c",
+      "name": "Game_CompareDecimalRoundingHalf_0200a41c",
+      "expected_names": ["FUN_0200a41c", "Game_CompareDecimalRoundingHalf_0200a41c"],
+      "confidence": "verified",
+      "rationale": "The complete decimal helper classifies the discarded tail for round-to-nearest, ties-to-even."
+    },
+    {
+      "address": "0x0200a488",
+      "name": "Game_IncrementRuntimeDecimal_0200a488",
+      "expected_names": ["FUN_0200a488", "Game_IncrementRuntimeDecimal_0200a488"],
+      "confidence": "verified",
+      "rationale": "The complete decimal increment helper propagates a carry through packed base-ten digits and adjusts the exponent on overflow."
+    },
+    {
+      "address": "0x0200a4d8",
+      "name": "Game_RoundRuntimeDecimal_0200a4d8",
+      "expected_names": ["FUN_0200a4d8", "Game_RoundRuntimeDecimal_0200a4d8"],
+      "confidence": "verified",
+      "rationale": "The complete decimal truncation wrapper applies the adjacent half-even classifier and carry helper."
+    },
+    {
+      "address": "0x0200a518",
+      "name": "Game_RuntimeDecimalFromUint64_0200a518",
+      "expected_names": ["FUN_0200a518", "Game_RuntimeDecimalFromUint64_0200a518"],
+      "confidence": "verified",
+      "rationale": "The complete helper converts an unsigned 64-bit magnitude into the runtime's most-significant-first decimal record."
+    },
+    {
+      "address": "0x0200a5dc",
+      "name": "Game_MultiplyRuntimeDecimals_0200a5dc",
+      "expected_names": ["FUN_0200a5dc", "Game_MultiplyRuntimeDecimals_0200a5dc"],
+      "confidence": "verified",
+      "rationale": "The complete decimal multiplication helper retains at most 32 digits and rounds a discarded product tail to even."
     }
   ]
 }

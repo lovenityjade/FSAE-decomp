@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "change-0046381babe6",
+  "summary": "Bloc ARM9 0x02007F14: 32 fonctions / 10112 octets de corps et 200 octets de pools récupérés; linkage en attente",
+  "updated_at": "2026-07-18T07:54:29Z",
+  "section": "arm9",
+  "worker": "rom-pipeline"
+}
