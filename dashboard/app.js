@@ -257,12 +257,17 @@ function renderPublication(data) {
   const provenance = data.overall.provenance || {};
   const units = data.overall.pipeline_units || {};
   const lastError = build.last_error;
+  const publishedLabel = build.published_at
+    ? dateFormat.format(new Date(build.published_at))
+    : "Vue live non publiée";
+  const shortCommit = build.commit ? build.commit.slice(0, 8) : "inconnu";
 
   document.querySelector("#build-id").textContent = build.id || "Non publié";
   document.querySelector("#build-commit").textContent = build.commit || "Inconnu";
-  document.querySelector("#published-at").textContent = build.published_at
-    ? dateFormat.format(new Date(build.published_at))
-    : "Vue live non publiée";
+  document.querySelector("#published-at").textContent = publishedLabel;
+  document.querySelector("#hero-build-id").textContent = build.id || "Non publié";
+  document.querySelector("#hero-build-meta").textContent =
+    `commit ${shortCommit} · ${publishedLabel}`;
   document.querySelector("#provenance-counts").textContent = ["source", "sdk", "fallback", "unmatched"]
     .map((name) => `${provenanceLabels[name]} ${numberFormat.format(provenance[name] || 0)}`)
     .join(" · ");

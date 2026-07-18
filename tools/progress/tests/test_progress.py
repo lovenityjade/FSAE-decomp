@@ -677,6 +677,10 @@ class ProgressTestCase(unittest.TestCase):
         self.assertIn("preuve de linkage exacte", markup)
         self.assertIn("renderPublication(data)", source)
         self.assertIn('id="build-id"', markup)
+        self.assertIn('id="hero-build-id"', markup)
+        self.assertIn('id="hero-build-meta"', markup)
+        self.assertIn("Dernier gros bloc publié", markup)
+        self.assertIn('document.querySelector("#hero-build-id")', source)
         self.assertIn('id="last-publication-error"', markup)
 
     def test_full_installation_validation(self) -> None:

@@ -32,9 +32,15 @@
             <span id="overall-percent">0,00</span><span class="percent-sign">%</span>
           </h2>
           <p class="muted" id="updated-at">En attente du premier relevé</p>
+          <div class="hero-checkpoint" aria-live="polite">
+            <span class="hero-checkpoint-label">Dernier gros bloc publié</span>
+            <strong id="hero-build-id">Non publié</strong>
+            <span id="hero-build-meta">En attente du premier checkpoint</span>
+          </div>
           <p class="phase-note">
             Seules les unités rattachées à une preuve de linkage exacte augmentent
-            cette valeur. L’analyse et les fallbacks restent exclus.
+            cette valeur. Le checkpoint ci-dessus change même quand le byte-match
+            reste stable; l’analyse et les fallbacks restent exclus.
           </p>
         </div>
         <div class="hero-details">

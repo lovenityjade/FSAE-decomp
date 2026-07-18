@@ -168,6 +168,35 @@ main > section + section,
   margin-top: 18px;
 }
 
+.hero-checkpoint {
+  display: grid;
+  gap: 4px;
+  max-width: 48ch;
+  margin-top: 16px;
+  padding: 13px 15px;
+  border: 1px solid rgba(121, 213, 141, 0.32);
+  border-radius: 12px;
+  background: rgba(121, 213, 141, 0.07);
+}
+
+.hero-checkpoint-label {
+  color: var(--green);
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero-checkpoint strong {
+  overflow-wrap: anywhere;
+  font-size: 0.9rem;
+}
+
+.hero-checkpoint #hero-build-meta {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
 .phase-note {
   max-width: 46ch;
   margin: 18px 0 0;
