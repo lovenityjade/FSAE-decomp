@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "change-44344ae49ea2",
+  "summary": "Bloc ARM9 0x02065F5C: 32 fonctions / 7520 octets de corps et 728 octets de pools vérifiés; linkage en attente",
+  "updated_at": "2026-07-18T07:52:13Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}
