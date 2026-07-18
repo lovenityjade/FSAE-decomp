@@ -4286,6 +4286,306 @@
       "expected_names": ["Game_HandleFatalAssertion", "Game_HandleFatalAssertionThunk_0200c544"],
       "confidence": "verified",
       "rationale": "The exact eight-byte veneer targets the established fatal assertion implementation at 0x02005488; the following veneer and literal occupy the extent before 0x0200C55C."
+    },
+    {
+      "address": "0x0200c55c",
+      "name": "Game_UnwindAbort_0200c55c",
+      "expected_names": [
+        "FUN_0200c55c",
+        "Game_UnwindAbort_0200c55c"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete runtime veneer calls the configured unwind-abort handler through the adjacent global pointer literal."
+    },
+    {
+      "address": "0x0200c594",
+      "name": "Game_UnwindTypeMatches_0200c594",
+      "expected_names": [
+        "FUN_0200c594",
+        "Game_UnwindTypeMatches_0200c594"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete compact RTTI matcher compares pointer qualifiers and extracts the encoded object adjustment used by catch selection."
+    },
+    {
+      "address": "0x0200c75c",
+      "name": "Game_DestroyObjectRangeReverse_0200c75c",
+      "expected_names": [
+        "FUN_0200c75c",
+        "Game_DestroyObjectRangeReverse_0200c75c"
+      ],
+      "confidence": "verified",
+      "rationale": "The runtime helper walks an object range backward by element size and invokes the supplied destructor for each element."
+    },
+    {
+      "address": "0x0200c7b8",
+      "name": "Game_ConstructObjectArray_0200c7b8",
+      "expected_names": [
+        "FUN_0200c7b8",
+        "Game_ConstructObjectArray_0200c7b8"
+      ],
+      "confidence": "verified",
+      "rationale": "The runtime helper constructs a fixed-stride array and owns the non-contiguous reverse-cleanup path used after construction failure."
+    },
+    {
+      "address": "0x0200c868",
+      "name": "Game_DestroyObjectArray_0200c868",
+      "expected_names": [
+        "FUN_0200c868",
+        "Game_DestroyObjectArray_0200c868"
+      ],
+      "confidence": "verified",
+      "rationale": "The runtime helper destroys every fixed-stride array element in reverse order, including its separated epilogue tail."
+    },
+    {
+      "address": "0x0200c8c4",
+      "name": "Game_RuntimeBaseDestructor_0200c8c4",
+      "expected_names": [
+        "FUN_0200c8c4",
+        "Game_RuntimeBaseDestructor_0200c8c4"
+      ],
+      "confidence": "verified",
+      "rationale": "The exact four-byte base destructor is a no-op return used by the adjacent destructor wrappers."
+    },
+    {
+      "address": "0x0200c8c8",
+      "name": "Game_RuntimeBaseDestructorThunk_0200c8c8",
+      "expected_names": [
+        "FUN_0200c8c8",
+        "Game_RuntimeBaseDestructorThunk_0200c8c8"
+      ],
+      "confidence": "verified",
+      "rationale": "The wrapper invokes the no-op runtime base destructor and returns the original object."
+    },
+    {
+      "address": "0x0200c8dc",
+      "name": "Game_RuntimeDeletingDestructor_0200c8dc",
+      "expected_names": [
+        "FUN_0200c8dc",
+        "Game_RuntimeDeletingDestructor_0200c8dc"
+      ],
+      "confidence": "verified",
+      "rationale": "The deleting-destructor wrapper runs the base destructor and releases the object through the global delete helper."
+    },
+    {
+      "address": "0x0200c8f8",
+      "name": "Game_RuntimeDerivedDestructor_0200c8f8",
+      "expected_names": [
+        "FUN_0200c8f8",
+        "Game_RuntimeDerivedDestructor_0200c8f8"
+      ],
+      "confidence": "verified",
+      "rationale": "The derived runtime destructor delegates to the adjacent base destructor and returns the object."
+    },
+    {
+      "address": "0x0200c90c",
+      "name": "Game_RuntimeDerivedDestructorThunk_0200c90c",
+      "expected_names": [
+        "FUN_0200c90c",
+        "Game_RuntimeDerivedDestructorThunk_0200c90c"
+      ],
+      "confidence": "verified",
+      "rationale": "The wrapper invokes the recovered derived runtime destructor and returns the original object."
+    },
+    {
+      "address": "0x0200c920",
+      "name": "Game_RuntimeDerivedDeletingDestructor_0200c920",
+      "expected_names": [
+        "FUN_0200c920",
+        "Game_RuntimeDerivedDeletingDestructor_0200c920"
+      ],
+      "confidence": "verified",
+      "rationale": "The deleting wrapper runs the derived destructor before releasing the allocation through global delete."
+    },
+    {
+      "address": "0x0200c93c",
+      "name": "Game_UnwindResolveContext_0200c93c",
+      "expected_names": [
+        "FUN_0200c93c",
+        "Game_UnwindResolveContext_0200c93c"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete unwind helper restores the register mask from the active stack frame and returns the recovered link register."
+    },
+    {
+      "address": "0x0200c998",
+      "name": "Game_UnwindSynchronizeDescriptor_0200c998",
+      "expected_names": [
+        "FUN_0200c998",
+        "Game_UnwindSynchronizeDescriptor_0200c998"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete helper decodes frame flags, register mask and stack adjustments from the unwind program into the execution context."
+    },
+    {
+      "address": "0x0200ca38",
+      "name": "Game_UnwindLocateTables_0200ca38",
+      "expected_names": [
+        "FUN_0200ca38",
+        "Game_UnwindLocateTables_0200ca38"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete target-specific table locator installs the identical recovered unwind-table bounds from its two following literals."
+    },
+    {
+      "address": "0x0200ca58",
+      "name": "Game_UnwindGetProgram_0200ca58",
+      "expected_names": [
+        "FUN_0200ca58",
+        "Game_UnwindGetProgram_0200ca58"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete accessor skips the compact frame header and optional stack field to return the first unwind opcode."
+    },
+    {
+      "address": "0x0200ca80",
+      "name": "Game_UnwindCommitDescriptor_0200ca80",
+      "expected_names": [
+        "FUN_0200ca80",
+        "Game_UnwindCommitDescriptor_0200ca80"
+      ],
+      "confidence": "verified",
+      "rationale": "The runtime commit helper applies the final stack correction and transfers control through its separated register-restore tail."
+    },
+    {
+      "address": "0x0200cafc",
+      "name": "Game_AddDoubleBits_0200cafc",
+      "expected_names": [
+        "FUN_0200cafc",
+        "Game_AddDoubleBits_0200cafc"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete software floating-point routine adds two binary64 values passed as low/high word pairs and owns the following exceptional-value tail."
+    },
+    {
+      "address": "0x0200ce2c",
+      "name": "Game_SubtractDoubleBits_0200ce2c",
+      "expected_names": [
+        "FUN_0200ce2c",
+        "Game_SubtractDoubleBits_0200ce2c"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete software floating-point routine subtracts two binary64 values passed as low/high word pairs."
+    },
+    {
+      "address": "0x0200d1e0",
+      "name": "Game_MultiplyDoubleBits_0200d1e0",
+      "expected_names": [
+        "FUN_0200d1e0",
+        "Game_MultiplyDoubleBits_0200d1e0"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete software floating-point routine multiplies two binary64 values passed as low/high word pairs."
+    },
+    {
+      "address": "0x0200d544",
+      "name": "Game_DoubleBitsLessThan_0200d544",
+      "expected_names": [
+        "FUN_0200d544",
+        "Game_DoubleBitsLessThan_0200d544"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete binary64 predicate implements the ordered less-than comparison, including sign, zero and NaN handling."
+    },
+    {
+      "address": "0x0200d5e0",
+      "name": "Game_DoubleBitsEqual_0200d5e0",
+      "expected_names": [
+        "FUN_0200d5e0",
+        "Game_DoubleBitsEqual_0200d5e0"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete binary64 predicate implements equality with signed-zero equivalence and unordered NaN rejection."
+    },
+    {
+      "address": "0x0200d66c",
+      "name": "Game_DoubleBitsNotEqual_0200d66c",
+      "expected_names": [
+        "FUN_0200d66c",
+        "Game_DoubleBitsNotEqual_0200d66c"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete binary64 predicate implements inequality, including the unordered NaN result."
+    },
+    {
+      "address": "0x0200d6f8",
+      "name": "Game_Int32ToFloatBits_0200d6f8",
+      "expected_names": [
+        "FUN_0200d6f8",
+        "Game_Int32ToFloatBits_0200d6f8"
+      ],
+      "confidence": "verified",
+      "rationale": "The catalogued entry converts a signed 32-bit integer to its IEEE-754 binary32 representation; the long following extent contains shared runtime tails."
+    },
+    {
+      "address": "0x0200d900",
+      "name": "Game_DivideUint64_0200d900",
+      "expected_names": [
+        "FUN_0200d900",
+        "Game_DivideUint64_0200d900"
+      ],
+      "confidence": "verified",
+      "rationale": "The full shared integer-division engine returns an unsigned 64-bit quotient and deliberately contains the two following alternate entries."
+    },
+    {
+      "address": "0x0200d90c",
+      "name": "Game_RemainderUint64_0200d90c",
+      "expected_names": [
+        "FUN_0200d90c",
+        "Game_RemainderUint64_0200d90c"
+      ],
+      "confidence": "verified",
+      "rationale": "This alternate entry selects the unsigned 64-bit remainder result inside the shared division helper beginning at 0x0200D900."
+    },
+    {
+      "address": "0x0200d948",
+      "name": "Game_DivideInt32WithRemainder_0200d948",
+      "expected_names": [
+        "FUN_0200d948",
+        "Game_DivideInt32WithRemainder_0200d948"
+      ],
+      "confidence": "verified",
+      "rationale": "This internal entry applies signed 32-bit quotient/remainder semantics around the shared unrolled division engine."
+    },
+    {
+      "address": "0x0200db54",
+      "name": "Game_DivideUint32Checked_0200db54",
+      "expected_names": [
+        "FUN_0200db54",
+        "Game_DivideUint32Checked_0200db54"
+      ],
+      "confidence": "verified",
+      "rationale": "The checked entry handles a zero divisor before falling into the adjacent shared unsigned 32-bit divider."
+    },
+    {
+      "address": "0x0200db5c",
+      "name": "Game_DivideUint32_0200db5c",
+      "expected_names": [
+        "FUN_0200db5c",
+        "Game_DivideUint32_0200db5c"
+      ],
+      "confidence": "verified",
+      "rationale": "The runtime helper returns an unsigned 32-bit quotient through the unrolled non-restoring division tail in its full extent."
+    },
+    {
+      "address": "0x0200dd38",
+      "name": "Game_FloatBitsToUint32_0200dd38",
+      "expected_names": [
+        "FUN_0200dd38",
+        "Game_FloatBitsToUint32_0200dd38"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete conversion helper transforms IEEE-754 binary32 bits into an unsigned 32-bit integer result."
+    },
+    {
+      "address": "0x0200dd78",
+      "name": "Game_DoubleBitsToUint64_0200dd78",
+      "expected_names": [
+        "FUN_0200dd78",
+        "Game_DoubleBitsToUint64_0200dd78"
+      ],
+      "confidence": "verified",
+      "rationale": "The complete conversion helper transforms IEEE-754 binary64 words into an unsigned 64-bit integer result and owns the following exponent literal."
     }
   ]
 }
