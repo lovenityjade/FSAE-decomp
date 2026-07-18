@@ -1,0 +1,931 @@
+{
+  "schema_version": 1,
+  "id": "arm9-sdk-0200f9fc",
+  "selection": {
+    "entry_min": "0x0200f9fc",
+    "entry_max": "0x02010ba0",
+    "last_body_end": "0x02010bb0",
+    "next_entry": "0x02010bb4",
+    "function_count": 32,
+    "sdk_function_count": 32,
+    "game_function_count": 0,
+    "body_bytes": 4484,
+    "relocation_literal_bytes": 52,
+    "span_bytes": 4536,
+    "closure": "32-function SDK checkpoint"
+  },
+  "inputs": {
+    "catalog": "build/decomp/arm9/catalog.json",
+    "catalog_sha256": "4f92163a9e2f9939a1f85215fffc8fd8daae89da3878a5bdaca986d3505edf19",
+    "target": "build/rom/sections/arm9.bin",
+    "target_sha256": "8bee49eedfb268c79ab371d3d2152c4e25f433d46daecd5dab2c0378a27300aa",
+    "sdk_signatures": "config/sdk-signatures-arm9.json",
+    "sdk_signatures_sha256": "749a9ccc1eed9af681caf24d991623c8195443d2711548c1b835844bf09f3ee7",
+    "patch4_policy": "config/sdk-patch4.json"
+  },
+  "functions": [
+    {
+      "address": "0x0200f9fc",
+      "name": "FS_NormalizePath",
+      "ownership": "sdk",
+      "body_bytes": 732,
+      "body_end": "0x0200fcd8",
+      "next_entry": "0x0200fce4",
+      "body_sha256": "f464be2593d925b2ab750ee1e0646c053105ece5646ccc01d05965ca39c8c341",
+      "extent_sha256": "17e5cfaed4e9f341d13f2a57258bea297cb3f9959f7e7206520c52128dceed37",
+      "gap": {
+        "address": "0x0200fcd8",
+        "bytes": 12,
+        "sha256": "413a8ca7a3a4316da52418d5d188ec9b95c53cecac62b41971b346f2eb1e86ba",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 744,
+        "matched_bytes": 704,
+        "relocation_masked_bytes": 40,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_archive.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200fce4",
+      "name": "FS_InitArchive",
+      "ownership": "sdk",
+      "body_bytes": 36,
+      "body_end": "0x0200fd08",
+      "next_entry": "0x0200fd08",
+      "body_sha256": "965ed0ad99430ce1481c3fe58c2d2385fc370710ce15a5c044cb6e1dceffe23a",
+      "extent_sha256": "965ed0ad99430ce1481c3fe58c2d2385fc370710ce15a5c044cb6e1dceffe23a",
+      "gap": {
+        "address": "0x0200fd08",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 36,
+        "matched_bytes": 32,
+        "relocation_masked_bytes": 4,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_archive.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200fd08",
+      "name": "FS_RegisterArchiveName",
+      "ownership": "sdk",
+      "body_bytes": 244,
+      "body_end": "0x0200fdfc",
+      "next_entry": "0x0200fe08",
+      "body_sha256": "a8e43b56504ce756c5eccd46ed8123bf554628164351bec4a6e372f1b3574e76",
+      "extent_sha256": "a522154529fd668f84f80388b3adbe47dc065c22f583edf2bf87f11c24047de6",
+      "gap": {
+        "address": "0x0200fdfc",
+        "bytes": 12,
+        "sha256": "4f3462bb5d88e67fa933b5563ec5ed9f0a20447fb2c58031773d664ae16778e9",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 256,
+        "matched_bytes": 216,
+        "relocation_masked_bytes": 40,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_archive.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200fe08",
+      "name": "FS_ReleaseArchiveName",
+      "ownership": "sdk",
+      "body_bytes": 164,
+      "body_end": "0x0200feac",
+      "next_entry": "0x0200feb4",
+      "body_sha256": "83cd80fc842bb49d4c556373667eb941b2cc6f77dd4f0d2de0591c9e3e193f5d",
+      "extent_sha256": "db1148ee960ea9d6ed9817385b10f9d977acbcb3212c69fa40c66af12f92e0db",
+      "gap": {
+        "address": "0x0200feac",
+        "bytes": 8,
+        "sha256": "a8e33b66cfdc37db15efb3a85029426b0c8b3ebd4efdec024cd5990a812200b3",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 172,
+        "matched_bytes": 152,
+        "relocation_masked_bytes": 20,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_archive.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200feb4",
+      "name": "FS_GetArchiveName",
+      "ownership": "sdk",
+      "body_bytes": 16,
+      "body_end": "0x0200fec4",
+      "next_entry": "0x0200fec4",
+      "body_sha256": "fa7e46ad589c916960ec164e25f534852cb22b275145fb33df63be90a7d4d11e",
+      "extent_sha256": "fa7e46ad589c916960ec164e25f534852cb22b275145fb33df63be90a7d4d11e",
+      "gap": {
+        "address": "0x0200fec4",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 16,
+        "matched_bytes": 16,
+        "relocation_masked_bytes": 0,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_archive.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200fec4",
+      "name": "FS_MountArchive",
+      "ownership": "sdk",
+      "body_bytes": 72,
+      "body_end": "0x0200ff0c",
+      "next_entry": "0x0200ff0c",
+      "body_sha256": "44eafb452b16d00f5d02e461bff62c7905b1fafb17781690c3fb740a5fd55c50",
+      "extent_sha256": "44eafb452b16d00f5d02e461bff62c7905b1fafb17781690c3fb740a5fd55c50",
+      "gap": {
+        "address": "0x0200ff0c",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 72,
+        "matched_bytes": 64,
+        "relocation_masked_bytes": 8,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_archive.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200ff0c",
+      "name": "FS_UnmountArchive",
+      "ownership": "sdk",
+      "body_bytes": 192,
+      "body_end": "0x0200ffcc",
+      "next_entry": "0x0200ffcc",
+      "body_sha256": "d9ffdd4f790a9e01b165259431e7a74c3452f645ddf6d2dc0c9c015a911b931e",
+      "extent_sha256": "d9ffdd4f790a9e01b165259431e7a74c3452f645ddf6d2dc0c9c015a911b931e",
+      "gap": {
+        "address": "0x0200ffcc",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 192,
+        "matched_bytes": 164,
+        "relocation_masked_bytes": 28,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_archive.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0200ffcc",
+      "name": "FS_SuspendArchive",
+      "ownership": "sdk",
+      "body_bytes": 144,
+      "body_end": "0x0201005c",
+      "next_entry": "0x0201005c",
+      "body_sha256": "8160a8d5f491e689421621ae64bc8db7b19e6f9f69f60c988212e6ce9ef4ccd8",
+      "extent_sha256": "8160a8d5f491e689421621ae64bc8db7b19e6f9f69f60c988212e6ce9ef4ccd8",
+      "gap": {
+        "address": "0x0201005c",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 144,
+        "matched_bytes": 124,
+        "relocation_masked_bytes": 20,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_archive.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0201005c",
+      "name": "FS_ResumeArchive",
+      "ownership": "sdk",
+      "body_bytes": 92,
+      "body_end": "0x020100b8",
+      "next_entry": "0x020100b8",
+      "body_sha256": "74eeed953b901bb90c59dec5fe581dd094a5b817bf41105554b1db57ff319351",
+      "extent_sha256": "74eeed953b901bb90c59dec5fe581dd094a5b817bf41105554b1db57ff319351",
+      "gap": {
+        "address": "0x020100b8",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 92,
+        "matched_bytes": 76,
+        "relocation_masked_bytes": 16,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_archive.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x020100b8",
+      "name": "FS_NotifyArchiveAsyncEnd",
+      "ownership": "sdk",
+      "body_bytes": 108,
+      "body_end": "0x02010124",
+      "next_entry": "0x02010124",
+      "body_sha256": "a27d22659503fbf632d0b904bad67aee912be1da6d0bc27725376ac8db369544",
+      "extent_sha256": "a27d22659503fbf632d0b904bad67aee912be1da6d0bc27725376ac8db369544",
+      "gap": {
+        "address": "0x02010124",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 108,
+        "matched_bytes": 84,
+        "relocation_masked_bytes": 24,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_archive.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010124",
+      "name": "FS_WaitAsync",
+      "ownership": "sdk",
+      "body_bytes": 164,
+      "body_end": "0x020101c8",
+      "next_entry": "0x020101c8",
+      "body_sha256": "a66656c7a257134eb12437ca5febacbe0f50c08004187dd11737bd0ec0a10d39",
+      "extent_sha256": "a66656c7a257134eb12437ca5febacbe0f50c08004187dd11737bd0ec0a10d39",
+      "gap": {
+        "address": "0x020101c8",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 164,
+        "matched_bytes": 140,
+        "relocation_masked_bytes": 24,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_archive.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x020101c8",
+      "name": "FSi_DecrementSjisPosition",
+      "ownership": "sdk",
+      "body_bytes": 64,
+      "body_end": "0x02010208",
+      "next_entry": "0x02010208",
+      "body_sha256": "602ad8654f1cfc0a0048e01569581854fb5e0ff223cab23332843b9fd9df46d1",
+      "extent_sha256": "602ad8654f1cfc0a0048e01569581854fb5e0ff223cab23332843b9fd9df46d1",
+      "gap": {
+        "address": "0x02010208",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 64,
+        "matched_bytes": 64,
+        "relocation_masked_bytes": 0,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010208",
+      "name": "FSi_IncrementSjisPositionToSlash",
+      "ownership": "sdk",
+      "body_bytes": 84,
+      "body_end": "0x0201025c",
+      "next_entry": "0x0201025c",
+      "body_sha256": "b5da9ac59c011ef937ceb8cd759c9cfc9b0dca30829a1264f58459dc96713357",
+      "extent_sha256": "b5da9ac59c011ef937ceb8cd759c9cfc9b0dca30829a1264f58459dc96713357",
+      "gap": {
+        "address": "0x0201025c",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 84,
+        "matched_bytes": 84,
+        "relocation_masked_bytes": 0,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x0201025c",
+      "name": "FSi_DecrementSjisPositionToSlash",
+      "ownership": "sdk",
+      "body_bytes": 52,
+      "body_end": "0x02010290",
+      "next_entry": "0x02010290",
+      "body_sha256": "7c207f09d8e9cef39876a978f841a49f83f6c1b81a043bd204c9a56b3f1ba296",
+      "extent_sha256": "7c207f09d8e9cef39876a978f841a49f83f6c1b81a043bd204c9a56b3f1ba296",
+      "gap": {
+        "address": "0x02010290",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 52,
+        "matched_bytes": 48,
+        "relocation_masked_bytes": 4,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010290",
+      "name": "FSi_TrimSjisTrailingSlash",
+      "ownership": "sdk",
+      "body_bytes": 68,
+      "body_end": "0x020102d4",
+      "next_entry": "0x020102d4",
+      "body_sha256": "5881baeb5ad916b13d60387450fe5b3901601b135b04751264c55ee8fb516506",
+      "extent_sha256": "5881baeb5ad916b13d60387450fe5b3901601b135b04751264c55ee8fb516506",
+      "gap": {
+        "address": "0x020102d4",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 68,
+        "matched_bytes": 60,
+        "relocation_masked_bytes": 8,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x020102d4",
+      "name": "FS_InitFile",
+      "ownership": "sdk",
+      "body_bytes": 44,
+      "body_end": "0x02010300",
+      "next_entry": "0x02010300",
+      "body_sha256": "de45ef6b44de8cbdb4a7803a96ccd7a4317fa7fa7b903aa09afcce3ce3b72da5",
+      "extent_sha256": "de45ef6b44de8cbdb4a7803a96ccd7a4317fa7fa7b903aa09afcce3ce3b72da5",
+      "gap": {
+        "address": "0x02010300",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 44,
+        "matched_bytes": 44,
+        "relocation_masked_bytes": 0,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010300",
+      "name": "FS_CreateFile",
+      "ownership": "sdk",
+      "body_bytes": 116,
+      "body_end": "0x02010374",
+      "next_entry": "0x02010374",
+      "body_sha256": "1aac8e498020a21e0827fec7446fb1e720141a46482081d44f39d563390cd8cf",
+      "extent_sha256": "1aac8e498020a21e0827fec7446fb1e720141a46482081d44f39d563390cd8cf",
+      "gap": {
+        "address": "0x02010374",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 116,
+        "matched_bytes": 104,
+        "relocation_masked_bytes": 12,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010374",
+      "name": "FS_DeleteFile",
+      "ownership": "sdk",
+      "body_bytes": 108,
+      "body_end": "0x020103e0",
+      "next_entry": "0x020103e0",
+      "body_sha256": "61c6e2b2249852307e180d2420ddc49afa1a0c96f37195841fcdfe800cfb5525",
+      "extent_sha256": "61c6e2b2249852307e180d2420ddc49afa1a0c96f37195841fcdfe800cfb5525",
+      "gap": {
+        "address": "0x020103e0",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 108,
+        "matched_bytes": 96,
+        "relocation_masked_bytes": 12,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x020103e0",
+      "name": "FS_GetPathInfo",
+      "ownership": "sdk",
+      "body_bytes": 116,
+      "body_end": "0x02010454",
+      "next_entry": "0x02010454",
+      "body_sha256": "056f4e4d7fb8b934def6873e08ecea2209a939a11161c2ba480262811f04b34a",
+      "extent_sha256": "056f4e4d7fb8b934def6873e08ecea2209a939a11161c2ba480262811f04b34a",
+      "gap": {
+        "address": "0x02010454",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 116,
+        "matched_bytes": 104,
+        "relocation_masked_bytes": 12,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010454",
+      "name": "FS_CreateDirectory",
+      "ownership": "sdk",
+      "body_bytes": 116,
+      "body_end": "0x020104c8",
+      "next_entry": "0x020104c8",
+      "body_sha256": "aa38376adecdf4bda13f95e2851709b53659e4817f2fb9a8dc4e55ec85f5935a",
+      "extent_sha256": "aa38376adecdf4bda13f95e2851709b53659e4817f2fb9a8dc4e55ec85f5935a",
+      "gap": {
+        "address": "0x020104c8",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 116,
+        "matched_bytes": 104,
+        "relocation_masked_bytes": 12,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x020104c8",
+      "name": "FS_DeleteDirectory",
+      "ownership": "sdk",
+      "body_bytes": 108,
+      "body_end": "0x02010534",
+      "next_entry": "0x02010534",
+      "body_sha256": "e28b3b58effeef36e4a229d88b616307eb5975f37b428ed5fd69b99f2cfb18b4",
+      "extent_sha256": "e28b3b58effeef36e4a229d88b616307eb5975f37b428ed5fd69b99f2cfb18b4",
+      "gap": {
+        "address": "0x02010534",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 108,
+        "matched_bytes": 96,
+        "relocation_masked_bytes": 12,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010534",
+      "name": "FSi_GetFullPath",
+      "ownership": "sdk",
+      "body_bytes": 128,
+      "body_end": "0x020105b4",
+      "next_entry": "0x020105b4",
+      "body_sha256": "cdd995e12c465598109bb7fc06eecef0a3d6b7c6aed642797c9c934623d544fa",
+      "extent_sha256": "cdd995e12c465598109bb7fc06eecef0a3d6b7c6aed642797c9c934623d544fa",
+      "gap": {
+        "address": "0x020105b4",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 128,
+        "matched_bytes": 104,
+        "relocation_masked_bytes": 24,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x020105b4",
+      "name": "FSi_ComplementDirectory",
+      "ownership": "sdk",
+      "body_bytes": 292,
+      "body_end": "0x020106d8",
+      "next_entry": "0x020106d8",
+      "body_sha256": "8b020ba20051c72bee3e5827425b4c438217dd39005a455dab87b7b2b4d678d4",
+      "extent_sha256": "8b020ba20051c72bee3e5827425b4c438217dd39005a455dab87b7b2b4d678d4",
+      "gap": {
+        "address": "0x020106d8",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 292,
+        "matched_bytes": 260,
+        "relocation_masked_bytes": 32,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x020106d8",
+      "name": "FS_CreateDirectoryAuto",
+      "ownership": "sdk",
+      "body_bytes": 80,
+      "body_end": "0x02010728",
+      "next_entry": "0x02010728",
+      "body_sha256": "d1f005e92dea579003a0e989ac8b3a5276129541c2203431bc85d4f94d62f5aa",
+      "extent_sha256": "d1f005e92dea579003a0e989ac8b3a5276129541c2203431bc85d4f94d62f5aa",
+      "gap": {
+        "address": "0x02010728",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "selected_signature_name": "FS_CreateDirectoryAuto",
+        "boundary_candidate_count": 2,
+        "boundary_candidate_names": [
+          "FS_CreateDirectoryAuto",
+          "FS_CreateFileAuto"
+        ],
+        "selection_evidence": "The recovered body calls FS_CreateDirectory and FS_DeleteDirectoryAuto.",
+        "signature_size": 80,
+        "matched_bytes": 68,
+        "relocation_masked_bytes": 12,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010728",
+      "name": "FS_DeleteDirectoryAuto",
+      "ownership": "sdk",
+      "body_bytes": 480,
+      "body_end": "0x02010908",
+      "next_entry": "0x02010910",
+      "body_sha256": "86c60e40086daa258a00a093d04f1b3045583a33407f752d5921e685ba4816c5",
+      "extent_sha256": "42f5bafc493b8e8ea5c08cfb811c854316137006f00811207aa69b9c8c1cca7e",
+      "gap": {
+        "address": "0x02010908",
+        "bytes": 8,
+        "sha256": "6d34dd20f73449a693e32f1455bbc78191c61e10d30146ef650c78104a5b3d5c",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 488,
+        "matched_bytes": 416,
+        "relocation_masked_bytes": 72,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010910",
+      "name": "FS_GetArchiveResource",
+      "ownership": "sdk",
+      "body_bytes": 96,
+      "body_end": "0x02010970",
+      "next_entry": "0x02010970",
+      "body_sha256": "ea2b53c832cf604d20a9ed62a20b27d19db4a65afff7ff9b5d06954788f2f855",
+      "extent_sha256": "ea2b53c832cf604d20a9ed62a20b27d19db4a65afff7ff9b5d06954788f2f855",
+      "gap": {
+        "address": "0x02010970",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 96,
+        "matched_bytes": 84,
+        "relocation_masked_bytes": 12,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010970",
+      "name": "FSi_GetSpaceToCreateDirectoryEntries",
+      "ownership": "sdk",
+      "body_bytes": 176,
+      "body_end": "0x02010a20",
+      "next_entry": "0x02010a28",
+      "body_sha256": "39c791f33243e001dfd5f5c40ef4a4b6548ccc4abd100f0663a0e89b08e96100",
+      "extent_sha256": "15b8f5cc0ca7709bd8fed562625d5b6eb3ca9297c0758c50b4c3bf2ff1a01288",
+      "gap": {
+        "address": "0x02010a20",
+        "bytes": 8,
+        "sha256": "f9b0c0de5272e7a500450299126b182b1d3eb125bb2aa7d515c2fa5e8ec05457",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 184,
+        "matched_bytes": 172,
+        "relocation_masked_bytes": 12,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010a28",
+      "name": "FS_HasEnoughSpaceToCreateFile",
+      "ownership": "sdk",
+      "body_bytes": 132,
+      "body_end": "0x02010aac",
+      "next_entry": "0x02010aac",
+      "body_sha256": "6dea9b87366b96bc9fb64d54cc32c6bcf8c09b308b5969423fd30820db044b94",
+      "extent_sha256": "6dea9b87366b96bc9fb64d54cc32c6bcf8c09b308b5969423fd30820db044b94",
+      "gap": {
+        "address": "0x02010aac",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 132,
+        "matched_bytes": 124,
+        "relocation_masked_bytes": 8,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010aac",
+      "name": "FS_SetFileLength",
+      "ownership": "sdk",
+      "body_bytes": 48,
+      "body_end": "0x02010adc",
+      "next_entry": "0x02010adc",
+      "body_sha256": "1c50dab1b2b8bb6f60dcdc9ce6ffc901835c004551592440da54b40385bbe61e",
+      "extent_sha256": "1c50dab1b2b8bb6f60dcdc9ce6ffc901835c004551592440da54b40385bbe61e",
+      "gap": {
+        "address": "0x02010adc",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 48,
+        "matched_bytes": 44,
+        "relocation_masked_bytes": 4,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010adc",
+      "name": "FS_OpenFileDirect",
+      "ownership": "sdk",
+      "body_bytes": 64,
+      "body_end": "0x02010b1c",
+      "next_entry": "0x02010b1c",
+      "body_sha256": "b4c9f15e348e8e12c1f5b65892ec7fbd96ab62fdd502a165a49967558aa3d057",
+      "extent_sha256": "b4c9f15e348e8e12c1f5b65892ec7fbd96ab62fdd502a165a49967558aa3d057",
+      "gap": {
+        "address": "0x02010b1c",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 64,
+        "matched_bytes": 60,
+        "relocation_masked_bytes": 4,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010b1c",
+      "name": "FS_OpenFileEx",
+      "ownership": "sdk",
+      "body_bytes": 132,
+      "body_end": "0x02010ba0",
+      "next_entry": "0x02010ba0",
+      "body_sha256": "7473cca53cd40ef1bc1b0bf0470a133b895180ee62e00790ad3789f19ba3fe5e",
+      "extent_sha256": "7473cca53cd40ef1bc1b0bf0470a133b895180ee62e00790ad3789f19ba3fe5e",
+      "gap": {
+        "address": "0x02010ba0",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "kind": "none"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 132,
+        "matched_bytes": 120,
+        "relocation_masked_bytes": 12,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    },
+    {
+      "address": "0x02010ba0",
+      "name": "FS_CloseFile",
+      "ownership": "sdk",
+      "body_bytes": 16,
+      "body_end": "0x02010bb0",
+      "next_entry": "0x02010bb4",
+      "body_sha256": "698276ccf9c31e4fd44024b91632b8f3186a9c9c4200f43fe201d45e4e21ae0c",
+      "extent_sha256": "54bd85b8c6ec31933a9f7569cb80d8a593e1fbb74e308d96bb88a8f91cf6086f",
+      "gap": {
+        "address": "0x02010bb0",
+        "bytes": 4,
+        "sha256": "9101671f2921d7ce220c12e78e422f751a8dc4f6e5ef210722f9df02a76d6133",
+        "kind": "sdk_relocation_literals"
+      },
+      "provenance": {
+        "kind": "existing_sdk_signature",
+        "signature_size": 20,
+        "matched_bytes": 16,
+        "relocation_masked_bytes": 4,
+        "sources": [
+          {
+            "library": "libfs.TWL.LTD.a",
+            "object": "fs_file.o"
+          }
+        ]
+      }
+    }
+  ]
+}
