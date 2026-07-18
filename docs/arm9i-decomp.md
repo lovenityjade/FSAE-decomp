@@ -51,6 +51,14 @@ Ce format vient directement du modèle `include/twl/specfiles/ARM9-TS.lcf.templa
 
 Les sept archives nécessaires et leurs SHA-256 sont épinglées dans `config/build/arm9i.json`. Elles restent sous `TWLSDK_ROOT`.
 
+L'outil public `tools/linker/arm9i_sdk_prepare.py` matérialise cette frontière
+sans copier les archives. La commande `inventory` vérifie leurs hashes et la
+présence non ambiguë des 15 membres requis, puis écrit uniquement leurs noms,
+tailles et SHA-256 sous `build/linker/arm9i-sdk/`. La commande `extract` crée un
+jeu adressé par contenu contenant exactement ces membres. Aucun chemin absolu
+du SDK, nom de membre non sélectionné ou contenu d'objet n'apparaît dans les
+rapports; tous les objets extraits restent sous `build/` et hors du dépôt.
+
 ## Les 1 232 octets auparavant non couverts
 
 La première passe ne reconnaissait que les fonctions possédant une ancre unique d'au moins huit octets après masquage des relocations. Les trous ne sont pas du glue de jeu :
@@ -90,6 +98,9 @@ Le seul crédit matching actuel vient de `src/arm9i/layout.S`. Cet assembleur é
 
 ```sh
 export TWLSDK_ROOT=/chemin/vers/TwlSDK
+python3 tools/linker/arm9i_sdk_prepare.py inventory
+python3 tools/linker/arm9i_sdk_prepare.py extract
+python3 tools/linker/arm9i_sdk_prepare.py validate
 mkdir -p build/arm9i
 CCACHE_DISABLE=1 clang --target=arm-none-eabi \
   -c src/arm9i/layout.S -o build/arm9i/layout.o

@@ -1,6 +1,6 @@
 # ARM9/ARM9i incremental linker
 
-This directory has two deliberately separate pipelines.
+This directory has three deliberately separate pipelines.
 
 `incremental.py` is a byte-level proof and selection tool. Its `compare`
 command reconstructs container images from exact source/SDK units plus private
@@ -14,6 +14,13 @@ an LSF and response file, runs the private SDK `makelcf` tool and then invokes
 CodeWarrior `mwldarm`. Container regions marked `generated` in
 `config/linker/units.v1.json` are not wrapped as inputs: the SDK LCF template
 must generate the ARM9 autoload table and the ARM9i LTD prefix/table.
+
+`arm9i_sdk_prepare.py` is the private-input boundary for ARM9i SDK objects. It
+reads the public selection in `config/build/arm9i.json`, verifies each selected
+archive by SHA-256, inventories only the required archive members and can
+extract those members into a content-addressed set below `build/linker/`.
+Neither the external SDK root nor unselected member names or contents are
+recorded in its reports.
 
 ## Prerequisites
 
@@ -53,6 +60,33 @@ python3 tools/linker/incremental.py compare
 `compare.v1.json` distinguishes reconstruction equality from credited equality.
 Only exact promoted source/SDK units contribute to `credited_matching_bytes`;
 `fallback_credited_bytes` is always zero.
+
+Verify the configured ARM9i archives and generate a metadata-only inventory:
+
+```sh
+python3 tools/linker/arm9i_sdk_prepare.py inventory \
+  --sdk-root "$TWLSDK_ROOT"
+```
+
+Extract exactly the 15 unique members selected by the current ARM9i plan:
+
+```sh
+python3 tools/linker/arm9i_sdk_prepare.py extract \
+  --sdk-root "$TWLSDK_ROOT"
+```
+
+The generated `inventory.v1.json` contains only configured archive/member
+names, sizes and SHA-256 metadata. `extraction.v1.json` points to the selected
+content-addressed set under `build/linker/arm9i-sdk/sets/`. The tool rejects
+archive hash mismatches, absent or duplicate selected members, archive paths
+escaping the SDK root and any output path resolving outside this repository's
+`build/` directory. It never copies a complete archive.
+
+Validate an existing extracted set without reading the external SDK again:
+
+```sh
+python3 tools/linker/arm9i_sdk_prepare.py validate
+```
 
 Build and validate the production ELF input objects, LSF and response:
 

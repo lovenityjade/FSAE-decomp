@@ -50,6 +50,13 @@ def source_addresses(paths: Iterable[Path]) -> set[int]:
     return addresses
 
 
+def semantic_source_paths(source_dir: Path) -> list[Path]:
+    """Return reviewed semantic units, excluding address-named raw drafts."""
+    return sorted(
+        path for path in source_dir.rglob("*.c") if not path.name.endswith("_raw.c")
+    )
+
+
 def measure(catalog: dict[str, Any], addresses: set[int], game_total_bytes: int) -> dict[str, int]:
     summary = catalog.get("summary")
     functions = catalog.get("functions")
@@ -152,7 +159,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     root = args.root.resolve()
     catalog = read_json(resolve(root, args.catalog))
     source_dir = resolve(root, args.source_dir)
-    sources = sorted(source_dir.rglob("*.c"))
+    sources = semantic_source_paths(source_dir)
     metrics = measure(catalog, source_addresses(sources), args.game_total_bytes)
     timestamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     value = evidence(metrics, len(sources), timestamp)

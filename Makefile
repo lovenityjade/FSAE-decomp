@@ -2,6 +2,7 @@ PYTHON ?= python3
 ORCHESTRATOR := $(PYTHON) tools/build/orchestrate.py
 LINKER_INCREMENTAL := $(PYTHON) tools/linker/incremental.py
 CODEWARRIOR_DRIVER := $(PYTHON) tools/linker/codewarrior_driver.py
+ARM9I_SDK_PREPARE := $(PYTHON) tools/linker/arm9i_sdk_prepare.py
 
 ROM ?= $(FSAE_ROM)
 BIOS7 ?= $(FSAE_BIOS7)
@@ -34,7 +35,8 @@ LINKER_ENV = TWLSDK_ROOT="$(TWLSDK)" \
 .DEFAULT_GOAL := help
 .PHONY: help diagnose prepare map validate match progress-validate serve test \
 	public-audit public-test link-bootstrap link-probe link-compare link-batch \
-	link-prepare link-real link-smoke windows-check windows-sync windows-build
+	link-prepare link-real link-smoke arm9i-sdk-inventory arm9i-sdk-extract \
+	arm9i-sdk-validate windows-check windows-sync windows-build
 
 help:
 	@echo "Four Swords Anniversary public orchestration"
@@ -56,6 +58,9 @@ help:
 	@echo "  make link-prepare      Prepare validated ARM ELF objects and production LSF"
 	@echo "  make link-real         Invoke the licensed CodeWarrior production linker"
 	@echo "  make link-smoke        Exercise the licensed CodeWarrior toolchain on fixtures"
+	@echo "  make arm9i-sdk-inventory  Verify required external SDK archive members"
+	@echo "  make arm9i-sdk-extract    Stage only selected ARM9i SDK members under build/"
+	@echo "  make arm9i-sdk-validate   Validate the staged ARM9i SDK member set"
 	@echo "  make windows-check     Check an explicitly configured Windows host"
 	@echo "  make windows-sync      Sync public files to an explicitly configured host"
 	@echo "  make windows-build     Run an explicit command on that host"
@@ -121,6 +126,15 @@ link-real:
 
 link-smoke:
 	$(LINKER_ENV) $(CODEWARRIOR_DRIVER) smoke $(ARGS)
+
+arm9i-sdk-inventory:
+	$(LINKER_ENV) $(ARM9I_SDK_PREPARE) inventory $(ARGS)
+
+arm9i-sdk-extract:
+	$(LINKER_ENV) $(ARM9I_SDK_PREPARE) extract $(ARGS)
+
+arm9i-sdk-validate:
+	$(ARM9I_SDK_PREPARE) validate $(ARGS)
 
 windows-check:
 	$(WINDOWS_ENV) $(ORCHESTRATOR) windows-check $(ARGS)

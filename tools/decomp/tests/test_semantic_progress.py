@@ -49,6 +49,17 @@ class SemanticProgressTests(unittest.TestCase):
                 {0x02012340, 0x02123456},
             )
 
+    def test_raw_matching_drafts_are_not_semantic_progress(self) -> None:
+        import tempfile
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            semantic = root / "reviewed.c"
+            raw = root / "arm9_middle_0206402c_raw.c"
+            semantic.write_text("/* 0x02012340 */\n", encoding="utf-8")
+            raw.write_text("/* 0x0206402c */\n", encoding="utf-8")
+            self.assertEqual(semantic_progress.semantic_source_paths(root), [semantic])
+
 
 if __name__ == "__main__":
     unittest.main()
