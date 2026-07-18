@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-18T08:25:03Z",
+  "generated_at": "2026-07-18T08:29:40Z",
   "build": {
-    "id": "arm9-raw-0206d8f0-32func",
-    "commit": "eecfd81e214ee8bf0615084425e440132fea1137",
-    "published_at": "2026-07-18T08:25:03Z",
+    "id": "arm9-runtime-support-0206e898",
+    "commit": "835b2c4f0e5d2f812f6040b880d3f8afb9ab4e51",
+    "published_at": "2026-07-18T08:29:40Z",
     "last_error": null
   },
   "project": {
@@ -13,19 +13,19 @@
   },
   "refresh_seconds": 5,
   "overall": {
-    "percent": 75.67,
+    "percent": 75.93,
     "basis": "bytes",
     "metrics": {
       "units": {
-        "covered": 3701,
-        "total": 3701
+        "covered": 3703,
+        "total": 3703
       },
       "functions": {
-        "covered": 7883,
+        "covered": 7913,
         "total": 10949
       },
       "bytes": {
-        "covered": 1260912,
+        "covered": 1265278,
         "total": 1666308
       }
     },
@@ -48,19 +48,19 @@
       }
     },
     "analysis": {
-      "percent": 75.67,
+      "percent": 75.93,
       "basis": "bytes",
       "metrics": {
         "units": {
-          "covered": 3701,
-          "total": 3701
+          "covered": 3703,
+          "total": 3703
         },
         "functions": {
-          "covered": 7883,
+          "covered": 7913,
           "total": 10949
         },
         "bytes": {
-          "covered": 1260912,
+          "covered": 1265278,
           "total": 1666308
         }
       }
@@ -69,10 +69,10 @@
       "source": 4,
       "sdk": 2,
       "fallback": 0,
-      "unmatched": 3701
+      "unmatched": 3703
     },
     "pipeline_units": {
-      "probe": 3707,
+      "probe": 3709,
       "promoted": 6,
       "rejected": 0
     },
@@ -87,19 +87,19 @@
       "include_in_total": true,
       "optional": false,
       "available": true,
-      "percent": 66.03,
+      "percent": 66.4,
       "basis": "bytes",
       "metrics": {
         "units": {
-          "covered": 1159,
-          "total": 1159
+          "covered": 1161,
+          "total": 1161
         },
         "functions": {
-          "covered": 5214,
+          "covered": 5244,
           "total": 8280
         },
         "bytes": {
-          "covered": 788077,
+          "covered": 792443,
           "total": 1193472
         }
       },
@@ -123,19 +123,19 @@
         "evidence_records": 0
       },
       "analysis": {
-        "percent": 66.03,
+        "percent": 66.4,
         "basis": "bytes",
         "metrics": {
           "units": {
-            "covered": 1159,
-            "total": 1159
+            "covered": 1161,
+            "total": 1161
           },
           "functions": {
-            "covered": 5214,
+            "covered": 5244,
             "total": 8280
           },
           "bytes": {
-            "covered": 788077,
+            "covered": 792443,
             "total": 1193472
           }
         },
@@ -145,10 +145,10 @@
         "source": 0,
         "sdk": 0,
         "fallback": 0,
-        "unmatched": 1159
+        "unmatched": 1161
       },
       "pipeline_units": {
-        "probe": 1159,
+        "probe": 1161,
         "promoted": 0,
         "rejected": 0
       },
@@ -457,19 +457,19 @@
       "include_in_total": false,
       "optional": true,
       "available": true,
-      "percent": 62.55,
+      "percent": 62.95,
       "basis": "bytes",
       "metrics": {
         "units": {
-          "covered": 188,
-          "total": 188
+          "covered": 190,
+          "total": 190
         },
         "functions": {
-          "covered": 4272,
+          "covered": 4302,
           "total": 7338
         },
         "bytes": {
-          "covered": 676983,
+          "covered": 681349,
           "total": 1082378
         }
       },
@@ -493,19 +493,19 @@
         "evidence_records": 0
       },
       "analysis": {
-        "percent": 62.55,
+        "percent": 62.95,
         "basis": "bytes",
         "metrics": {
           "units": {
-            "covered": 188,
-            "total": 188
+            "covered": 190,
+            "total": 190
           },
           "functions": {
-            "covered": 4272,
+            "covered": 4302,
             "total": 7338
           },
           "bytes": {
-            "covered": 676983,
+            "covered": 681349,
             "total": 1082378
           }
         },
@@ -515,10 +515,10 @@
         "source": 0,
         "sdk": 0,
         "fallback": 0,
-        "unmatched": 188
+        "unmatched": 190
       },
       "pipeline_units": {
-        "probe": 188,
+        "probe": 190,
         "promoted": 0,
         "rejected": 0
       },
@@ -608,7 +608,7 @@
       "section": "arm9",
       "task": "Récupération du pilote de menu glyphes 0x020AEA40 (1504 octets)",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 9675,
+      "age_seconds": 9952,
       "stale": true
     },
     {
@@ -619,7 +619,7 @@
       "section": "arm9",
       "task": "Récupération sémantique et tests de la fonction 0x020B19D8 (1944 octets) terminés",
       "updated_at": "2026-07-18T06:19:35Z",
-      "age_seconds": 7528,
+      "age_seconds": 7805,
       "stale": true
     },
     {
@@ -630,7 +630,7 @@
       "section": "arm9",
       "task": "B2190-B2A90: analyse bloc contigu, 13 fonctions",
       "updated_at": "2026-07-18T06:07:10Z",
-      "age_seconds": 8273,
+      "age_seconds": 8550,
       "stale": true
     },
     {
@@ -641,18 +641,18 @@
       "section": "arm9",
       "task": "Lot glyphes AE280-AEA17: 19 fonctions / 1768 octets; intégration des gros lots agents",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 9675,
+      "age_seconds": 9952,
       "stale": true
     }
   ],
   "recent_changes": [
     {
       "id": "evidence:coordinator-arm9-ghidra-catalog",
-      "summary": "Ghidra exported 3669 game candidates; 603 functions / 109284 body bytes now have reviewed semantic C",
+      "summary": "Ghidra exported 3669 game candidates; 633 functions / 114392 body bytes now have reviewed semantic C",
       "section": "arm9",
       "worker": "coordinator",
       "track": "analysis",
-      "updated_at": "2026-07-18T08:10:26Z",
+      "updated_at": "2026-07-18T08:28:41Z",
       "source": "evidence",
       "provenance": "unmatched",
       "matching_credited": false
