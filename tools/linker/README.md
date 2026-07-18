@@ -1,6 +1,6 @@
 # ARM9/ARM9i incremental linker
 
-This directory has three deliberately separate pipelines.
+This directory has four deliberately separate pipelines.
 
 `incremental.py` is a byte-level proof and selection tool. Its `compare`
 command reconstructs container images from exact source/SDK units plus private
@@ -21,6 +21,15 @@ archive by SHA-256, inventories only the required archive members and can
 extract those members into a content-addressed set below `build/linker/`.
 Neither the external SDK root nor unselected member names or contents are
 recorded in its reports.
+
+`source_provider.py` is the ARM9 public-source boundary. It plans deterministic
+CodeWarrior compile commands for one promotion batch capped at 16 KiB, verifies
+the resulting relocatable objects, and stages only separately linked raw unit
+candidates into `build/linker/source/`. A compiler object is never treated as
+a ROM unit. An atomic generated registry validates and preserves managed source
+artifacts across cumulative batches while rejecting mutations and unmanaged
+files. `stage` runs `probe`, never `compare`, and always reports zero credited
+bytes. See [arm9-source-provider.md](../../docs/arm9-source-provider.md).
 
 ## Prerequisites
 

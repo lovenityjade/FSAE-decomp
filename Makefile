@@ -3,6 +3,7 @@ ORCHESTRATOR := $(PYTHON) tools/build/orchestrate.py
 LINKER_INCREMENTAL := $(PYTHON) tools/linker/incremental.py
 CODEWARRIOR_DRIVER := $(PYTHON) tools/linker/codewarrior_driver.py
 ARM9I_SDK_PREPARE := $(PYTHON) tools/linker/arm9i_sdk_prepare.py
+ARM9_SOURCE_PROVIDER := $(PYTHON) tools/linker/source_provider.py
 
 ROM ?= $(FSAE_ROM)
 BIOS7 ?= $(FSAE_BIOS7)
@@ -20,6 +21,8 @@ ARM_OBJECT_COMPILER ?= $(FSAE_ARM_OBJECT_COMPILER)
 MAKELCF ?= $(FSAE_MAKELCF)
 MWCCARM ?= $(FSAE_MWCCARM)
 MWLDARM ?= $(FSAE_MWLDARM)
+ARM9_SOURCE_PROMOTIONS ?= $(FSAE_ARM9_SOURCE_PROMOTIONS)
+ARM9_SOURCE_CANDIDATES ?= build/linker/source-provider/candidates
 
 PRIVATE_INPUT_ENV = FSAE_ROM="$(ROM)" FSAE_BIOS7="$(BIOS7)" TWLTOOL_ZIP="$(TWLTOOL)"
 WINDOWS_ENV = FSAE_WINDOWS_HOST="$(WINDOWS_HOST)" \
@@ -36,7 +39,8 @@ LINKER_ENV = TWLSDK_ROOT="$(TWLSDK)" \
 .PHONY: help diagnose prepare map validate match progress-validate serve test \
 	public-audit public-test link-bootstrap link-probe link-compare link-batch \
 	link-prepare link-real link-smoke arm9i-sdk-inventory arm9i-sdk-extract \
-	arm9i-sdk-validate windows-check windows-sync windows-build
+	arm9i-sdk-validate arm9-source-plan arm9-source-compile arm9-source-stage \
+	windows-check windows-sync windows-build
 
 help:
 	@echo "Four Swords Anniversary public orchestration"
@@ -61,6 +65,9 @@ help:
 	@echo "  make arm9i-sdk-inventory  Verify required external SDK archive members"
 	@echo "  make arm9i-sdk-extract    Stage only selected ARM9i SDK members under build/"
 	@echo "  make arm9i-sdk-validate   Validate the staged ARM9i SDK member set"
+	@echo "  make arm9-source-plan     Plan one <=16 KiB public ARM9 source batch"
+	@echo "  make arm9-source-compile  Compile the planned C inputs with mwccarm"
+	@echo "  make arm9-source-stage    Stage linked raw units and run probe only"
 	@echo "  make windows-check     Check an explicitly configured Windows host"
 	@echo "  make windows-sync      Sync public files to an explicitly configured host"
 	@echo "  make windows-build     Run an explicit command on that host"
@@ -135,6 +142,21 @@ arm9i-sdk-extract:
 
 arm9i-sdk-validate:
 	$(ARM9I_SDK_PREPARE) validate $(ARGS)
+
+arm9-source-plan:
+	test -n "$(ARM9_SOURCE_PROMOTIONS)"
+	$(ARM9_SOURCE_PROVIDER) plan --promotions "$(ARM9_SOURCE_PROMOTIONS)" $(ARGS)
+
+arm9-source-compile:
+	test -n "$(ARM9_SOURCE_PROMOTIONS)"
+	MWCCARM="$(MWCCARM)" $(ARM9_SOURCE_PROVIDER) compile \
+		--promotions "$(ARM9_SOURCE_PROMOTIONS)" $(ARGS)
+
+arm9-source-stage:
+	test -n "$(ARM9_SOURCE_PROMOTIONS)"
+	$(ARM9_SOURCE_PROVIDER) stage \
+		--promotions "$(ARM9_SOURCE_PROMOTIONS)" \
+		--candidate-root "$(ARM9_SOURCE_CANDIDATES)" $(ARGS)
 
 windows-check:
 	$(WINDOWS_ENV) $(ORCHESTRATOR) windows-check $(ARGS)
