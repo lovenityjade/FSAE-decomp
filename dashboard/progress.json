@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-18T07:41:51Z",
+  "generated_at": "2026-07-18T07:50:09Z",
   "build": {
-    "id": "arm9-02061818-31f-8848b",
-    "commit": "59cc0efc4405753c02642daf6fdabad3a99c0807",
-    "published_at": "2026-07-18T07:41:51Z",
+    "id": "arm9-0206402c-sdk-arm9i",
+    "commit": "1306a6857e7e01d336bfa923afbb49782370a4e3",
+    "published_at": "2026-07-18T07:50:09Z",
     "last_error": null
   },
   "project": {
@@ -17,8 +17,8 @@
     "basis": "bytes",
     "metrics": {
       "units": {
-        "covered": 3694,
-        "total": 3694
+        "covered": 3693,
+        "total": 3693
       },
       "functions": {
         "covered": 7823,
@@ -52,8 +52,8 @@
       "basis": "bytes",
       "metrics": {
         "units": {
-          "covered": 3694,
-          "total": 3694
+          "covered": 3693,
+          "total": 3693
         },
         "functions": {
           "covered": 7823,
@@ -69,10 +69,10 @@
       "source": 4,
       "sdk": 2,
       "fallback": 0,
-      "unmatched": 3694
+      "unmatched": 3693
     },
     "pipeline_units": {
-      "probe": 3700,
+      "probe": 3699,
       "promoted": 6,
       "rejected": 0
     },
@@ -91,8 +91,8 @@
       "basis": "bytes",
       "metrics": {
         "units": {
-          "covered": 1152,
-          "total": 1152
+          "covered": 1151,
+          "total": 1151
         },
         "functions": {
           "covered": 5154,
@@ -127,8 +127,8 @@
         "basis": "bytes",
         "metrics": {
           "units": {
-            "covered": 1152,
-            "total": 1152
+            "covered": 1151,
+            "total": 1151
           },
           "functions": {
             "covered": 5154,
@@ -145,10 +145,10 @@
         "source": 0,
         "sdk": 0,
         "fallback": 0,
-        "unmatched": 1152
+        "unmatched": 1151
       },
       "pipeline_units": {
-        "probe": 1152,
+        "probe": 1151,
         "promoted": 0,
         "rejected": 0
       },
@@ -461,8 +461,8 @@
       "basis": "bytes",
       "metrics": {
         "units": {
-          "covered": 181,
-          "total": 181
+          "covered": 180,
+          "total": 180
         },
         "functions": {
           "covered": 4212,
@@ -497,8 +497,8 @@
         "basis": "bytes",
         "metrics": {
           "units": {
-            "covered": 181,
-            "total": 181
+            "covered": 180,
+            "total": 180
           },
           "functions": {
             "covered": 4212,
@@ -515,10 +515,10 @@
         "source": 0,
         "sdk": 0,
         "fallback": 0,
-        "unmatched": 181
+        "unmatched": 180
       },
       "pipeline_units": {
-        "probe": 181,
+        "probe": 180,
         "promoted": 0,
         "rejected": 0
       },
@@ -608,7 +608,7 @@
       "section": "arm9",
       "task": "Récupération du pilote de menu glyphes 0x020AEA40 (1504 octets)",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 7083,
+      "age_seconds": 7581,
       "stale": true
     },
     {
@@ -619,7 +619,7 @@
       "section": "arm9",
       "task": "Récupération sémantique et tests de la fonction 0x020B19D8 (1944 octets) terminés",
       "updated_at": "2026-07-18T06:19:35Z",
-      "age_seconds": 4936,
+      "age_seconds": 5434,
       "stale": true
     },
     {
@@ -630,7 +630,7 @@
       "section": "arm9",
       "task": "B2190-B2A90: analyse bloc contigu, 13 fonctions",
       "updated_at": "2026-07-18T06:07:10Z",
-      "age_seconds": 5681,
+      "age_seconds": 6179,
       "stale": true
     },
     {
@@ -641,7 +641,7 @@
       "section": "arm9",
       "task": "Lot glyphes AE280-AEA17: 19 fonctions / 1768 octets; intégration des gros lots agents",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 7083,
+      "age_seconds": 7581,
       "stale": true
     }
   ],
@@ -652,10 +652,26 @@
       "section": "arm9",
       "worker": "coordinator",
       "track": "analysis",
-      "updated_at": "2026-07-18T07:41:09Z",
+      "updated_at": "2026-07-18T07:48:53Z",
       "source": "evidence",
       "provenance": "unmatched",
       "matching_credited": false
+    },
+    {
+      "id": "change-028e71549f69",
+      "summary": "Bloc ARM9 0x0206402C: 32 fonctions / 5080 octets de corps et 2904 octets de pools vérifiés; linkage en attente",
+      "section": "arm9",
+      "worker": "progress-site",
+      "updated_at": "2026-07-18T07:48:05Z",
+      "source": "change"
+    },
+    {
+      "id": "change-c5fb0f2c267a",
+      "summary": "TwlSDK 5.5 patch4 validé; 15 objets ARM9i requis extraits depuis 7 archives sous build/",
+      "section": "arm9i",
+      "worker": "binary-map",
+      "updated_at": "2026-07-18T07:48:05Z",
+      "source": "change"
     },
     {
       "id": "change-9fa7f525025d",
@@ -728,29 +744,13 @@
       "worker": "coordinator",
       "updated_at": "2026-07-18T04:43:29Z",
       "source": "change"
-    },
-    {
-      "id": "ghidra-datalink-manualtoc-items-423",
-      "summary": "Huit symboles ARM9 finalisés sans linking: Game_ChangeDatalinkState 0x020AC038 sur 632 octets, wrappers Datalink resource 0x020AC3D0/0x020AC40C sur 80 octets, helpers ItemsPanel free 0x020B9350/0x020B9368 sur 48 octets et trois factories ManualToc 0x020BA71C/0x020BA774/0x020BA7E0 sur 196 octets; tests hôte/ROM/ARM946E-S validés, Ghidra appliqué puis dry-run idempotent à 423 symboles",
-      "section": "arm9",
-      "worker": "coordinator",
-      "updated_at": "2026-07-18T04:29:30Z",
-      "source": "change"
-    },
-    {
-      "id": "ghidra-glyph-datalink-items-415",
-      "summary": "Trois blocs ARM9 finalisés sans linking: NtmvM2dGlyphRenderer_DrawBitmap_020b64fc sur 872 octets, Game_CommitDatalinkScreenUpdate 0x020AC308 sur 192 octets et NtmvM2dItemsPanel_Configure 0x020B8F68 sur 744 octets; ROM, hôte et ARM946E-S validés, Ghidra appliqué puis dry-run idempotent à 415 symboles",
-      "section": "arm9",
-      "worker": "coordinator",
-      "updated_at": "2026-07-18T04:17:20Z",
-      "source": "change"
     }
   ],
   "issues": [],
   "sources": {
     "evidence": 9,
     "workers": 4,
-    "changes": 138,
+    "changes": 140,
     "legacy_inputs": 4,
     "matching_linked": 3,
     "matching_rejected": 0,
