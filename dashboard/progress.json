@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-18T07:55:07Z",
+  "generated_at": "2026-07-18T08:00:34Z",
   "build": {
-    "id": "arm9-02007f14-32f-10112b",
-    "commit": "7933920765bfa881303d0d73f5825068c0ab440e",
-    "published_at": "2026-07-18T07:55:07Z",
+    "id": "arm9-02067f94-32f-4452b",
+    "commit": "14711ff82230453a37cf84cead7caee6b44b08b1",
+    "published_at": "2026-07-18T08:00:34Z",
     "last_error": null
   },
   "project": {
@@ -608,7 +608,7 @@
       "section": "arm9",
       "task": "Récupération du pilote de menu glyphes 0x020AEA40 (1504 octets)",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 7879,
+      "age_seconds": 8206,
       "stale": true
     },
     {
@@ -619,7 +619,7 @@
       "section": "arm9",
       "task": "Récupération sémantique et tests de la fonction 0x020B19D8 (1944 octets) terminés",
       "updated_at": "2026-07-18T06:19:35Z",
-      "age_seconds": 5732,
+      "age_seconds": 6059,
       "stale": true
     },
     {
@@ -630,7 +630,7 @@
       "section": "arm9",
       "task": "B2190-B2A90: analyse bloc contigu, 13 fonctions",
       "updated_at": "2026-07-18T06:07:10Z",
-      "age_seconds": 6477,
+      "age_seconds": 6804,
       "stale": true
     },
     {
@@ -641,11 +641,19 @@
       "section": "arm9",
       "task": "Lot glyphes AE280-AEA17: 19 fonctions / 1768 octets; intégration des gros lots agents",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 7879,
+      "age_seconds": 8206,
       "stale": true
     }
   ],
   "recent_changes": [
+    {
+      "id": "change-6d3714dd27c6",
+      "summary": "Bloc ARM9 0x02067F94: 32 fonctions / 4452 octets de corps et 772 octets de pools vérifiés; linkage en attente",
+      "section": "arm9",
+      "worker": "progress-site",
+      "updated_at": "2026-07-18T07:59:43Z",
+      "source": "change"
+    },
     {
       "id": "evidence:coordinator-arm9-ghidra-catalog",
       "summary": "Ghidra exported 3669 game candidates; 572 functions / 101860 body bytes now have reviewed semantic C",
@@ -736,21 +744,13 @@
       "worker": "coordinator",
       "updated_at": "2026-07-18T04:52:15Z",
       "source": "change"
-    },
-    {
-      "id": "ghidra-datalink-tween-433",
-      "summary": "Trois helpers Datalink tween finalisés sans linking: Game_ClampDatalinkSignedByte 0x020AC898 sur 28 octets, Game_DatalinkInterpolateVectorLinear 0x020ACAB4 sur 80 octets et Game_AdvanceDatalinkTween_020ACC7C sur 36 octets; hashes ROM, harness hôte, ARM946E-S et Ghidra 433 idempotent validés",
-      "section": "arm9",
-      "worker": "coordinator",
-      "updated_at": "2026-07-18T04:50:38Z",
-      "source": "change"
     }
   ],
   "issues": [],
   "sources": {
     "evidence": 9,
     "workers": 4,
-    "changes": 142,
+    "changes": 143,
     "legacy_inputs": 4,
     "matching_linked": 3,
     "matching_rejected": 0,
