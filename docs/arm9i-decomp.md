@@ -101,6 +101,8 @@ export TWLSDK_ROOT=/chemin/vers/TwlSDK
 python3 tools/linker/arm9i_sdk_prepare.py inventory
 python3 tools/linker/arm9i_sdk_prepare.py extract
 python3 tools/linker/arm9i_sdk_prepare.py validate
+python3 tools/linker/codewarrior_driver.py prepare \
+  --arm9i-sdk-set build/linker/arm9i-sdk
 mkdir -p build/arm9i
 CCACHE_DISABLE=1 clang --target=arm-none-eabi \
   -c src/arm9i/layout.S -o build/arm9i/layout.o
@@ -117,7 +119,7 @@ python3 -m unittest discover -s tools/analysis/tests -v
 ## Plan de lien vers 100 %
 
 1. Générer le LCF et la response du lien ARM9 depuis `include/twl/specfiles/ARM9-TS.lsf` et `ARM9-TS.lcf.template`, comme le fait `makelcf.TWL.exe`. Le bloc à reconstruire est `Ltdautoload LTDMAIN`, placé après l'image statique ARM9 à `0x021870c0` dans cette ROM.
-2. Utiliser les archives épinglées en mode ROM/LTD et sélectionner uniquement les sections atteignables des objets listés ci-dessus. La response doit préserver cet ordre exact; le linker conserve d'abord les sections Thumb de NA et syscall, puis passe en ARM à `0x02187720`.
+2. Utiliser `--arm9i-sdk-set build/linker/arm9i-sdk` pour remplacer les deux wrappers fallback de `LTDMAIN` et leur BSS synthétique par les 15 objets ELF vérifiés. Le driver recoupe les deux rapports du set avec le plan, préserve l'ordre exact dans le LSF et la response, puis conserve d'abord les sections Thumb de NA et syscall avant le passage en ARM à `0x02187720`. Sans cette option explicite, le mode fallback historique reste inchangé.
 3. Exécuter `mwldarm` 2.0 build 99 avec l'ABI CodeWarrior 4.0 build 1051 et les drapeaux SDK vérifiés : `-proc arm946e -nothumb -nopic -nopid -interworking -stdlib -map closure -main _start`. La licence privée CodeWarrior reste le prérequis externe pour ce lien; aucun objet SDK n'a besoin d'être recompilé.
 4. Extraire le fichier ARM9i émis par le lien complet. Le template doit produire le préfixe, les alignements, le payload LTDMAIN, sa BSS de `0x34420` octets et la table d'autoload; `layout.o` est seulement la preuve locale indépendante de ces quatre zones sérialisées.
 5. Passer l'image obtenue à `python3 tools/analysis/arm9i_map.py --candidate chemin/arm9i.bin`. Le fragment matching ne passera à 18 324/18 324 que si cette image est identique octet par octet.

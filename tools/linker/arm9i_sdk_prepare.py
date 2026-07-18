@@ -375,12 +375,25 @@ def validate_set(root: Path, entries: list[dict[str, Any]]) -> None:
     expected_paths: set[Path] = set()
     set_roots: set[Path] = set()
     for entry in entries:
-        path = (root / PurePosixPath(entry["path"])).resolve(strict=False)
+        lexical_path = root / PurePosixPath(entry["path"])
+        cursor = lexical_path
+        while cursor != root:
+            if cursor.is_symlink():
+                raise PreparationError(
+                    f"extracted member path contains a symbolic link: {entry['path']}"
+                )
+            cursor = cursor.parent
+        try:
+            path = lexical_path.resolve(strict=True)
+        except OSError:
+            raise PreparationError(
+                f"extracted member is missing or not a regular file: {entry['path']}"
+            ) from None
         if not path.is_relative_to(root):
             raise PreparationError("extraction report contains a path outside its output root")
         expected_paths.add(path)
         set_roots.add(path.parents[1])
-        if not path.is_file() or path.is_symlink():
+        if not path.is_file():
             raise PreparationError(f"extracted member is missing or not a regular file: {entry['path']}")
         try:
             payload = path.read_bytes()
@@ -444,7 +457,69 @@ def extract_members(
     }
 
 
+def validate_inventory(root: Path, plan: dict[str, Any]) -> dict[str, Any]:
+    report, _ = read_json(root / "inventory.v1.json", "ARM9i SDK inventory report")
+    if report.get("schema_version") != SCHEMA_VERSION or report.get("kind") != INVENTORY_KIND:
+        raise PreparationError("invalid ARM9i SDK inventory report identity")
+    if report.get("plan_sha256") != plan["plan_sha256"]:
+        raise PreparationError("inventory report was produced from a different ARM9i build plan")
+    if report.get("archive_count") != len(plan["required"]):
+        raise PreparationError("inventory report has the wrong archive count")
+    if report.get("selected_member_count") != len(plan["link_order"]):
+        raise PreparationError("inventory report has the wrong selected member count")
+    if report.get("link_order") != plan["link_order"]:
+        raise PreparationError("inventory report link order differs from the ARM9i build plan")
+
+    archives = report.get("archives")
+    if not isinstance(archives, list) or len(archives) != len(plan["required"]):
+        raise PreparationError("inventory report has the wrong archives")
+    for index, ((archive_name, required_members), archive) in enumerate(
+        zip(plan["required"].items(), archives, strict=True)
+    ):
+        if not isinstance(archive, dict):
+            raise PreparationError(f"inventory archives[{index}] must be an object")
+        configured = plan["archives"][archive_name]
+        if (
+            archive.get("index") != index
+            or archive.get("name") != archive_name
+            or archive.get("configured_path") != configured["path"]
+            or archive.get("sha256") != configured["sha256"]
+        ):
+            raise PreparationError(f"inventory archives[{index}] differs from the build plan")
+        members = archive.get("members")
+        if not isinstance(members, list) or len(members) != len(required_members):
+            raise PreparationError(f"inventory archives[{index}] has the wrong members")
+        for member_index, (required_name, member) in enumerate(
+            zip(required_members, members, strict=True)
+        ):
+            if not isinstance(member, dict) or member.get("name") != required_name:
+                raise PreparationError(
+                    f"inventory archives[{index}].members[{member_index}] differs from the plan"
+                )
+            size = member.get("size")
+            digest = member.get("sha256")
+            if not isinstance(size, int) or isinstance(size, bool) or size < 0:
+                raise PreparationError(
+                    f"inventory archives[{index}].members[{member_index}].size is invalid"
+                )
+            if not isinstance(digest, str) or SHA256_RE.fullmatch(digest) is None:
+                raise PreparationError(
+                    f"inventory archives[{index}].members[{member_index}].sha256 is invalid"
+                )
+
+    selection_basis = {
+        "plan_sha256": plan["plan_sha256"],
+        "archives": archives,
+        "link_order": plan["link_order"],
+    }
+    expected_selection = canonical_sha256(selection_basis)
+    if report.get("selection_sha256") != expected_selection:
+        raise PreparationError("inventory report selection SHA-256 is invalid")
+    return report
+
+
 def validate_extraction(root: Path, plan: dict[str, Any]) -> dict[str, Any]:
+    inventory = validate_inventory(root, plan)
     report, _ = read_json(root / "extraction.v1.json", "ARM9i SDK extraction report")
     if report.get("schema_version") != SCHEMA_VERSION or report.get("kind") != EXTRACTION_KIND:
         raise PreparationError("invalid ARM9i SDK extraction report identity")
@@ -456,6 +531,8 @@ def validate_extraction(root: Path, plan: dict[str, Any]) -> dict[str, Any]:
     selection = report.get("selection_sha256")
     if not isinstance(selection, str) or SHA256_RE.fullmatch(selection) is None:
         raise PreparationError("extraction report has an invalid selection SHA-256")
+    if selection != inventory["selection_sha256"]:
+        raise PreparationError("extraction report selection differs from the inventory")
     if report.get("archive_count") != len(plan["required"]):
         raise PreparationError("extraction report has the wrong archive count")
     if report.get("selected_member_count") != len(plan["link_order"]):
@@ -466,6 +543,11 @@ def validate_extraction(root: Path, plan: dict[str, Any]) -> dict[str, Any]:
         for index, archive_name in enumerate(plan["required"])
     }
     checked_entries: list[dict[str, Any]] = []
+    inventory_members = {
+        (archive["name"], member["name"]): member
+        for archive in inventory["archives"]
+        for member in archive["members"]
+    }
     for index, item in enumerate(entries):
         if not isinstance(item, dict):
             raise PreparationError(f"extraction report members[{index}] must be an object")
@@ -480,6 +562,11 @@ def validate_extraction(root: Path, plan: dict[str, Any]) -> dict[str, Any]:
             raise PreparationError(f"members[{index}].sha256 must be 64 lowercase hex digits")
         if archive not in archive_indices:
             raise PreparationError(f"members[{index}] references an unknown archive")
+        expected_member = inventory_members.get((archive, member))
+        if expected_member is None or (
+            size != expected_member["size"] or digest != expected_member["sha256"]
+        ):
+            raise PreparationError(f"members[{index}] metadata differs from the inventory")
         expected_path = (
             f"sets/{selection}/"
             f"{_archive_directory(archive_indices[archive], archive)}/{member}"

@@ -139,6 +139,10 @@ class CodeWarriorDriverTests(unittest.TestCase):
                 compiler,
             )
             self.assertEqual(report["object_count"], 5)
+            self.assertEqual(report["arm9i_input_mode"], "fallback-wrappers")
+            self.assertEqual(report["arm9i_sdk_object_count"], 0)
+            self.assertEqual(report["credited_matching_bytes"], 0)
+            self.assertEqual(report["fallback_credited_bytes"], 0)
             lsf = (fixture.build / "codewarrior/production.lsf").read_text(
                 encoding="utf-8"
             )

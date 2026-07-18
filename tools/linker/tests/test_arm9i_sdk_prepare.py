@@ -150,6 +150,7 @@ class Arm9iSdkPrepareTests(unittest.TestCase):
         root = self.output()
         root.mkdir(parents=True)
         report = sdk_prepare.extract_members(root, inventory, payloads)
+        sdk_prepare.atomic_json(root / "inventory.v1.json", inventory)
         sdk_prepare.atomic_json(root / "extraction.v1.json", report)
         validated = sdk_prepare.validate_extraction(root, plan)
         self.assertEqual(validated["selection_sha256"], inventory["selection_sha256"])
@@ -170,6 +171,7 @@ class Arm9iSdkPrepareTests(unittest.TestCase):
         root = self.output()
         root.mkdir(parents=True)
         report = sdk_prepare.extract_members(root, inventory, payloads)
+        sdk_prepare.atomic_json(root / "inventory.v1.json", inventory)
         sdk_prepare.atomic_json(root / "extraction.v1.json", report)
         first = root / report["members"][0]["path"]
         first.write_bytes(b"changed")
@@ -178,6 +180,21 @@ class Arm9iSdkPrepareTests(unittest.TestCase):
         first.write_bytes(b"ONE")
         (first.parent / "extra.o").write_bytes(b"extra")
         with self.assertRaisesRegex(sdk_prepare.PreparationError, "unexpected"):
+            sdk_prepare.validate_extraction(root, plan)
+
+    def test_validate_rejects_member_symlink(self) -> None:
+        plan = self.parse()
+        inventory, payloads = sdk_prepare.build_inventory(plan, self.sdk)
+        root = self.output()
+        root.mkdir(parents=True)
+        report = sdk_prepare.extract_members(root, inventory, payloads)
+        sdk_prepare.atomic_json(root / "inventory.v1.json", inventory)
+        sdk_prepare.atomic_json(root / "extraction.v1.json", report)
+        first = root / report["members"][0]["path"]
+        second = root / report["members"][1]["path"]
+        first.unlink()
+        first.symlink_to(second)
+        with self.assertRaisesRegex(sdk_prepare.PreparationError, "symbolic link"):
             sdk_prepare.validate_extraction(root, plan)
 
     def test_rejects_archive_hash_mismatch(self) -> None:
@@ -266,19 +283,22 @@ class Arm9iSdkPrepareTests(unittest.TestCase):
     def test_validate_rejects_malformed_report_instead_of_crashing(self) -> None:
         root = self.output()
         root.mkdir(parents=True)
+        plan = self.parse()
+        inventory, _ = sdk_prepare.build_inventory(plan, self.sdk)
+        sdk_prepare.atomic_json(root / "inventory.v1.json", inventory)
         malformed = {
             "schema_version": 1,
             "kind": "arm9i-sdk-member-extraction",
-            "plan_sha256": self.parse()["plan_sha256"],
-            "selection_sha256": "0" * 64,
+            "plan_sha256": plan["plan_sha256"],
+            "selection_sha256": inventory["selection_sha256"],
             "archive_count": 2,
             "selected_member_count": 3,
             "members": [None, None, None],
-            "link_order": self.parse()["link_order"],
+            "link_order": plan["link_order"],
         }
         (root / "extraction.v1.json").write_text(json.dumps(malformed), encoding="utf-8")
         with self.assertRaisesRegex(sdk_prepare.PreparationError, "must be an object"):
-            sdk_prepare.validate_extraction(root, self.parse())
+            sdk_prepare.validate_extraction(root, plan)
 
 
 if __name__ == "__main__":

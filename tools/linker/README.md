@@ -88,6 +88,26 @@ Validate an existing extracted set without reading the external SDK again:
 python3 tools/linker/arm9i_sdk_prepare.py validate
 ```
 
+Opt in to those verified objects when preparing the production link:
+
+```sh
+python3 tools/linker/codewarrior_driver.py prepare \
+  --arm9i-sdk-set build/linker/arm9i-sdk
+```
+
+This replaces only the two flat ARM9i fallback wrappers and their synthetic
+BSS object with the 15 relocatable SDK members, in the exact `link_order` from
+`config/build/arm9i.json`. ARM9 static/ITCM/DTCM inputs are unchanged. The
+driver revalidates `inventory.v1.json`, `extraction.v1.json`, every member hash,
+the exact set contents and the ARM relocatable ELF identity before compiling
+any wrapper. Paths for SDK members in the LSF and response are relative to the
+project, and preparation reports never contain the absolute SDK-set root.
+
+Without `--arm9i-sdk-set`, preparation retains the original fallback-wrapper
+mode. Both modes explicitly report `credited_matching_bytes: 0` and
+`fallback_credited_bytes: 0`; only an exact linked output comparison may earn
+matching credit.
+
 Build and validate the production ELF input objects, LSF and response:
 
 ```sh
@@ -99,6 +119,7 @@ Run the real production link:
 ```sh
 python3 tools/linker/codewarrior_driver.py link \
   --sdk-root "$TWLSDK_ROOT" \
+  --arm9i-sdk-set build/linker/arm9i-sdk \
   --makelcf "$MAKELCF" \
   --mwldarm "$MWLDARM"
 ```

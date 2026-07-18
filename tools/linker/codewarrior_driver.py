@@ -4,6 +4,8 @@
 Unlike :mod:`tools.linker.incremental`, this module does not reconstruct an
 image by concatenation.  It creates ARM ELF input objects, generates a linker
 specification/response and invokes private ``makelcf`` and ``mwldarm`` tools.
+The extracted ARM9i SDK objects are opt-in through ``--arm9i-sdk-set``; without
+that option the existing exact fallback wrappers remain the link inputs.
 """
 
 from __future__ import annotations
@@ -39,9 +41,15 @@ from tools.linker.incremental import (
     validate_fallback_index,
     write_json,
 )
+from tools.linker.arm9i_sdk_prepare import (
+    PreparationError,
+    parse_plan as parse_arm9i_plan,
+    validate_extraction as validate_arm9i_extraction,
+)
 
 
 DEFAULT_LAYOUT = PROJECT_ROOT / "config/linker/arm9.json"
+DEFAULT_ARM9I_PLAN = PROJECT_ROOT / "config/build/arm9i.json"
 LICENSE_MARKERS = (
     "flexlm",
     "license checkout",
@@ -212,6 +220,40 @@ def validate_bss_object(path: Path, section: str, expected_size: int) -> None:
         )
 
 
+def validate_arm_relocatable_elf(data: bytes, label: str) -> None:
+    """Validate a CodeWarrior-compatible ARM ET_REL without indexing names.
+
+    CodeWarrior objects may legally contain repeated section names such as
+    ``.debug_line``.  Production wrapper validation needs a name index, but
+    private SDK inputs only need a strict ELF identity and bounds check.
+    """
+    if len(data) < 52 or data[:4] != b"\x7fELF":
+        raise CodeWarriorDriverError(f"{label} is not an ELF file")
+    if data[4] != 1 or data[5] != 1 or data[6] != 1:
+        raise CodeWarriorDriverError(
+            f"{label} must be a 32-bit little-endian ELF v1"
+        )
+    elf_type, machine = struct.unpack_from("<HH", data, 16)
+    if elf_type != 1 or machine != 40:
+        raise CodeWarriorDriverError(
+            f"{label} ELF type/machine is {elf_type}/{machine}, expected ET_REL/ARM"
+        )
+    section_offset = struct.unpack_from("<I", data, 32)[0]
+    entry_size, count, names_index = struct.unpack_from("<HHH", data, 46)
+    if entry_size < 40 or count == 0 or names_index >= count:
+        raise CodeWarriorDriverError(f"{label} has an invalid ELF section table")
+    if section_offset + entry_size * count > len(data):
+        raise CodeWarriorDriverError(f"{label} has a truncated ELF section table")
+    for index in range(count):
+        offset = section_offset + index * entry_size
+        section_type = struct.unpack_from("<I", data, offset + 4)[0]
+        file_offset, size = struct.unpack_from("<II", data, offset + 16)
+        if section_type != 8 and file_offset + size > len(data):
+            raise CodeWarriorDriverError(
+                f"{label} has a truncated ELF section payload at index {index}"
+            )
+
+
 def compile_assembly_object(
     source: Path,
     output: Path,
@@ -248,7 +290,9 @@ def render_lsf(
     manifest: UnitManifest,
     objects: dict[tuple[str, str], tuple[Path, str]],
     bss_objects: dict[tuple[str, str], tuple[Path, str]],
+    replacements: dict[tuple[str, str], Sequence[Path]] | None = None,
 ) -> str:
+    replacements = replacements or {}
     lines = [
         "# Generated from config/linker/units.v1.json.",
         "# This is a real CodeWarrior link specification, not concatenation.",
@@ -266,17 +310,22 @@ def render_lsf(
                 lines.append(f"    Address 0x{region.linker_address:08x}")
             else:
                 lines.append(f"    After {region.linker_after}")
-            for unit in region.units:
-                path, section = objects[(unit.image, unit.unit_id)]
-                lines.append(
-                    f"    Object {quote_spec_path(path)} ({section})"
-                )
-            bss = bss_objects.get((region.image, region.region_id))
-            if bss is not None:
-                path, section = bss
-                lines.append(
-                    f"    Object {quote_spec_path(path)} ({section})"
-                )
+            replacement = replacements.get((region.image, region.region_id))
+            if replacement is not None:
+                for path in replacement:
+                    lines.append(f"    Object {quote_spec_path(path)}")
+            else:
+                for unit in region.units:
+                    path, section = objects[(unit.image, unit.unit_id)]
+                    lines.append(
+                        f"    Object {quote_spec_path(path)} ({section})"
+                    )
+                bss = bss_objects.get((region.image, region.region_id))
+                if bss is not None:
+                    path, section = bss
+                    lines.append(
+                        f"    Object {quote_spec_path(path)} ({section})"
+                    )
             if region.linker_block == "Static":
                 lines.append("    StackSize 0 0")
             lines.append("}")
@@ -321,6 +370,116 @@ def selected_artifact(
     return path, data
 
 
+def load_arm9i_sdk_inputs(
+    sdk_set: Path,
+    arm9i_plan_path: Path,
+    project_root: Path,
+    build_dir: Path,
+) -> dict[str, Any]:
+    """Validate and order the private ARM9i objects selected by the public plan."""
+    project = project_root.resolve()
+    build = build_dir.resolve()
+    requested = sdk_set if sdk_set.is_absolute() else project / sdk_set
+    try:
+        selected_root = requested.resolve(strict=True)
+    except OSError:
+        raise CodeWarriorDriverError("ARM9i SDK set cannot be resolved") from None
+    if not selected_root.is_dir() or not selected_root.is_relative_to(build):
+        raise CodeWarriorDriverError(
+            "ARM9i SDK set must resolve beneath the active linker build directory"
+        )
+    if not selected_root.is_relative_to(project):
+        raise CodeWarriorDriverError(
+            "ARM9i SDK set must resolve beneath the active project"
+        )
+
+    plan_path = (
+        arm9i_plan_path
+        if arm9i_plan_path.is_absolute()
+        else project / arm9i_plan_path
+    )
+    try:
+        plan = parse_arm9i_plan(plan_path)
+        extraction = validate_arm9i_extraction(selected_root, plan)
+    except PreparationError as error:
+        raise CodeWarriorDriverError(f"invalid ARM9i SDK set: {error}") from None
+
+    entries = {
+        (entry["archive"], entry["member"]): entry
+        for entry in extraction["members"]
+    }
+    link_paths: list[Path] = []
+    records: list[dict[str, Any]] = []
+    for index, selection in enumerate(plan["link_order"]):
+        archive = selection["archive"]
+        member = selection["member"]
+        entry = entries[(archive, member)]
+        try:
+            path = (selected_root / entry["path"]).resolve(strict=True)
+        except OSError:
+            raise CodeWarriorDriverError(
+                f"ARM9i SDK member cannot be resolved: {archive}:{member}"
+            ) from None
+        if not path.is_relative_to(selected_root):
+            raise CodeWarriorDriverError("invalid ARM9i SDK set member path")
+        try:
+            data = path.read_bytes()
+            validate_arm_relocatable_elf(
+                data, f"ARM9i SDK member {archive}:{member}"
+            )
+        except (CodeWarriorDriverError, OSError):
+            raise CodeWarriorDriverError(
+                f"ARM9i SDK member is not an ARM relocatable ELF: "
+                f"{archive}:{member}"
+            ) from None
+        digest = sha256_bytes(data)
+        if len(data) != entry["size"] or digest != entry["sha256"]:
+            raise CodeWarriorDriverError(
+                f"ARM9i SDK member integrity changed: {archive}:{member}"
+            )
+        link_paths.append(path.relative_to(project))
+        records.append(
+            {
+                "archive": archive,
+                "artifact_sha256": digest,
+                "compile_command": None,
+                "credited_bytes": 0,
+                "image": "arm9i",
+                "link_order": index,
+                "member": member,
+                "object": path.relative_to(build).as_posix(),
+                "object_sha256": digest,
+                "provider": "arm9i-sdk-extracted",
+                "size": len(data),
+            }
+        )
+    return {
+        "link_paths": link_paths,
+        "records": records,
+        "selection_sha256": extraction["selection_sha256"],
+    }
+
+
+def arm9i_sdk_region(manifest: UnitManifest) -> tuple[str, str]:
+    candidates = [
+        region
+        for target in manifest.targets
+        if target.image == "arm9i"
+        for region in target.regions
+        if region.linker_mode == "input"
+    ]
+    if len(candidates) != 1:
+        raise CodeWarriorDriverError(
+            "extracted ARM9i SDK mode requires exactly one ARM9i input region"
+        )
+    region = candidates[0]
+    if region.linker_block != "Ltdautoload" or region.linker_name != "LTDMAIN":
+        raise CodeWarriorDriverError(
+            "extracted ARM9i SDK mode requires Ltdautoload LTDMAIN"
+        )
+    return region.image, region.region_id
+
+
 def prepare_production(
     manifest_path: Path,
     project_root: Path,
@@ -329,6 +488,8 @@ def prepare_production(
     sdk_dir: Path | None,
     object_compiler: str,
     *,
+    arm9i_sdk_set: Path | None = None,
+    arm9i_plan_path: Path = DEFAULT_ARM9I_PLAN,
     runner: Runner = default_runner,
     probe_path: Path | None = None,
 ) -> dict[str, Any]:
@@ -348,6 +509,18 @@ def prepare_production(
     bss_objects: dict[tuple[str, str], tuple[Path, str]] = {}
     object_paths: list[Path] = []
     records: list[dict[str, Any]] = []
+    replacements: dict[tuple[str, str], Sequence[Path]] = {}
+    sdk_inputs: dict[str, Any] | None = None
+    replaced_region: tuple[str, str] | None = None
+    if arm9i_sdk_set is not None:
+        sdk_inputs = load_arm9i_sdk_inputs(
+            arm9i_sdk_set,
+            arm9i_plan_path,
+            project_root,
+            build_dir,
+        )
+        replaced_region = arm9i_sdk_region(manifest)
+        replacements[replaced_region] = sdk_inputs["link_paths"]
 
     expected_input_units = {
         (unit.image, unit.unit_id)
@@ -355,10 +528,19 @@ def prepare_production(
         for region in target.regions
         if region.linker_mode == "input"
         for unit in region.units
+        if (unit.image, region.region_id) != replaced_region
     }
     for target in manifest.targets:
         for region in target.regions:
             if region.linker_mode != "input":
+                continue
+            if (region.image, region.region_id) == replaced_region:
+                assert sdk_inputs is not None
+                object_paths.extend(sdk_inputs["link_paths"])
+                records.extend(
+                    {**record, "region_id": region.region_id}
+                    for record in sdk_inputs["records"]
+                )
                 continue
             for unit in region.units:
                 record = selections[(unit.image, unit.unit_id)]
@@ -401,6 +583,7 @@ def prepare_production(
                     {
                         "artifact_sha256": unit.target_sha256,
                         "compile_command": command,
+                        "credited_bytes": 0,
                         "image": unit.image,
                         "object": str(output.relative_to(build_dir)),
                         "object_sha256": sha256_bytes(output.read_bytes()),
@@ -443,6 +626,7 @@ def prepare_production(
                     {
                         "bss_size": region.bss_size,
                         "compile_command": command,
+                        "credited_bytes": 0,
                         "image": region.image,
                         "object": str(output.relative_to(build_dir)),
                         "object_sha256": sha256_bytes(output.read_bytes()),
@@ -458,11 +642,24 @@ def prepare_production(
     lsf_path = driver_dir / "production.lsf"
     response_path = driver_dir / "production.response"
     lsf_path.parent.mkdir(parents=True, exist_ok=True)
-    lsf_path.write_text(render_lsf(manifest, objects, bss_objects), encoding="utf-8")
+    lsf_path.write_text(
+        render_lsf(manifest, objects, bss_objects, replacements), encoding="utf-8"
+    )
     response_path.write_text(render_response(object_paths), encoding="utf-8")
     report = {
         "schema_version": 1,
         "kind": "arm9-codewarrior-link-preparation",
+        "arm9i_input_mode": (
+            "extracted-sdk" if sdk_inputs is not None else "fallback-wrappers"
+        ),
+        "arm9i_sdk_object_count": (
+            len(sdk_inputs["records"]) if sdk_inputs is not None else 0
+        ),
+        "arm9i_sdk_selection_sha256": (
+            sdk_inputs["selection_sha256"] if sdk_inputs is not None else None
+        ),
+        "credited_matching_bytes": 0,
+        "fallback_credited_bytes": 0,
         "manifest_sha256": manifest.sha256,
         "lsf": str(lsf_path.relative_to(build_dir)),
         "lsf_sha256": sha256_bytes(lsf_path.read_bytes()),
@@ -514,6 +711,8 @@ def invoke_production_link(
     makelcf: str,
     mwldarm: str,
     *,
+    arm9i_sdk_set: Path | None = None,
+    arm9i_plan_path: Path = DEFAULT_ARM9I_PLAN,
     runner: Runner = default_runner,
 ) -> dict[str, Any]:
     preparation = prepare_production(
@@ -523,6 +722,8 @@ def invoke_production_link(
         source_dir,
         sdk_units_dir,
         object_compiler,
+        arm9i_sdk_set=arm9i_sdk_set,
+        arm9i_plan_path=arm9i_plan_path,
         runner=runner,
     )
     version_flag, template_relative = load_toolchain_layout(layout_path)
@@ -695,6 +896,17 @@ def add_common(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--build-dir", type=Path, default=DEFAULT_BUILD_DIR)
     parser.add_argument("--source-dir", type=Path)
     parser.add_argument("--sdk-units-dir", type=Path)
+    parser.add_argument(
+        "--arm9i-sdk-set",
+        type=Path,
+        help=(
+            "opt in to the verified extracted ARM9i SDK set; without this "
+            "option the existing fallback wrappers remain active"
+        ),
+    )
+    parser.add_argument(
+        "--arm9i-plan", type=Path, default=DEFAULT_ARM9I_PLAN,
+    )
 
 
 def provider_directories(args: argparse.Namespace) -> tuple[Path, Path | None]:
@@ -755,6 +967,8 @@ def main(argv: Sequence[str] | None = None) -> int:
                 source,
                 sdk_units,
                 compiler,
+                arm9i_sdk_set=args.arm9i_sdk_set,
+                arm9i_plan_path=args.arm9i_plan,
             )
         elif args.command == "link":
             source, sdk_units = provider_directories(args)
@@ -780,6 +994,8 @@ def main(argv: Sequence[str] | None = None) -> int:
                 compiler,
                 required_tool(args.makelcf, "MAKELCF", "makelcf"),
                 required_tool(args.mwldarm, "MWLDARM", "mwldarm"),
+                arm9i_sdk_set=args.arm9i_sdk_set,
+                arm9i_plan_path=args.arm9i_plan,
             )
         else:
             sdk_root = args.sdk_root or (

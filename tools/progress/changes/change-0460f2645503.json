@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "change-0460f2645503",
+  "summary": "Driver CodeWarrior raccordé aux 15 objets SDK ARM9i vérifiés; 92 entrées préparées, crédits maintenus à zéro avant link",
+  "updated_at": "2026-07-18T08:01:22Z",
+  "section": "arm9i",
+  "worker": "binary-map"
+}
