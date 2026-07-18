@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-transform-descriptor-selector",
+  "summary": "NtmvM2d_GetTransformDescriptor_020B76BC récupérée: retourne l'entrée 5 octets de la table transform à 0x02126C4C, six descriptors validés et utilisés avec ComputeSourceOrigin, sans linking",
+  "updated_at": "2026-07-18T02:52:00Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

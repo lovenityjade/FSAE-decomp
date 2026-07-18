@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "kind": "arm7-match-config",
+  "section": "arm7i",
+  "reference": {
+    "path": "components/racoon/ARM7-TS.LTD/Rom/racoon.TWL.LTD.sbin",
+    "size": 300816,
+    "sha256": "3703c27125294aa754fb4bc64f6f78e6cac93ae0b4eb4d72cafbcc591aaaa3ef"
+  },
+  "target": {
+    "path": "build/rom/sections/arm7i.bin",
+    "size": 300816,
+    "sha256": "3703c27125294aa754fb4bc64f6f78e6cac93ae0b4eb4d72cafbcc591aaaa3ef"
+  },
+  "normalization": [],
+  "normalized": {
+    "size": 300816,
+    "sha256": "3703c27125294aa754fb4bc64f6f78e6cac93ae0b4eb4d72cafbcc591aaaa3ef"
+  },
+  "output": {
+    "artifact": "build/match/arm7i.bin",
+    "proof": "build/match/arm7i.proof.json",
+    "progress": "build/match/arm7i.progress.json"
+  }
+}

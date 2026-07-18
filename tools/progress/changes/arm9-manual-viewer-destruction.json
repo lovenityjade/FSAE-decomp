@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-viewer-destruction",
+  "summary": "Destructeur complet du visualiseur de manuel et quatre helpers propriétaires récupérés: page courante, panneaux, index, ressource, renderers, allocations, accesseurs, défilement et audio libérés dans l'ordre ROM exact sans linking",
+  "updated_at": "2026-07-18T02:02:24Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

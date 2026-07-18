@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "source_sha256": "070edd820627d25749c1d24817c36fcb08a082e87cd3f4e0ad39ac41af84ded8",
+  "file_count": 29,
+  "directory_count": 1,
+  "root_directory_id": 61440,
+  "root_subtable_offset": 8,
+  "root_first_file_id": 0,
+  "files": [
+    {
+      "id": 0,
+      "path": "all.kmsg",
+      "rom": {
+        "offset": 1374208,
+        "size": 367312,
+        "end": 1741520
+      },
+      "sha256": "62fd02f5e6b76db75f5338a6327991c7bb1a1d6958673e43f7d9fd6a0783a6f7"
+    },
+    {
+      "id": 1,
+      "path": "eu.kmsg",
+      "rom": {
+        "offset": 1741824,
+        "size": 209680,
+        "end": 1951504
+      },
+      "sha256": "dd4f958eb1da5e669ee551fec179f6a41b0bc7b86845ca59b72d47afd8c23aac"
+    },
+    {
+      "id": 2,
+      "path": "font_ltn.nftr",
+      "rom": {
+        "offset": 1951744,
+        "size": 4104,
+        "end": 1955848
+      },
+      "sha256": "4d02c93c0f6882c0f6da1b1e8b213c46f5d48eb838ad561a6e19c66b6b94d79f"
+    },
+    {
+      "id": 3,
+      "path": "knife_sound.bin",
+      "rom": {
+        "offset": 1956352,
+        "size": 960,
+        "end": 1957312
+      },
+      "sha256": "959d988cbceddadf0b5f0ca755750fa9e4c1703cf19f55ba858b089fab12160c"
+    },
+    {
+      "id": 4,
+      "path": "knife_sound.sdat",
+      "rom": {
+        "offset": 1957376,
+        "size": 1573184,
+        "end": 3530560
+      },
+      "sha256": "dd39067282d1c76dd94792e8aa1a4923ea62f4eb2fadfbd33257f55132463fc9"
+    },
+    {
+      "id": 5,
+      "path": "m2dres_narc.blz",
+      "rom": {
+        "offset": 3530752,
+        "size": 42632,
+        "end": 3573384
+      },
+      "sha256": "40e9adc23758180334c835c0aa3787d1e3ef43b48435db5b671d899b06edd118"
+    },
+    {
+      "id": 6,
+      "path": "manpages_narc_eu.blz",
+      "rom": {
+        "offset": 3573760,
+        "size": 369816,
+        "end": 3943576
+      },
+      "sha256": "0ed58c91d529154dc065699ac135b91c4377bc58c079d66a465c74a3264fa19b"
+    },
+    {
+      "id": 7,
+      "path": "pat.bin",
+      "rom": {
+        "offset": 3943936,
+        "size": 76024,
+        "end": 4019960
+      },
+      "sha256": "cedd36e005555c88b00e4285e1faa5c727099ebf9cf2b9d91a44e371ae32036a"
+    },
+    {
+      "id": 8,
+      "path": "subtask.cmp",
+      "rom": {
+        "offset": 4020224,
+        "size": 284448,
+        "end": 4304672
+      },
+      "sha256": "18e3e22c80c6e4766fffe508d41f09d04ce97103c047557df36f36c91161e31a"
+    },
+    {
+      "id": 9,
+      "path": "subtask_eu_en.cmp",
+      "rom": {
+        "offset": 4304896,
+        "size": 27760,
+        "end": 4332656
+      },
+      "sha256": "6e8ab3b29c84b22d2f67cd0869a414692ed797ab09123fe0f1791eed44f6dc62"
+    },
+    {
+      "id": 10,
+      "path": "subtask_eu_fr.cmp",
+      "rom": {
+        "offset": 4333056,
+        "size": 28816,
+        "end": 4361872
+      },
+      "sha256": "02d331a8ec4557ec81a7b4ac0c7cc1cb8cbb6f1f0185d32a934c85cc170527b2"
+    },
+    {
+      "id": 11,
+      "path": "subtask_eu_gr.cmp",
+      "rom": {
+        "offset": 4362240,
+        "size": 28224,
+        "end": 4390464
+      },
+      "sha256": "788374360f81203820573f1f70d438c7c44c98e11edb1f583cc2746ba6d3c9ae"
+    },
+    {
+      "id": 12,
+      "path": "subtask_eu_it.cmp",
+      "rom": {
+        "offset": 4390912,
+        "size": 28192,
+        "end": 4419104
+      },
+      "sha256": "70dfba5624aa75d9a43fba8310bd3a71b894eb5198ae5e351a497d9e849ab8f0"
+    },
+    {
+      "id": 13,
+      "path": "subtask_eu_sp.cmp",
+      "rom": {
+        "offset": 4419584,
+        "size": 29280,
+        "end": 4448864
+      },
+      "sha256": "42df8564398a37d7fdc17da0c3b46f55d6fe4d461d684ae0ef7954a74dd133c7"
+    },
+    {
+      "id": 14,
+      "path": "tri_cas.wave",
+      "rom": {
+        "offset": 4449280,
+        "size": 1041140,
+        "end": 5490420
+      },
+      "sha256": "009a25ce743fa677fbca7a43365b5dbd8b2e66d7d729879a777ecaf54e60341d"
+    },
+    {
+      "id": 15,
+      "path": "tri_gnd.wave",
+      "rom": {
+        "offset": 5490688,
+        "size": 506988,
+        "end": 5997676
+      },
+      "sha256": "d265ab219b50c63e1592094d16bbc5ce815dbbea60cb3b5181e6dcd9afb1543e"
+    },
+    {
+      "id": 16,
+      "path": "yum_dng.wave",
+      "rom": {
+        "offset": 5998080,
+        "size": 1514188,
+        "end": 7512268
+      },
+      "sha256": "f7f49a6ca3c5b4aaf95d4390b087bc12d9ab1a4e88ab5e31cd2d24d6d24321bf"
+    },
+    {
+      "id": 17,
+      "path": "yum_fie.wave",
+      "rom": {
+        "offset": 7512576,
+        "size": 755684,
+        "end": 8268260
+      },
+      "sha256": "ab6358b887b73449d9c81edeadf9bba933c518942a717075df489dc480d441ab"
+    },
+    {
+      "id": 18,
+      "path": "yum_tal.wave",
+      "rom": {
+        "offset": 8268288,
+        "size": 1527536,
+        "end": 9795824
+      },
+      "sha256": "21150ff48aaed2b77e0f6d4ffec91922b479d080e70939217d2990bd32bb8ba5"
+    },
+    {
+      "id": 19,
+      "path": "zelda_gnd.wave",
+      "rom": {
+        "offset": 9796096,
+        "size": 646436,
+        "end": 10442532
+      },
+      "sha256": "d521a2c4917274a3255a2ca615f1e31255e4e21d331f8a9e59092b8f43723089"
+    },
+    {
+      "id": 20,
+      "path": "zelda_tit.wave",
+      "rom": {
+        "offset": 10442752,
+        "size": 301660,
+        "end": 10744412
+      },
+      "sha256": "6cddaa2cba8e243c96cb4b70164e0ce74bcc00a52915a9d0420fe49e97e38837"
+    },
+    {
+      "id": 21,
+      "path": "zelda_und.wave",
+      "rom": {
+        "offset": 10744832,
+        "size": 316892,
+        "end": 11061724
+      },
+      "sha256": "6787d3c56bdf5459843372cbecc3c077a6b8b4c0e4944098c102d939a932d055"
+    },
+    {
+      "id": 22,
+      "path": "zeldat.bin",
+      "rom": {
+        "offset": 11061760,
+        "size": 1768572,
+        "end": 12830332
+      },
+      "sha256": "b49a773148b859f9e29fc5b4b3637123c83891588435e4b26d05ba10caa91b3c"
+    },
+    {
+      "id": 23,
+      "path": "zeldat_eu_en.bin",
+      "rom": {
+        "offset": 12830720,
+        "size": 64048,
+        "end": 12894768
+      },
+      "sha256": "63e9d11e571c3f9c2cd41ca2f5eb3133db6bd8f6d8cbffa12625aabacccc5bab"
+    },
+    {
+      "id": 24,
+      "path": "zeldat_eu_fr.bin",
+      "rom": {
+        "offset": 12895232,
+        "size": 63660,
+        "end": 12958892
+      },
+      "sha256": "f2f78950166913f618c399c9828d1d933a3858b4581b0947d0420d0f1fbeedb2"
+    },
+    {
+      "id": 25,
+      "path": "zeldat_eu_gr.bin",
+      "rom": {
+        "offset": 12959232,
+        "size": 63368,
+        "end": 13022600
+      },
+      "sha256": "510f1306a4c699fa9a117e7b99e2a52b24c911b5f40db022c1f60bceb663ebda"
+    },
+    {
+      "id": 26,
+      "path": "zeldat_eu_it.bin",
+      "rom": {
+        "offset": 13022720,
+        "size": 63992,
+        "end": 13086712
+      },
+      "sha256": "65ebcbaa241882f0a0ef66e5b6800861562260806303ab1006cffbeb0d5c3ed4"
+    },
+    {
+      "id": 27,
+      "path": "zeldat_eu_sp.bin",
+      "rom": {
+        "offset": 13086720,
+        "size": 63624,
+        "end": 13150344
+      },
+      "sha256": "1d9093cf7d473e4f60d4bf8f28d2453460e0d265dc2fd365f2d6bda2ee2abaad"
+    },
+    {
+      "id": 28,
+      "path": "zelmap.bin",
+      "rom": {
+        "offset": 13150720,
+        "size": 1083100,
+        "end": 14233820
+      },
+      "sha256": "d2cb87f79350642f851ceb5d08abd0425c84eb47a596f400bdb4bdbf04a7cbc1"
+    }
+  ]
+}

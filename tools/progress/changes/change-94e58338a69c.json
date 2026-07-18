@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v1.json#/$defs/change",
+  "schema_version": 1,
+  "kind": "change",
+  "id": "change-94e58338a69c",
+  "summary": "ROM, BIOS7 et TWLTool vérifiés; secure-area, deux régions modcrypt, 4 exécutables et 29 fichiers NitroFS extraits sur copies",
+  "updated_at": "2026-07-17T15:45:29Z",
+  "section": "data",
+  "worker": "rom-pipeline"
+}

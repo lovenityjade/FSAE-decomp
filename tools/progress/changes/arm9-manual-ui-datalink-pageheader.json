@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-ui-datalink-pageheader",
+  "summary": "ManualTocPanel, ItemsPanel, PageHeaderPanel et nouveaux lots Datalink repris; 181 fonctions ARM9 sémantiques mesurées et 43 tests de décompilation passent",
+  "updated_at": "2026-07-17T23:29:43Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

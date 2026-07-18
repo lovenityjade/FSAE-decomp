@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-pane-draw-tree-391",
+  "summary": "NtmvM2dPane_DrawTree_020b57f4 finalisé sur 76 octets et appliqué dans Ghidra, portant le registre à 391 symboles; UpdatePosition, Draw et GetRuntimeType préservés comme corps distincts et littéral RTTI à 0x020B584C exclu",
+  "updated_at": "2026-07-18T03:15:38Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

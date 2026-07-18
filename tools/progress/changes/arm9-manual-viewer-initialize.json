@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-viewer-initialize",
+  "summary": "Entrée d'initialisation du visualiseur récupérée: matériel initialisé, archives BLZ partagée/localisée chargées avec alignements 4/32, bases propriétaires conservées et setup appelé avec pointeur localisé aligné sans linking",
+  "updated_at": "2026-07-18T02:13:21Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

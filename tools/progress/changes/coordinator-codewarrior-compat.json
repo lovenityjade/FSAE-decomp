@@ -1,0 +1,9 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "coordinator-codewarrior-compat",
+  "summary": "CodeWarrior ARM 4.0 build 1051 compiled the public smoke fixture reproducibly under a process-local compatibility clock.",
+  "updated_at": "2026-07-17T16:11:55Z",
+  "worker": "coordinator"
+}

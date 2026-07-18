@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-ntmv-pane-tree-helpers",
+  "summary": "Cinq helpers d'arbre ntmv::m2d::Pane récupérés sur 296 octets à 0x020b56a0..0x020b57c7: libération/allocation du tableau, capacité, ajout parent-enfant et propagation virtuelle récursive de position",
+  "updated_at": "2026-07-18T03:03:02Z",
+  "section": "arm9",
+  "worker": "binary-map"
+}

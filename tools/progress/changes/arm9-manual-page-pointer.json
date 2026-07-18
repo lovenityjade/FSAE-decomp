@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-page-pointer",
+  "summary": "Handler tactile de page 0x020bd474..0x020bd807 récupéré: capture, historique de gestes, hystérésis 3 px, scroll clampé, upload sonore différé et inertie décélérée validés",
+  "updated_at": "2026-07-18T02:31:54Z",
+  "section": "arm9",
+  "worker": "binary-map"
+}

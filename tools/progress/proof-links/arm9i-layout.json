@@ -1,0 +1,17 @@
+{
+  "$schema": "../schema-v2.json#/$defs/proofLink",
+  "schema_version": 2,
+  "kind": "proof-link",
+  "id": "arm9i-layout-byte-perfect",
+  "evidence_id": "arm9i-rebuilt-byte-proof",
+  "proof": "build/arm9i/matching.json",
+  "proof_sha256": "c6c42f37bb265dcd0650987d85850e89c1aadec7393d5b280fcd79939544a254",
+  "provenance": "source",
+  "build_id": "arm9i-layout-20260717",
+  "commit": "unknown",
+  "units": {
+    "probe": 4,
+    "promoted": 4,
+    "rejected": 0
+  }
+}

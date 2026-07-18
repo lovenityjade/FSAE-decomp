@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-pointer-boundary",
+  "summary": "Frontière tactile du contenu du manuel récupérée: y=148 en disposition double écran et y=0 en mode sous-écran complet, validée sans linking",
+  "updated_at": "2026-07-18T01:30:30Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

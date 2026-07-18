@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "dashboard-decomp-primary",
+  "summary": "Le tableau de bord affiche désormais la décompilation active en progression principale; le byte-match reste séparé et reporté à la phase finale",
+  "updated_at": "2026-07-17T22:34:46Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

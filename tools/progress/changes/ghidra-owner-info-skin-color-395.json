@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-owner-info-skin-color-395",
+  "summary": "Ntmv_GetSkinColor_020b7b00 finalisé sur 28 octets, validé par ROM, comportement hôte, syntaxe ARM946E-S et régressions UI/Window puis appliqué dans Ghidra, portant le registre à 395 symboles",
+  "updated_at": "2026-07-18T03:18:20Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

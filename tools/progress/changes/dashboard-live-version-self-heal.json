@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "dashboard-live-version-self-heal",
+  "summary": "Dashboard live corrigé : version d'assets dynamique partagée par HTML/API, purge des caches et service workers hérités, rechargement automatique des clients périmés et analyse 71,75 % maintenue comme métrique primaire",
+  "updated_at": "2026-07-18T00:47:13Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

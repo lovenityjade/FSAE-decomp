@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-window-border-helpers-394",
+  "summary": "Sept helpers de bordure Window finalisés sur 364 octets: quatre noms existants alignés sur les définitions finales et trois nouvelles adresses appliquées, portant le registre à 394 symboles idempotents; littéral 0x020B5994 exclu et helpers déjà comptés 0x020B5A70/0x020B5B30 préservés sans duplication",
+  "updated_at": "2026-07-18T03:15:38Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

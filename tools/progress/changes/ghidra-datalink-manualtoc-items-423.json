@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-manualtoc-items-423",
+  "summary": "Huit symboles ARM9 finalisés sans linking: Game_ChangeDatalinkState 0x020AC038 sur 632 octets, wrappers Datalink resource 0x020AC3D0/0x020AC40C sur 80 octets, helpers ItemsPanel free 0x020B9350/0x020B9368 sur 48 octets et trois factories ManualToc 0x020BA71C/0x020BA774/0x020BA7E0 sur 196 octets; tests hôte/ROM/ARM946E-S validés, Ghidra appliqué puis dry-run idempotent à 423 symboles",
+  "updated_at": "2026-07-18T04:29:30Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

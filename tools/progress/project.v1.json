@@ -1,0 +1,112 @@
+{
+  "$schema": "schema-v1.json#/$defs/project",
+  "schema_version": 1,
+  "kind": "project",
+  "project": {
+    "name": "Four Swords Anniversary Edition",
+    "short_name": "FSAE"
+  },
+  "refresh_seconds": 5,
+  "worker_stale_seconds": 180,
+  "recent_change_limit": 12,
+  "sections": [
+    {
+      "id": "arm9",
+      "label": "ARM9",
+      "dimension": "section",
+      "include_in_total": true,
+      "optional": false,
+      "targets": {
+        "units": {"matched": 0, "total": 0},
+        "functions": {"matched": 0, "total": 0},
+        "bytes": {"matched": 0, "total": 0}
+      }
+    },
+    {
+      "id": "arm7",
+      "label": "ARM7",
+      "dimension": "section",
+      "include_in_total": true,
+      "optional": false,
+      "targets": {
+        "units": {"matched": 0, "total": 0},
+        "functions": {"matched": 0, "total": 0},
+        "bytes": {"matched": 0, "total": 0}
+      }
+    },
+    {
+      "id": "arm9i",
+      "label": "ARM9i",
+      "dimension": "section",
+      "include_in_total": true,
+      "optional": false,
+      "targets": {
+        "units": {"matched": 0, "total": 0},
+        "functions": {"matched": 0, "total": 0},
+        "bytes": {"matched": 0, "total": 0}
+      }
+    },
+    {
+      "id": "arm7i",
+      "label": "ARM7i",
+      "dimension": "section",
+      "include_in_total": true,
+      "optional": false,
+      "targets": {
+        "units": {"matched": 0, "total": 0},
+        "functions": {"matched": 0, "total": 0},
+        "bytes": {"matched": 0, "total": 0}
+      }
+    },
+    {
+      "id": "sdk",
+      "label": "SDK",
+      "dimension": "category",
+      "include_in_total": false,
+      "optional": true,
+      "targets": {
+        "units": {"matched": 0, "total": 0},
+        "functions": {"matched": 0, "total": 0},
+        "bytes": {"matched": 0, "total": 0}
+      }
+    },
+    {
+      "id": "game",
+      "label": "Game code",
+      "dimension": "category",
+      "include_in_total": false,
+      "optional": true,
+      "targets": {
+        "units": {"matched": 0, "total": 0},
+        "functions": {"matched": 0, "total": 0},
+        "bytes": {"matched": 0, "total": 0}
+      }
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "dimension": "category",
+      "include_in_total": false,
+      "optional": true,
+      "targets": {
+        "units": {"matched": 0, "total": 0},
+        "functions": {"matched": 0, "total": 0},
+        "bytes": {"matched": 0, "total": 0}
+      }
+    }
+  ],
+  "inputs": {
+    "evidence_globs": [
+      "tools/progress/evidence/*.json",
+      "build/**/*.progress.json"
+    ],
+    "worker_globs": ["tools/progress/workers/*.json"],
+    "change_globs": ["tools/progress/changes/*.json"]
+  },
+  "expected_workers": [
+    {"id": "coordinator", "label": "Coordinator"},
+    {"id": "binary-map", "label": "Binary map"},
+    {"id": "rom-pipeline", "label": "ROM pipeline"},
+    {"id": "progress-site", "label": "Progress site"}
+  ]
+}

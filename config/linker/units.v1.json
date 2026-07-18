@@ -1,0 +1,228 @@
+{
+  "schema_version": 1,
+  "kind": "arm9-incremental-link-units",
+  "targets": [
+    {
+      "id": "arm9",
+      "path": "build/rom/sections/arm9.bin",
+      "size": 1193472,
+      "sha256": "8bee49eedfb268c79ab371d3d2152c4e25f433d46daecd5dab2c0378a27300aa",
+      "regions": [
+        {
+          "id": "static-main",
+          "kind": "static",
+          "target_offset": 0,
+          "size": 1192576,
+          "sha256": "d974be655904487311482ebafef3929e9eb0dcd16cb47eb0fd7565684c4069c8",
+          "linker": {
+            "mode": "input",
+            "block": "Static",
+            "name": "main",
+            "address": 33570816,
+            "after": null,
+            "bss_size": 392768
+          },
+          "unit_size": 16384,
+          "unit_sha256": [
+            "f4c8782511d1c737afe79119dde5a8196a45858f8af88e4c9168febe3958a040",
+            "3c0d20cd6081ff0c869c48c8345a7e9867cb33539de297797c1e9d05944b0618",
+            "b8678a307ab9259ef1a2c19a602d4efaf1bdce39fbe2686b8f479a43bb0f675d",
+            "1a6597b7f11a7fe69757a2ca5332476aa9d95e395b85696a57e29ef767941dad",
+            "4d1f1fa14454e4ecf65983377ffa136dfed3671f3b997ea157850411c3c7c880",
+            "7f2e6c9181c8ad22a4d2e7c612f225864c56114826bf16a26abb200f44c397de",
+            "d6677eb82dc1b39ee507a7ac0bbe305d1672207aa3b477524d6ffe30e31f1a1c",
+            "42d3ac18be9fef7c1cac9135921fcf3161c88c92aef03f621ee446999cfb2297",
+            "790dd343c58a86342e80421aaa485be7b3b75fea4f8eaea47125706ff4d7dd42",
+            "6684525b317f58012c3c8f89597b62cedeba8dc824e28bccdb109b54642a471b",
+            "6ace01c5fa1d3a36e3d4047f0949cc3d864af2dba26be214b7ad3f83756b3587",
+            "3a23c6f38a2e28fb79d968f0818a3d148a5d6e653891c300a4fb3a1469f419fa",
+            "f2d087e5a85d5e4086ca43a42a7f2a00444c67bfbcaf2b843884a5c9ec472e11",
+            "5251c5081f852840129f7c568b6d748b16c7fa34cf0e5e58be81a1e94f6f2703",
+            "fee9c5e20c77b435183fce90f9f5cc3e7debeaa75838c59b3a223cdcf861fd63",
+            "f47d60be1cede5ad327c8f53648c0d60406e9fb74276be3faa4d26e2d07bbda7",
+            "0d5c0ba84839e898652ef078e9f1efc79732943894ebf3c66489a94d3b5b868a",
+            "c489a9b0d53daf4a2311f4ddfa4b4353fc4622806770d71b326738f1d6a31e59",
+            "3fd7eb15b5ddf901912d7f4201fb3b6df71f284576212425a00ef37a5cf9364d",
+            "256d580215c9711099368e1d42b1d997dad41881c5fa38a00c3e6b452ccd818d",
+            "a856dbd1ae02f5b20e7bf8af905f32cf835d6136625d9600a738d6e8c6795fc8",
+            "eee48f9b743217593c8fc536d2086e024ab7ec8a7926be264f564686a7909866",
+            "d2915252bf13e7105cdedb9788ee5c35bcf94160beb24a0bcfff0bafc6efdbda",
+            "d2ce5008eeb8650ebb378c2fa9232967c954ca5d963b7427117df488ad308443",
+            "d19ad796b4a67bd6076dcb8934dc8d31355dad52e0846a8fca843a91290643ac",
+            "a57f703d9a83079222eb4b31d3beb885f7c72448c9eb06a87ab504c9412a719c",
+            "9c9a61946b380ed87112c58b6564c9e938465b4b7332c98b70a8870399d1166b",
+            "5f38f6ffe4c5142280191f7a3fe67bd47f4236618ab86ddf85de5677c25bee27",
+            "c923ad17ae3b1226baa6efb32caa3aed4689f94f7bb2f5fda0b71f0f4bb4338f",
+            "d7f094ed7d61f267aa3992b45ad49e37c5fc7bd6aeebd638c81ebf7c28f7406a",
+            "0fca1cdda3af0f1133716f4ac642f9f4f275f7e78b90f17eda0852f80989895c",
+            "7c04f8774e036aafe64ea273b20054e357ceb8a9b149dda88bc2bad8a3fb0947",
+            "320b68d92626117e47a63cd2bcec327b0f9fb60d889cd77c031a8b6012946425",
+            "1927eae0e6c1aaf1fd9cdacbbaacd2e47cf839f027ee529ee0438428d1f90492",
+            "f7a7dcfb0732e2ff314091545c12816805ad19d3e1206272bf069e16b225e241",
+            "c8a107226fa7cfbff5085bbf572dc421f436db5a5a14a30b90556be944cd2a5e",
+            "43750a089bead970ecebd265bf1622815cedba306e0870497a9656351cd36041",
+            "c1e8ceef845ec4a53dcd346e68296cfd0fe494797c9d570b378ae75e50702614",
+            "1ecbfb60ea427b9a18180fa640c0d0189bd8d101958378d44e11e9be55d8c691",
+            "c4120a2689a935e26a969be7b6cd00ba7e000685544216f34f844fe726b2e96f",
+            "e466cb497f5a0e47372e73fbf2d66f66e599ca72c70ccdeae016006d0ca11b9c",
+            "6210593f7b54e56d9080c28845db38f5db6ef3e29ae38d90aa4b360ac8532be1",
+            "8f37dd0516fba8244b15ef0014ce827268481b3b5b8e6ac8c7ee9bb869ddd71e",
+            "831dbe0f5f1ab206e66737b5d0fda56b7d793d02f331d7ae9caca3a2dc395084",
+            "c76127fb2a5484b9a0892947c5c7644c405af6a1c20797946224ea119b9dcae4",
+            "6616d75814cd60cfff9ecc527365b70f9a5b586cea8128fc12127a4f535af7ad",
+            "c537378c5f802ca41c6514810b8fb3ec14190852542cac7484dad9bc06af395f",
+            "2276be66fd48e8ca957eacdf275eaa88cd12a7010455dadffb939263b3ce15a7",
+            "60e54b54bc8172a1d5b59d4e767048869f438e3166bd6f8cb0cc15e026694c5e",
+            "ad55d2cb676981feb43293bc9d0f7dfc61451bf1c5964880ec5157b5452eb604",
+            "7b63b0222954901c540cc9a6168c0c42d021640be9bd33c82226415bc42eb185",
+            "65d01bb0c83a38e315d301dd7beab882d01f64e6455d2ac3e5589c1582d33898",
+            "463eed973b6bbae50cc5484c99eaef94cd6a614409b13eb6c2ec9baf5dfc44fd",
+            "9a9d539881f629323ef20e4c5a4eb3329dc65f33bf944d451a639ae4ecdf2f58",
+            "9e1e444fba9577450d6a85f18e6f3fc657e04ce582c8f2b41c14e8107c5646c2",
+            "58a60e058760d709bc161b8979664fb841e727034b989041394eba4ee4eccecb",
+            "7c1bf1a77ae58109dd56580fbe61b23e0eac5bb8cd63f3632295a5c9fed3887b",
+            "861cc217d7657ac5726e33bd6ff5f89cd819d8d9164789d5e5088a54ef086f0e",
+            "1f574ddec087547373944d21551a5c9631bce7059fc1040867bfb6f42bff80ca",
+            "319d73ddbbb67b83ee30482e11c109345d9b416131d2610f1af055234d282233",
+            "5dd11d8be4ad5c5564b23ba1a8302b5ccfdcf867501e53184cc529cf4c7666c2",
+            "ab3cd48223ef44d66f537b915ef1288c6ef0bb086b166ca86e7a5c5db3424629",
+            "84e307bb22cef5017f6a3f05ad46b3f21f5ab4511c298a6943aaa31ef4026784",
+            "2451d9af638697a415a3cf7e359ac5bc967f21680c601515d239c03cf965addc",
+            "c73e5fe744cd1700b1bcede6de300a743ab1734362a10fb7158fd10007d465af",
+            "aff75555fbbcce865b67343b5f61038d142fbd65e9ccfcd712cc4dd59901885e",
+            "e37de6a1e9b16fda0b22d53acdbf8b686212ac0dced28fa55d4d0cbbff92f2b4",
+            "95ab9c36a58b627d86d934172ea575afe4794068a8b90b3a11b9d76471d4e84b",
+            "0a5b4f34dc7e6089905566f2b476d91cb75c41dab02693758e9c55f0bacd9e5b",
+            "75a69e0253254202dfad062b4816fabc8b4c9e8f5acce6c1301db797002cda21",
+            "0d8a6882eedcd7e27e9c5908c4c126f4becc04bb75e94fea5f4a043ec38d3a61",
+            "dd064c19dafb4d343d0936c3890e671ac7407a215e7762870834f0edd47f3e7b",
+            "f0a096eb405f6f3f394e93108b06e4574324415f8d2932a18760dc5acd59d8cf"
+          ]
+        },
+        {
+          "id": "autoload-itcm",
+          "kind": "autoload",
+          "target_offset": 1192576,
+          "size": 704,
+          "sha256": "3b6a895567897cc73171ea92022607e3749ced6a9b5a075ca88c36c51dabf22e",
+          "linker": {
+            "mode": "input",
+            "block": "Autoload",
+            "name": "ITCM",
+            "address": 33521664,
+            "after": null,
+            "bss_size": 0
+          },
+          "unit_size": 704,
+          "unit_sha256": [
+            "3b6a895567897cc73171ea92022607e3749ced6a9b5a075ca88c36c51dabf22e"
+          ]
+        },
+        {
+          "id": "autoload-dtcm",
+          "kind": "autoload",
+          "target_offset": 1193280,
+          "size": 160,
+          "sha256": "9273f2312c34cc9ad2aae61b6a35cfd9a8bf7c94dc43036916e979affeb1656f",
+          "linker": {
+            "mode": "input",
+            "block": "Autoload",
+            "name": "DTCM",
+            "address": 50200576,
+            "after": null,
+            "bss_size": 2400
+          },
+          "unit_size": 160,
+          "unit_sha256": [
+            "9273f2312c34cc9ad2aae61b6a35cfd9a8bf7c94dc43036916e979affeb1656f"
+          ]
+        },
+        {
+          "id": "autoload-table",
+          "kind": "autoload-table",
+          "target_offset": 1193440,
+          "size": 32,
+          "sha256": "0a9a68fcf44ba6172382c67540da3a895f9abd3366fce8b2d2c4e4054afac16b",
+          "linker": {
+            "mode": "generated",
+            "block": null,
+            "name": null,
+            "address": null,
+            "after": null,
+            "bss_size": 0
+          },
+          "unit_size": 32,
+          "unit_sha256": [
+            "0a9a68fcf44ba6172382c67540da3a895f9abd3366fce8b2d2c4e4054afac16b"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arm9i",
+      "path": "build/rom/sections/arm9i.bin",
+      "size": 18324,
+      "sha256": "ab03826fbbe1b15d381008d37ec6d1c284bfb4df26082adda374458caea58f6f",
+      "regions": [
+        {
+          "id": "container-prefix",
+          "kind": "container-prefix",
+          "target_offset": 0,
+          "size": 4,
+          "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+          "linker": {
+            "mode": "generated",
+            "block": null,
+            "name": null,
+            "address": null,
+            "after": null,
+            "bss_size": 0
+          },
+          "unit_size": 4,
+          "unit_sha256": [
+            "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+          ]
+        },
+        {
+          "id": "ltdmain",
+          "kind": "ltdautoload",
+          "target_offset": 4,
+          "size": 18304,
+          "sha256": "1b84053d589c7e60044b5f1265e227b318ef4f8df14db8e922254fd5f276946e",
+          "linker": {
+            "mode": "input",
+            "block": "Ltdautoload",
+            "name": "LTDMAIN",
+            "address": null,
+            "after": "main",
+            "bss_size": 214048
+          },
+          "unit_size": 9152,
+          "unit_sha256": [
+            "2c48b5b0936c75c837fa9b1fb3257fd6a3f88e87fdda05dc53d9908e35ea5255",
+            "1f2ef4bf2aa67c545902af6b73a9571816cad2c2cedeb1125787055514be03ba"
+          ]
+        },
+        {
+          "id": "ltdmain-table",
+          "kind": "ltdautoload-table",
+          "target_offset": 18308,
+          "size": 16,
+          "sha256": "565d5bfe4ec762e7b2225eddaabc448fa4d23edf53f4b86e12c06845bf014319",
+          "linker": {
+            "mode": "generated",
+            "block": null,
+            "name": null,
+            "address": null,
+            "after": null,
+            "bss_size": 0
+          },
+          "unit_size": 16,
+          "unit_sha256": [
+            "565d5bfe4ec762e7b2225eddaabc448fa4d23edf53f4b86e12c06845bf014319"
+          ]
+        }
+      ]
+    }
+  ]
+}

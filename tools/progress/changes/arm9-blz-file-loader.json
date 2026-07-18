@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-blz-file-loader",
+  "summary": "Chargeur BLZ NitroFS récupéré: footer de taille, allocation alignée, décompression sécurisée, taille de sortie et tous les chemins d'échec/libération validés sans linking",
+  "updated_at": "2026-07-18T02:17:34Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

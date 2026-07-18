@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-textbox-uipanel-hud-batch",
+  "summary": "TextBox, UIPanel, callbacks de terminaison et compteur HUD intégrés: 100 fonctions ARM9 ont maintenant une reprise C sémantique mesurée",
+  "updated_at": "2026-07-17T22:54:07Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

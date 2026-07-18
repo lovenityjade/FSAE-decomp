@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-glyph-datalink-items-415",
+  "summary": "Trois blocs ARM9 finalisés sans linking: NtmvM2dGlyphRenderer_DrawBitmap_020b64fc sur 872 octets, Game_CommitDatalinkScreenUpdate 0x020AC308 sur 192 octets et NtmvM2dItemsPanel_Configure 0x020B8F68 sur 744 octets; ROM, hôte et ARM946E-S validés, Ghidra appliqué puis dry-run idempotent à 415 symboles",
+  "updated_at": "2026-07-18T04:17:20Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

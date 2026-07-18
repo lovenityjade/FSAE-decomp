@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-semantic-symbols-77",
+  "summary": "77 noms ARM9 appliqués dans Ghidra: 9 fonctions créées, 49 renommées et 19 déjà stables; second dry-run entièrement idempotent",
+  "updated_at": "2026-07-17T22:48:46Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.fsae.invalid/progress/schema-v2.json",
+  "title": "Four Swords Anniversary decompilation progress inputs v2",
+  "type": "object",
+  "$defs": {
+    "matchingCounter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["matched", "total"],
+      "properties": {
+        "matched": {"type": "integer", "minimum": 0},
+        "total": {"type": "integer", "minimum": 0}
+      }
+    },
+    "coverageCounter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["covered", "total"],
+      "properties": {
+        "covered": {"type": "integer", "minimum": 0},
+        "total": {"type": "integer", "minimum": 0}
+      }
+    },
+    "matchingMetrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["units", "functions", "bytes"],
+      "properties": {
+        "units": {"$ref": "#/$defs/matchingCounter"},
+        "functions": {"$ref": "#/$defs/matchingCounter"},
+        "bytes": {"$ref": "#/$defs/matchingCounter"}
+      }
+    },
+    "analysisMetrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["units", "functions", "bytes"],
+      "properties": {
+        "units": {"$ref": "#/$defs/coverageCounter"},
+        "functions": {"$ref": "#/$defs/coverageCounter"},
+        "bytes": {"$ref": "#/$defs/coverageCounter"}
+      }
+    },
+    "unitOutcomes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["probe", "promoted", "rejected"],
+      "properties": {
+        "probe": {"type": "integer", "minimum": 0},
+        "promoted": {"type": "integer", "minimum": 0},
+        "rejected": {"type": "integer", "minimum": 0}
+      }
+    },
+    "proofLink": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "kind", "id", "evidence_id", "proof", "proof_sha256", "provenance", "build_id", "commit", "units"],
+      "properties": {
+        "$schema": {"type": "string"},
+        "schema_version": {"const": 2},
+        "kind": {"const": "proof-link"},
+        "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"},
+        "evidence_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"},
+        "proof": {"type": "string", "minLength": 1},
+        "proof_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "provenance": {"enum": ["source", "sdk"]},
+        "build_id": {"type": "string", "minLength": 1},
+        "commit": {"type": "string", "minLength": 1},
+        "units": {"$ref": "#/$defs/unitOutcomes"}
+      }
+    },
+    "targets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["units", "functions", "bytes"],
+      "properties": {
+        "units": {"type": "integer", "minimum": 0},
+        "functions": {"type": "integer", "minimum": 0},
+        "bytes": {"type": "integer", "minimum": 0}
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "dimension", "include_in_total", "optional", "targets"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
+        "label": {"type": "string", "minLength": 1},
+        "dimension": {"enum": ["section", "category"]},
+        "include_in_total": {"type": "boolean"},
+        "optional": {"type": "boolean"},
+        "targets": {"$ref": "#/$defs/targets"}
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "kind", "project", "refresh_seconds", "worker_stale_seconds", "recent_change_limit", "sections", "inputs", "expected_workers"],
+      "properties": {
+        "$schema": {"type": "string"},
+        "schema_version": {"const": 2},
+        "kind": {"const": "project"},
+        "project": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name", "short_name"],
+          "properties": {
+            "name": {"type": "string", "minLength": 1},
+            "short_name": {"type": "string", "minLength": 1}
+          }
+        },
+        "refresh_seconds": {"type": "integer", "minimum": 1},
+        "worker_stale_seconds": {"type": "integer", "minimum": 1},
+        "recent_change_limit": {"type": "integer", "minimum": 1},
+        "sections": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/section"}},
+        "inputs": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["evidence_globs", "worker_globs", "change_globs"],
+          "properties": {
+            "evidence_globs": {"type": "array", "items": {"type": "string"}},
+            "proof_link_globs": {"type": "array", "items": {"type": "string"}},
+            "worker_globs": {"type": "array", "items": {"type": "string"}},
+            "change_globs": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "expected_workers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "label"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
+              "label": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "kind", "id", "track", "section", "metrics", "updated_at"],
+      "properties": {
+        "$schema": {"type": "string"},
+        "schema_version": {"const": 2},
+        "kind": {"const": "evidence"},
+        "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"},
+        "track": {"enum": ["matching", "analysis"]},
+        "section": {"type": "string"},
+        "category": {"type": "string"},
+        "metrics": {"oneOf": [{"$ref": "#/$defs/matchingMetrics"}, {"$ref": "#/$defs/analysisMetrics"}]},
+        "updated_at": {"type": "string", "format": "date-time"},
+        "worker": {"type": "string"},
+        "summary": {"type": "string"},
+        "provenance": {"enum": ["source", "sdk", "fallback", "unmatched"]},
+        "units": {"$ref": "#/$defs/unitOutcomes"},
+        "linked": {"type": "boolean"},
+        "build_id": {"type": "string", "minLength": 1},
+        "commit": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"track": {"const": "matching"}}},
+          "then": {"properties": {"metrics": {"$ref": "#/$defs/matchingMetrics"}}},
+          "else": {"properties": {"metrics": {"$ref": "#/$defs/analysisMetrics"}}}
+        },
+        {
+          "if": {
+            "required": ["linked"],
+            "properties": {"linked": {"const": true}}
+          },
+          "then": {"required": ["build_id", "commit"]}
+        }
+      ]
+    },
+    "worker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "kind", "id", "label", "status", "task", "updated_at"],
+      "properties": {
+        "$schema": {"type": "string"},
+        "schema_version": {"const": 2},
+        "kind": {"const": "worker"},
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
+        "label": {"type": "string", "minLength": 1},
+        "status": {"enum": ["working", "idle", "blocked", "done", "offline"]},
+        "section": {"type": "string"},
+        "task": {"type": "string"},
+        "updated_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "change": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "kind", "id", "summary", "updated_at"],
+      "properties": {
+        "$schema": {"type": "string"},
+        "schema_version": {"const": 2},
+        "kind": {"const": "change"},
+        "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"},
+        "summary": {"type": "string", "minLength": 1},
+        "section": {"type": "string"},
+        "worker": {"type": "string"},
+        "updated_at": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}

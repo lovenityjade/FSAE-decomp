@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-render-surface-fill",
+  "summary": "NtmvM2d_FillRect_020B73B8 et NtmvM2d_RenderSurfaceRowAddress_020B7508 récupérées: clipping local, remplissage 16-bit sur surface à rangées wrapées et helper d'adresse validés en hôte + ARM946E-S syntax-only sans linking",
+  "updated_at": "2026-07-18T02:58:34Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

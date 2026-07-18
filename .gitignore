@@ -1,0 +1,31 @@
+# User-supplied Nintendo material. These files must never be committed.
+/*.nds
+/*.srl
+/*.tad
+/NintendoDSSDK.zip
+/bios7.bin
+/bios7i.bin
+/bios9.bin
+/bios9i.bin
+/firmware.bin
+/private/
+license.dat
+*.lic
+*.license
+
+# Generated extraction, build, and local toolchain state.
+/build/
+/out/
+/extracted/
+/toolchains/
+/.cache/
+/.venv/
+
+# Language and editor by-products.
+__pycache__/
+*.py[cod]
+*.o
+*.elf
+*.map
+.DS_Store
+Thumbs.db

@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema-v2.json#/$defs/worker",
+  "schema_version": 2,
+  "kind": "worker",
+  "id": "rom-pipeline",
+  "label": "Code jeu ARM9",
+  "status": "working",
+  "task": "B2190-B2A90: analyse bloc contigu, 13 fonctions",
+  "updated_at": "2026-07-18T06:07:10Z",
+  "section": "arm9"
+}

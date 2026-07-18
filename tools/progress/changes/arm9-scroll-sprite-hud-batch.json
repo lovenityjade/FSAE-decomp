@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-scroll-sprite-hud-batch",
+  "summary": "ScrollButton, ScrollIndicator, variantes de panneaux HUD et animation des sprites joueurs intégrés; 133 fonctions ARM9 sémantiques mesurées",
+  "updated_at": "2026-07-17T23:08:42Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

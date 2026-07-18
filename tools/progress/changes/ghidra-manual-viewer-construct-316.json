@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-manual-viewer-construct-316",
+  "summary": "Constructeur complet GameManualViewer validé et appliqué dans Ghidra sur 308 octets : registre ARM9 porté à 316 symboles, second dry-run idempotent avec 316 inchangés",
+  "updated_at": "2026-07-18T01:54:44Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

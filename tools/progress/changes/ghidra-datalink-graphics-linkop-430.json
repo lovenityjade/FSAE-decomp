@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-graphics-linkop-430",
+  "summary": "Sept symboles ARM9 finalisés sans linking: Game_LoadDatalinkBackgroundResources 0x020AC428 sur 364 octets, helpers Datalink graphics 0x020AC594/0x020AC64C/0x020AC6B0/0x020AC7DC sur 772 octets, et LinkOperation 0x020B2A90/0x020B2AAC sur 28 octets; hashes ROM, harness hôte, ARM946E-S, Ghidra 430 idempotent et tests decomp/progress validés",
+  "updated_at": "2026-07-18T04:43:29Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

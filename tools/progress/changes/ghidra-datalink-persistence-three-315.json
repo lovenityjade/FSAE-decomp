@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-persistence-three-315",
+  "summary": "Trois symboles Ghidra Datalink ressource/sérialisation validés et appliqués sur 508 octets : registre ARM9 porté à 315 symboles, second dry-run idempotent avec 315 inchangés",
+  "updated_at": "2026-07-18T01:52:07Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

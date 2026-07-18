@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-ghidra-catalog",
+  "summary": "ARM9 raw recovery catalogued: 4665 exports, 939 static SDK boundaries, 3656 non-SDK candidates, 70 switch artifacts, 14 work shards",
+  "updated_at": "2026-07-17T22:08:42Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

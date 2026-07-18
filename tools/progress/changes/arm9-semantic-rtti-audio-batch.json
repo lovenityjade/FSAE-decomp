@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-semantic-rtti-audio-batch",
+  "summary": "47 fonctions ARM9 ont maintenant une reprise C sémantique mesurée: DataManager audio, DatalinkReader, Pane, Picture, Page, ResourceAccessor et chemin fatal",
+  "updated_at": "2026-07-17T22:34:46Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

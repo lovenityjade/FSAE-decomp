@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-controller-three-319",
+  "summary": "Trois fonctions complètes du contrôleur Datalink validées et renommées dans Ghidra sur 192 octets : registre ARM9 porté à 319 symboles, second dry-run idempotent avec 319 inchangés",
+  "updated_at": "2026-07-18T02:00:30Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

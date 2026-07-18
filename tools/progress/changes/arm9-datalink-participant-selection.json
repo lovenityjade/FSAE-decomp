@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-datalink-participant-selection",
+  "summary": "Participant-selection datalink 0x020A9E0C..0x020AA44F récupéré: phases 0/5/10/15, navigation, confirm/cancel, transfert temporisé, restauration propriétaire, tail tilemaps/commandes; pool 0x020AA450..0x020AA4AB exclu; validations ciblées sans linking",
+  "updated_at": "2026-07-18T02:41:59Z",
+  "section": "arm9",
+  "worker": "rom-pipeline"
+}

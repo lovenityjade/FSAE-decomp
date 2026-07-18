@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "public-build-orchestration",
+  "summary": "Orchestration publique unifiée validée: 49 tests, maps/hashes stricts et toolchain Windows accessible par clé",
+  "updated_at": "2026-07-17T16:30:52Z",
+  "section": "data",
+  "worker": "progress-site"
+}

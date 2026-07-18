@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-data-manager-sequence-pool-helpers",
+  "summary": "Trois helpers DataManager de handle séquence ajoutés au C source sur 36 octets: accès au NNSSndHandle embarqué à +0x18, allocation et libération via le pool global 0x02171F74; bornes ROM, comportement hôte et syntaxe ARM946E-S validés sans linking",
+  "updated_at": "2026-07-18T03:33:00Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-runtime-helpers-435",
+  "summary": "Deux helpers runtime Datalink finalisés sans linking: Game_GetDatalinkTweenProgress 0x020ACD74 sur 36 octets et Game_DatalinkStateStack_Init_020ACD98 sur 24 octets; hashes ROM, tests hôte/ROM/ARM946E-S, Ghidra 435 idempotent validés",
+  "updated_at": "2026-07-18T04:52:15Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-viewer-setup",
+  "summary": "Setup complet du visualiseur récupéré: archives/accessors, audio, tilemap circulaire, OAM, deux renderers, en-tête, indicateurs, panneaux racine, page UI, TOC, palette et index initialisés dans l'ordre ROM sans linking",
+  "updated_at": "2026-07-18T02:34:22Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

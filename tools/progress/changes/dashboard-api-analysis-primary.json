@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "dashboard-api-analysis-primary",
+  "summary": "API et cartes corrigées: l’analyse active est la progression principale; le byte-match reste secondaire et les compteurs non mesurés ne s’affichent plus comme 0/0",
+  "updated_at": "2026-07-17T23:30:22Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

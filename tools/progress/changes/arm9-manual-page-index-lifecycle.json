@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-page-index-lifecycle",
+  "summary": "Cycle de vie de l'index du manuel récupéré: construction, destruction des enregistrements, libération par allocateur et chargement de la ressource cmtn avec échec propre validés sans linking",
+  "updated_at": "2026-07-18T01:38:30Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

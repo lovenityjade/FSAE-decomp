@@ -1,0 +1,3554 @@
+{
+  "schema_version": 1,
+  "image": "arm9i",
+  "image_sha256": "ab03826fbbe1b15d381008d37ec6d1c284bfb4df26082adda374458caea58f6f",
+  "load_address": 35156160,
+  "method": "unique relocation-masked function match",
+  "minimum_function_size": 12,
+  "minimum_contiguous_anchor": 8,
+  "archive_count": 104,
+  "archives": [
+    {
+      "name": "libaes.TWL.LTD.a",
+      "sha256": "44db69a78d7d900cbe16958b9a0678e2038b2fa023677f3d61bc8d3a9acef897"
+    },
+    {
+      "name": "libcamera.TWL.LTD.a",
+      "sha256": "ebf89cfc328a17f9fe541332d48c197645f1d4494b03dc67a7cb6814bf74ac33"
+    },
+    {
+      "name": "libcard.TWL.LTD.a",
+      "sha256": "80a0c4c924153bececc11ed4d1191920fea9f7ba72ea11f181e31d0d735a2088"
+    },
+    {
+      "name": "libcht.TWL.LTD.a",
+      "sha256": "d76b0b2aac2430f02f2e693231c8f428277a29cec38d7d846d2b038e978a8bc6"
+    },
+    {
+      "name": "libcp.TWL.LTD.a",
+      "sha256": "255b35f5108383aa169c1028cf5528002e2209abed9564acc51d7d2ad73e7cb3"
+    },
+    {
+      "name": "libcrypto.TWL.LTD.a",
+      "sha256": "f46ae844596514d27b1310a5a3a54177d5ca0dbf911d1f95858bd540577baa51"
+    },
+    {
+      "name": "libctrdg.TWL.LTD.a",
+      "sha256": "64b51093e8206697d7c11fa69a764c32fa20d5bdbb8d254edd63174818ea42f0"
+    },
+    {
+      "name": "libdsp.TWL.LTD.a",
+      "sha256": "cb39712026041eec96638cf738638bea7053dd9d35f7b33d282a8d5ba02ecee1"
+    },
+    {
+      "name": "libdsp_g711.TWL.LTD.a",
+      "sha256": "bdeed86a21b603b3003ef9dadfafa120480e36008af55994fa1e9554d1a4648b"
+    },
+    {
+      "name": "libdsp_graphics.TWL.LTD.a",
+      "sha256": "ebac83fff8100568490d1d3172db1cbf701fd5b6475aa437b6618d39e98ae557"
+    },
+    {
+      "name": "libel.TWL.LTD.a",
+      "sha256": "b0e5fbe7441b04aaab74cedff24f3ccfc84527fe8331558b09ed52d86de61f48"
+    },
+    {
+      "name": "libenv.TWL.LTD.a",
+      "sha256": "92a4a7cf0bc9ba27a9a7d40f6389fc2a72cdbf98fba2a621ecaed42f5394acaa"
+    },
+    {
+      "name": "libext.TWL.LTD.a",
+      "sha256": "071355250c7cea53761b0838f779ad18764a106e58e1524e22b7cb70efb72ec2"
+    },
+    {
+      "name": "libfatfs.TWL.LTD.a",
+      "sha256": "b694b1ed0f5c9bc2772e663a0a98e0ca220c2611bb166c453ae98a8b087c27c6"
+    },
+    {
+      "name": "libfs.TWL.LTD.a",
+      "sha256": "2a9ac9cfe3370b4572376d14662eaeac3c5bf4006d02fc26b231ec338936bb10"
+    },
+    {
+      "name": "libfx.TWL.LTD.a",
+      "sha256": "f8225ec3ab7aa7281e5bcb58af6cf36e749fed2abd452a79cb13770931525184"
+    },
+    {
+      "name": "libgx.TWL.LTD.a",
+      "sha256": "cc37f316c463a76d4174e94b615f05d0b1f49738d0ed079cda893eac60633a97"
+    },
+    {
+      "name": "libmath.TWL.LTD.a",
+      "sha256": "1fbb8d54308679654787f6f11a99c725cd38f1b3de9c6d3bfbb72d33743ac13a"
+    },
+    {
+      "name": "libmb.TWL.LTD.a",
+      "sha256": "a8f0a8bd4ff35abfe2ca0aceb2c47df4160b2c1944447b138291d33eae5b6d95"
+    },
+    {
+      "name": "libmi.TWL.LTD.a",
+      "sha256": "43cb8cf9e3ff26f7b65fe4f4f407c1f203ffe1920ea7401fc2a8cb9d7d768c6e"
+    },
+    {
+      "name": "libmicex.TWL.LTD.a",
+      "sha256": "5815e92963bfc1aaaf3bac30834a0105c0553c5e717b3a2e68a5c0d0ce75745f"
+    },
+    {
+      "name": "libna.TWL.LTD.a",
+      "sha256": "02438c67d9824acfab50c3030ebbe74cc47d9bc6502c9f317fe3c7a1349b6cee"
+    },
+    {
+      "name": "libnvram.TWL.LTD.a",
+      "sha256": "31173b817db383ca38cc7c638a65f17f37f957dc008b911f1dddf5596bf35c4d"
+    },
+    {
+      "name": "libnwm.TWL.LTD.a",
+      "sha256": "76ef58633ec99bd5d7e6e4d4f9ea0aef195f7ddedfc36c52f716aa5a9759b903"
+    },
+    {
+      "name": "libos.CALLTRACE.TWL.LTD.a",
+      "sha256": "ae6362f5e19a1a7b5ae44deee32c94a5bae21efdc80f801f857285571e0a4788"
+    },
+    {
+      "name": "libos.FUNCTIONCOST.TWL.LTD.a",
+      "sha256": "0fb75c46d867645ebf3f4cb7eafd8ba8534badda2109f3934b796f1846948a1d"
+    },
+    {
+      "name": "libos.TWL.LTD.a",
+      "sha256": "e26963318b46f01c0448b69ffb8d92fc69bff45f6ce3f15b0246a0818f6ef111"
+    },
+    {
+      "name": "libprc.TWL.LTD.a",
+      "sha256": "521f51cd4a2d052083526c6d89efe2f2f2777c673b584f26ecd695747d42d4e9"
+    },
+    {
+      "name": "libpxi.TWL.LTD.a",
+      "sha256": "7f6c4ab131778c133a428705d9ed48169b19867f46055a65c665fabe863b0864"
+    },
+    {
+      "name": "librtc.TWL.LTD.a",
+      "sha256": "9fea7970c8683f55d35d798b6c3ae66a13f5c3b04cbc43dc0c3769c8ac8dd56a"
+    },
+    {
+      "name": "librtcex.TWL.LTD.a",
+      "sha256": "3e4775390ece63bf892eaa6954492cc486c15cb11bfc699a04c8800c74030719"
+    },
+    {
+      "name": "libscfg.TWL.LTD.a",
+      "sha256": "ea08d45883d4b8187d9354b57552caafd12e6b18e763073e50002dca56d33fd5"
+    },
+    {
+      "name": "libsharedfont.TWL.LTD.a",
+      "sha256": "80a8c189e715fcb3b22ce16b2423f627ba359d1e137a9bea81cc59d7bb36d81b"
+    },
+    {
+      "name": "libsnd.TWL.LTD.a",
+      "sha256": "c2e0b6d2b4403f4a71393975e161331b1554daf253b7ea9fa8e6d7da1b179eba"
+    },
+    {
+      "name": "libsndex.TWL.LTD.a",
+      "sha256": "55c3cf15818663ec0182d8aeebb83306ec3da3db63865742fad9f9c14befdefa"
+    },
+    {
+      "name": "libspi.TWL.LTD.a",
+      "sha256": "a6484d23307450557e8249a3cfe0e2298acc4503e0559ce3ca3d402adc544374"
+    },
+    {
+      "name": "libssp.TWL.LTD.a",
+      "sha256": "1a5e810784ae9f273c56cbd1e2bcb78d11d1fa20fd2d9233bdd3f462866f3bb2"
+    },
+    {
+      "name": "libstd.TWL.LTD.a",
+      "sha256": "1fb9b4e0d9a3d31f8223082488b09a9c5cc7b03875dc6507bd5c6cb8d5c41537"
+    },
+    {
+      "name": "libstubsisd.TWL.LTD.a",
+      "sha256": "6d20ec67a6c5ec58ddd34cca07d7d4efe6ea952e501ef57316e0d9ea92bd29b3"
+    },
+    {
+      "name": "libstubsistd.TWL.LTD.a",
+      "sha256": "7a47438e5df86abe3510e73eeaa205879e63b0476de530e22cdcacadf8434467"
+    },
+    {
+      "name": "libtcl.TWL.LTD.a",
+      "sha256": "611bc7d79e479d2d6215ca732438ec7eeb3e025dac5d73aef1ac6a4a19f7cc27"
+    },
+    {
+      "name": "libwbt.TWL.LTD.a",
+      "sha256": "5f61fc1919f3099c5c0fc135255913a662e802acc45eb06e3f3b81bdec5b8616"
+    },
+    {
+      "name": "libwfs.TWL.LTD.a",
+      "sha256": "835451f6e6b187c3bf4d1e05efcf6138adb2f1839a3e59adb1a547ef3ce2c650"
+    },
+    {
+      "name": "libwm.TWL.LTD.a",
+      "sha256": "4f2e0d10609cba36b1e9bf739c38a105b8e51a3b025b16a9693e1f2756de2225"
+    },
+    {
+      "name": "libwvr.TWL.LTD.a",
+      "sha256": "d850073c1ad566238bc7a3b6fa02d4c43fe90406be400d9e5370b62f9e78779e"
+    },
+    {
+      "name": "libwxc.TWL.LTD.a",
+      "sha256": "5ed6299eac28ff4b71e986b2053559bb1aea207b951abb6b009fdfee4838d67e"
+    },
+    {
+      "name": "libaes.TWL.LTD.thumb.a",
+      "sha256": "dd5ba7135105ff33a4202751a47eb4cf6653ce3ddb403646b7bee716be3f4641"
+    },
+    {
+      "name": "libcamera.TWL.LTD.thumb.a",
+      "sha256": "03ce94e03197ae015c09375ecb4f48f1b49fb812c6bd79f2ce127f3ecafea117"
+    },
+    {
+      "name": "libcard.TWL.LTD.thumb.a",
+      "sha256": "4acdb0135b359547cf56fa87dd2b48d00abb386cd24815ac130ee1b28d383274"
+    },
+    {
+      "name": "libcht.TWL.LTD.thumb.a",
+      "sha256": "b8f406d53e5c9bfae30c607ab4f4e43f0decc01c0e937bf886313e109e42195d"
+    },
+    {
+      "name": "libcp.TWL.LTD.thumb.a",
+      "sha256": "e74db5335d206cce63bdfe760ded4b6d49bffb89f00850a15e152c65de4b4bfd"
+    },
+    {
+      "name": "libcrypto.TWL.LTD.thumb.a",
+      "sha256": "fc38bf1fb980151c173625a33010ce0b3b5da3791a42471ab2b85fabeb19179f"
+    },
+    {
+      "name": "libctrdg.TWL.LTD.thumb.a",
+      "sha256": "9a41f0cd7d74d0bf2af23586dfd323e755c244d7b225364f8ecd239e695b9901"
+    },
+    {
+      "name": "libdsp.TWL.LTD.thumb.a",
+      "sha256": "479c6ad34abd77317dc504c9da5d23292f56ec00b1a6d02ab6a7becf4b004433"
+    },
+    {
+      "name": "libdsp_g711.TWL.LTD.thumb.a",
+      "sha256": "00a2571e9c0222fd3a38b5f61bac57c8fc2a424b4e6e43ddd9889e2eedd2755f"
+    },
+    {
+      "name": "libdsp_graphics.TWL.LTD.thumb.a",
+      "sha256": "77e0706ffda4fcb1e615ad0670bc1fa2646d12b6734c03bdcba0e489b1015c51"
+    },
+    {
+      "name": "libel.TWL.LTD.thumb.a",
+      "sha256": "c3744e2ca1b6e403f6dc512fe3d6d774c01f287e92a85fad90b733d971d5558c"
+    },
+    {
+      "name": "libenv.TWL.LTD.thumb.a",
+      "sha256": "e7153bc04e2bd60c462904dc28208e665ff3607135b854fd175e1819f5531ca5"
+    },
+    {
+      "name": "libext.TWL.LTD.thumb.a",
+      "sha256": "21a3263cc6e35184f47483d88e7f902f98e67e19a6ece8fb016724fe07513bda"
+    },
+    {
+      "name": "libfatfs.TWL.LTD.thumb.a",
+      "sha256": "1f51fd17ffad8dead05c1081b74b2cf082e04650471584f7d4ab6151f55867ac"
+    },
+    {
+      "name": "libfs.TWL.LTD.thumb.a",
+      "sha256": "f78f4cc806de05859569d7c61e4e968eda9c87df9153494d4d461f999d11bcff"
+    },
+    {
+      "name": "libfx.TWL.LTD.thumb.a",
+      "sha256": "82a5ddd4a13053284adeb94aec7f007f544f4cb47abdc7cdad1daa0607555d57"
+    },
+    {
+      "name": "libgx.TWL.LTD.thumb.a",
+      "sha256": "aa28fbbcc8df7d870c6631765cbbbfdf86df56b2a6d0df1ac7ff84d48b73b7a8"
+    },
+    {
+      "name": "libmath.TWL.LTD.thumb.a",
+      "sha256": "88267d8779aa65d71e76595ceab5b2f6b311910a5277d209c12a3848afc1e353"
+    },
+    {
+      "name": "libmb.TWL.LTD.thumb.a",
+      "sha256": "5a14eacda05d573b2f2fd3a5340d7905f7f223a749e7b5ccb49d2c0c01b34990"
+    },
+    {
+      "name": "libmi.TWL.LTD.thumb.a",
+      "sha256": "c9ad0576c4fb71d508e382a1ec2357da4d7925d442852d5674b99652ae39162a"
+    },
+    {
+      "name": "libmicex.TWL.LTD.thumb.a",
+      "sha256": "bf3783972e3ba7516b01df7875d80dc083e85e4f99cd9143a9863ff1bfd9b98b"
+    },
+    {
+      "name": "libna.TWL.LTD.thumb.a",
+      "sha256": "91f6c32e618e3269da5fa8de4b175b0963f663a4634d06725bf7466e3469dce1"
+    },
+    {
+      "name": "libnvram.TWL.LTD.thumb.a",
+      "sha256": "de0da9421835c82ea9f5ab5f00799bc434e9401decd564e487fd9cfbb0791b3b"
+    },
+    {
+      "name": "libnwm.TWL.LTD.thumb.a",
+      "sha256": "656a12cdc65649d0428d50723580b9c22edbde7e64f3aff278268d9aa32a0b4b"
+    },
+    {
+      "name": "libos.CALLTRACE.TWL.LTD.thumb.a",
+      "sha256": "64926b6205fcbc11d610a88a3fa0059d7cc6a6216f9e285fb55e43d1c0222668"
+    },
+    {
+      "name": "libos.FUNCTIONCOST.TWL.LTD.thumb.a",
+      "sha256": "d675f92f92f3788b7d31c6abdfe7c434476db454f3c1383b19d3181312c77376"
+    },
+    {
+      "name": "libos.TWL.LTD.thumb.a",
+      "sha256": "3c4802db85f245d71ec353ac37c823ea9aaa3ed90be6c362f156d0cf4488a9ea"
+    },
+    {
+      "name": "libprc.TWL.LTD.thumb.a",
+      "sha256": "aaa0e6330aaea458a4a9f9c6ab01ffe70d4a9e8c153d7cd80bf64e0c20ba6edc"
+    },
+    {
+      "name": "libpxi.TWL.LTD.thumb.a",
+      "sha256": "7f6059a32cf4ad6d21823e374fbc00d067fb10bdee3abcebea98aa50d8712e53"
+    },
+    {
+      "name": "librtc.TWL.LTD.thumb.a",
+      "sha256": "e07912afe22929bd960836cec57fbd6491ed223fd6624514369bdeecfca082ff"
+    },
+    {
+      "name": "librtcex.TWL.LTD.thumb.a",
+      "sha256": "4a4e886a11d78b620a8773827b132568c0f5182342735e9651f251fe33de932f"
+    },
+    {
+      "name": "libscfg.TWL.LTD.thumb.a",
+      "sha256": "70b0040b0212b76e374df58f8b178a1936603063efb693d0e16d35429e24800e"
+    },
+    {
+      "name": "libsharedfont.TWL.LTD.thumb.a",
+      "sha256": "8107b585d522df69aeb66095f57b5bdc26338e1dd0d12f9bbb79c86ca46c006d"
+    },
+    {
+      "name": "libsnd.TWL.LTD.thumb.a",
+      "sha256": "a7186608d5c098405def389259495fd03977a15500b238bc3d4eca1918518704"
+    },
+    {
+      "name": "libsndex.TWL.LTD.thumb.a",
+      "sha256": "682f6a2f5ea23c322447b18583403457e8998c933a3866eb7d4421bbbf0d2c45"
+    },
+    {
+      "name": "libspi.TWL.LTD.thumb.a",
+      "sha256": "a7bd784f9a5932134de48db438cc16c7c92cb96ccfe4c243de3f37919a057ab7"
+    },
+    {
+      "name": "libssp.TWL.LTD.thumb.a",
+      "sha256": "27584f005ee309f2366f5e3703fccc815d44873fab9854a7a1347ce1bc338a90"
+    },
+    {
+      "name": "libstd.TWL.LTD.thumb.a",
+      "sha256": "4082f3e02c6e48169a39c6f5e18a41c132b8521a146ad9c486af1ed5fbd749d4"
+    },
+    {
+      "name": "libstubsisd.TWL.LTD.thumb.a",
+      "sha256": "889b0272df7b040b5b80a0eb2750dc64548f06f3eed0745eecb74493471e1fe0"
+    },
+    {
+      "name": "libstubsistd.TWL.LTD.thumb.a",
+      "sha256": "7a7d88f14c14a3f3842969c04951dc0270354a2ae93c0b86fd40d575cb815c3c"
+    },
+    {
+      "name": "libtcl.TWL.LTD.thumb.a",
+      "sha256": "84b3c7f448f1f999d9e7109cf1a5cb262d0ba745e4e00c7fdef70ea4d41362b5"
+    },
+    {
+      "name": "libwbt.TWL.LTD.thumb.a",
+      "sha256": "7507c57e907e4cc9e656c4b021558beaf1f2b2f892fe5ff2e0835c2f58068b7c"
+    },
+    {
+      "name": "libwfs.TWL.LTD.thumb.a",
+      "sha256": "8bd914a47f06f0718360c0e08e280ac1a96ce16c19b637944e76d28123cf5f7a"
+    },
+    {
+      "name": "libwm.TWL.LTD.thumb.a",
+      "sha256": "87ae9482096824f4223ddc31bea6aea5bbc8efec346800eaa0c7e047fb2fde49"
+    },
+    {
+      "name": "libwvr.TWL.LTD.thumb.a",
+      "sha256": "6b758dea61948b5e9b5fbc70febf9a76cf5360e87d871118f3f8553eadca8e04"
+    },
+    {
+      "name": "libwxc.TWL.LTD.thumb.a",
+      "sha256": "1cfcef74cfd1345fed07fdb29e8eae94c06abce645d18e1f2bc48c237c8760ea"
+    },
+    {
+      "name": "libnnsfnd.TWL.LTD.a",
+      "sha256": "90ed7a753316623a451674107a0bc5c2dc5788ae6aa69727ea7a45539f60eaed"
+    },
+    {
+      "name": "libnnsg2d.TWL.LTD.a",
+      "sha256": "dd601b3b8f93f6baf4f401706a1a96a3e9443af8aca58b8b0693ef6bec92b832"
+    },
+    {
+      "name": "libnnsg3d.TWL.LTD.a",
+      "sha256": "8e07f3e064ef52df3378ee11e72315243d073848e0bd1f823e8e7bb6df32e54d"
+    },
+    {
+      "name": "libnnsgfd.TWL.LTD.a",
+      "sha256": "5431b773da2516c05fc60d0907f54ed84ffda8581290e7117155bc91bf3524c5"
+    },
+    {
+      "name": "libnnsmcs.TWL.LTD.a",
+      "sha256": "e879f5be30c65292da6e14c42546d6e58be74c918aa7288e220de7ae275dfd70"
+    },
+    {
+      "name": "libnnssnd.TWL.LTD.a",
+      "sha256": "c70fece4d32090c1a183f8affc42f2832d18ce45cb5aaa25a7e6b5f91bff71e6"
+    },
+    {
+      "name": "libnnsfnd.TWL.LTD.thumb.a",
+      "sha256": "68209b83bd5007942d32ec9be3bf2d8d5584f5d9cae7ed61c5f7bfe90dc24de3"
+    },
+    {
+      "name": "libnnsg2d.TWL.LTD.thumb.a",
+      "sha256": "6208b56a5eef7a65ed7c8dae1f645535e2617d62b9eb99ab0eca683bb73e4489"
+    },
+    {
+      "name": "libnnsg3d.TWL.LTD.thumb.a",
+      "sha256": "5747cbebd6e8be62e7fa9e8f2a5a85430a55806136b86d77bfa66de6d6bdcada"
+    },
+    {
+      "name": "libnnsgfd.TWL.LTD.thumb.a",
+      "sha256": "a98336830278ed5977f78ee5dc18dfad00618c381688b60ad9d19c33b437a5fd"
+    },
+    {
+      "name": "libnnsmcs.TWL.LTD.thumb.a",
+      "sha256": "e3855e9be9f02d426421b3927e7b22b5afab7982bb3eddc488bee0d53594b632"
+    },
+    {
+      "name": "libnnssnd.TWL.LTD.thumb.a",
+      "sha256": "ebc5cfc5249cfcd6f756287e2e13ca0722d8eeab0d028e4393f9d30182583953"
+    }
+  ],
+  "functions_scanned": 9731,
+  "unique_match_count": 154,
+  "unique_boundary_count": 125,
+  "covered_bytes": 17072,
+  "coverage_ranges": [
+    {
+      "offset": 36,
+      "size": 1556,
+      "end": 1592
+    },
+    {
+      "offset": 1732,
+      "size": 2132,
+      "end": 3864
+    },
+    {
+      "offset": 4156,
+      "size": 160,
+      "end": 4316
+    },
+    {
+      "offset": 4608,
+      "size": 500,
+      "end": 5108
+    },
+    {
+      "offset": 5212,
+      "size": 1908,
+      "end": 7120
+    },
+    {
+      "offset": 7224,
+      "size": 424,
+      "end": 7648
+    },
+    {
+      "offset": 7672,
+      "size": 1860,
+      "end": 9532
+    },
+    {
+      "offset": 9580,
+      "size": 132,
+      "end": 9712
+    },
+    {
+      "offset": 9744,
+      "size": 120,
+      "end": 9864
+    },
+    {
+      "offset": 9896,
+      "size": 220,
+      "end": 10116
+    },
+    {
+      "offset": 10156,
+      "size": 4512,
+      "end": 14668
+    },
+    {
+      "offset": 14676,
+      "size": 436,
+      "end": 15112
+    },
+    {
+      "offset": 15176,
+      "size": 3112,
+      "end": 18288
+    }
+  ],
+  "unique_matched_bytes_sum": 17792,
+  "matches": [
+    {
+      "name": "NAi_FormatTitleArchive",
+      "binary_offset": 36,
+      "address": 35156192,
+      "size": 40,
+      "end": 35156232,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 28,
+      "relocation_masked_bytes": 12,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_archive.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "AsyncProc",
+      "binary_offset": 76,
+      "address": 35156232,
+      "size": 148,
+      "end": 35156380,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 84,
+      "relocation_masked_bytes": 64,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_rom.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "GetBoundLength",
+      "binary_offset": 224,
+      "address": 35156380,
+      "size": 24,
+      "end": 35156404,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_rom.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "NAi_AsyncTransferProcedure",
+      "binary_offset": 248,
+      "address": 35156404,
+      "size": 48,
+      "end": 35156452,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 40,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_rom.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "NAi_AsyncTransferHook",
+      "binary_offset": 296,
+      "address": 35156452,
+      "size": 52,
+      "end": 35156504,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 44,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_rom.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "NAi_HookAsyncTransfer",
+      "binary_offset": 348,
+      "address": 35156504,
+      "size": 100,
+      "end": 35156604,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 52,
+      "relocation_masked_bytes": 48,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_rom.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "NAi_ReadRomViaCache",
+      "binary_offset": 448,
+      "address": 35156604,
+      "size": 88,
+      "end": 35156692,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 56,
+      "relocation_masked_bytes": 32,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_rom.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "NAi_ReadRomViaCacheAsync",
+      "binary_offset": 536,
+      "address": 35156692,
+      "size": 100,
+      "end": 35156792,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 64,
+      "relocation_masked_bytes": 36,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_rom.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "NAi_OverrideRomArchive",
+      "binary_offset": 636,
+      "address": 35156792,
+      "size": 320,
+      "end": 35157112,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 184,
+      "relocation_masked_bytes": 136,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_rom.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "NAi_InitSharedFont",
+      "binary_offset": 956,
+      "address": 35157112,
+      "size": 192,
+      "end": 35157304,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 132,
+      "relocation_masked_bytes": 60,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_shared_font.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "NAi_GetSharedFontTableSize",
+      "binary_offset": 1148,
+      "address": 35157304,
+      "size": 32,
+      "end": 35157336,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_shared_font.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "NAi_LoadSharedFontTable",
+      "binary_offset": 1180,
+      "address": 35157336,
+      "size": 156,
+      "end": 35157492,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 112,
+      "relocation_masked_bytes": 44,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_shared_font.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "NAi_GetSharedFontSize",
+      "binary_offset": 1336,
+      "address": 35157492,
+      "size": 64,
+      "end": 35157556,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 56,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_shared_font.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "NAi_LoadSharedFont",
+      "binary_offset": 1400,
+      "address": 35157556,
+      "size": 192,
+      "end": 35157748,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "Thumb",
+      "matched_bytes": 148,
+      "relocation_masked_bytes": 44,
+      "sources": [
+        {
+          "library": "libna.TWL.LTD.thumb.a",
+          "object": "na_shared_font.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_SetupFATBuffers",
+      "binary_offset": 1732,
+      "address": 35157888,
+      "size": 68,
+      "end": 35157956,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 44,
+      "relocation_masked_bytes": 24,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_IsValidAddressForARM7",
+      "binary_offset": 1800,
+      "address": 35157956,
+      "size": 308,
+      "end": 35158264,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 284,
+      "relocation_masked_bytes": 24,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_AllocUnicodeFullPath",
+      "binary_offset": 2108,
+      "address": 35158264,
+      "size": 220,
+      "end": 35158484,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 204,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_DostimeToFstime",
+      "binary_offset": 2328,
+      "address": 35158484,
+      "size": 84,
+      "end": 35158568,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 84,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FstimeToDostime",
+      "binary_offset": 2412,
+      "address": 35158568,
+      "size": 88,
+      "end": 35158656,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 88,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_CheckFstime",
+      "binary_offset": 2500,
+      "address": 35158656,
+      "size": 116,
+      "end": 35158772,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 116,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_GetUnicodeSpanExcluding",
+      "binary_offset": 2616,
+      "address": 35158772,
+      "size": 132,
+      "end": 35158904,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 132,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_UsingInvalidCharacterW",
+      "binary_offset": 2748,
+      "address": 35158904,
+      "size": 300,
+      "end": 35159204,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 288,
+      "relocation_masked_bytes": 12,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_ConvertError",
+      "binary_offset": 3048,
+      "address": 35159204,
+      "size": 172,
+      "end": 35159376,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 172,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFSAsyncDone",
+      "binary_offset": 3220,
+      "address": 35159376,
+      "size": 32,
+      "end": 35159408,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_GetArchiveCaps",
+      "binary_offset": 3252,
+      "address": 35159408,
+      "size": 16,
+      "end": 35159424,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 16,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_GetPathInfo",
+      "binary_offset": 3268,
+      "address": 35159424,
+      "size": 208,
+      "end": 35159632,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 168,
+      "relocation_masked_bytes": 40,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_SetPathInfo",
+      "binary_offset": 3476,
+      "address": 35159632,
+      "size": 224,
+      "end": 35159856,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 180,
+      "relocation_masked_bytes": 44,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_CreateFile",
+      "binary_offset": 3700,
+      "address": 35159856,
+      "size": 164,
+      "end": 35160020,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 136,
+      "relocation_masked_bytes": 28,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_CreateDirectory",
+      "binary_offset": 4156,
+      "address": 35160312,
+      "size": 160,
+      "end": 35160472,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 132,
+      "relocation_masked_bytes": 28,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_GetArchiveResource",
+      "binary_offset": 4608,
+      "address": 35160764,
+      "size": 232,
+      "end": 35160996,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 200,
+      "relocation_masked_bytes": 32,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_OpenFile",
+      "binary_offset": 4840,
+      "address": 35160996,
+      "size": 268,
+      "end": 35161264,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 240,
+      "relocation_masked_bytes": 28,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_ReadFile",
+      "binary_offset": 5212,
+      "address": 35161368,
+      "size": 468,
+      "end": 35161836,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 420,
+      "relocation_masked_bytes": 48,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_WriteFile",
+      "binary_offset": 5680,
+      "address": 35161836,
+      "size": 452,
+      "end": 35162288,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 408,
+      "relocation_masked_bytes": 44,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_SetSeekCache",
+      "binary_offset": 6132,
+      "address": 35162288,
+      "size": 220,
+      "end": 35162508,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 200,
+      "relocation_masked_bytes": 20,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_SeekFile",
+      "binary_offset": 6352,
+      "address": 35162508,
+      "size": 132,
+      "end": 35162640,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 116,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_GetFileLength",
+      "binary_offset": 6484,
+      "address": 35162640,
+      "size": 88,
+      "end": 35162728,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 72,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_SetFileLength",
+      "binary_offset": 6572,
+      "address": 35162728,
+      "size": 88,
+      "end": 35162816,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 72,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_GetFilePosition",
+      "binary_offset": 6660,
+      "address": 35162816,
+      "size": 24,
+      "end": 35162840,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 20,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_FlushFile",
+      "binary_offset": 6684,
+      "address": 35162840,
+      "size": 80,
+      "end": 35162920,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 64,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_OpenDirectory",
+      "binary_offset": 6764,
+      "address": 35162920,
+      "size": 356,
+      "end": 35163276,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 332,
+      "relocation_masked_bytes": 24,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FATFS_ReadDirectory",
+      "binary_offset": 7224,
+      "address": 35163380,
+      "size": 424,
+      "end": 35163804,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 368,
+      "relocation_masked_bytes": 56,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_MountFATFSArchive",
+      "binary_offset": 7672,
+      "address": 35163828,
+      "size": 92,
+      "end": 35163920,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 72,
+      "relocation_masked_bytes": 20,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_MountDefaultArchives",
+      "binary_offset": 7764,
+      "address": 35163920,
+      "size": 204,
+      "end": 35164124,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 152,
+      "relocation_masked_bytes": 52,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FSi_FormatSpecialArchive",
+      "binary_offset": 7968,
+      "address": 35164124,
+      "size": 80,
+      "end": 35164204,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 64,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_GetControlData",
+      "binary_offset": 8048,
+      "address": 35164204,
+      "size": 164,
+      "end": 35164368,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 164,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_NDma_withConfig_Dev",
+      "binary_offset": 8212,
+      "address": 35164368,
+      "size": 284,
+      "end": 35164652,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 264,
+      "relocation_masked_bytes": 20,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_NDmaAsync_withConfig_Dev",
+      "binary_offset": 8496,
+      "address": 35164652,
+      "size": 332,
+      "end": 35164984,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 312,
+      "relocation_masked_bytes": 20,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_InitNDma",
+      "binary_offset": 8828,
+      "address": 35164984,
+      "size": 24,
+      "end": 35165008,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 16,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_NDmaFill",
+      "binary_offset": 8852,
+      "address": 35165008,
+      "size": 80,
+      "end": 35165088,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 72,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_NDmaCopy",
+      "binary_offset": 8932,
+      "address": 35165088,
+      "size": 88,
+      "end": 35165176,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 80,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_NDmaCopyAsync",
+      "binary_offset": 9020,
+      "address": 35165176,
+      "size": 100,
+      "end": 35165276,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 92,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_IsNDmaBusy",
+      "binary_offset": 9120,
+      "address": 35165276,
+      "size": 32,
+      "end": 35165308,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 32,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_WaitNDma",
+      "binary_offset": 9152,
+      "address": 35165308,
+      "size": 48,
+      "end": 35165356,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 40,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_StopNDma",
+      "binary_offset": 9200,
+      "address": 35165356,
+      "size": 56,
+      "end": 35165412,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 48,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_StopAllDma",
+      "binary_offset": 9256,
+      "address": 35165412,
+      "size": 40,
+      "end": 35165452,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_dma.o"
+        }
+      ],
+      "boundary_candidate_count": 3,
+      "boundary_candidate_names": [
+        "MI_StopAllDma",
+        "MI_StopAllNDma",
+        "OS_StopTimer64"
+      ]
+    },
+    {
+      "name": "MI_StopAllNDma",
+      "binary_offset": 9256,
+      "address": 35165412,
+      "size": 40,
+      "end": 35165452,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 3,
+      "boundary_candidate_names": [
+        "MI_StopAllDma",
+        "MI_StopAllNDma",
+        "OS_StopTimer64"
+      ]
+    },
+    {
+      "name": "OS_StopTimer64",
+      "binary_offset": 9256,
+      "address": 35165412,
+      "size": 40,
+      "end": 35165452,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libos.TWL.LTD.a",
+          "object": "os_timer.o"
+        }
+      ],
+      "boundary_candidate_count": 3,
+      "boundary_candidate_names": [
+        "MI_StopAllDma",
+        "MI_StopAllNDma",
+        "OS_StopTimer64"
+      ]
+    },
+    {
+      "name": "MIi_Wait",
+      "binary_offset": 9296,
+      "address": 35165452,
+      "size": 28,
+      "end": 35165480,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_SetNDmaArbitrament",
+      "binary_offset": 9324,
+      "address": 35165480,
+      "size": 32,
+      "end": 35165512,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 32,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_InitNDmaConfig",
+      "binary_offset": 9356,
+      "address": 35165512,
+      "size": 68,
+      "end": 35165580,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 64,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_CardNDmaRecv32",
+      "binary_offset": 9424,
+      "address": 35165580,
+      "size": 108,
+      "end": 35165688,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 92,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_ndma.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_GetWramBank_A",
+      "binary_offset": 9580,
+      "address": 35165736,
+      "size": 16,
+      "end": 35165752,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 16,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_GetWramBank_B",
+      "binary_offset": 9596,
+      "address": 35165752,
+      "size": 16,
+      "end": 35165768,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 16,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_GetWramBank_C",
+      "binary_offset": 9612,
+      "address": 35165768,
+      "size": 16,
+      "end": 35165784,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 16,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_SetWramBankMaster_A",
+      "binary_offset": 9628,
+      "address": 35165784,
+      "size": 28,
+      "end": 35165812,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 28,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_SetWramBankMaster_B",
+      "binary_offset": 9656,
+      "address": 35165812,
+      "size": 28,
+      "end": 35165840,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 28,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_SetWramBankMaster_C",
+      "binary_offset": 9684,
+      "address": 35165840,
+      "size": 28,
+      "end": 35165868,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 28,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_SetWramBankEnable_A",
+      "binary_offset": 9744,
+      "address": 35165900,
+      "size": 40,
+      "end": 35165940,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 40,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_SetWramBankEnable_B",
+      "binary_offset": 9784,
+      "address": 35165940,
+      "size": 40,
+      "end": 35165980,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 40,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_SetWramBankEnable_C",
+      "binary_offset": 9824,
+      "address": 35165980,
+      "size": 40,
+      "end": 35166020,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 40,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_GetWramBankMaster_A",
+      "binary_offset": 9896,
+      "address": 35166052,
+      "size": 20,
+      "end": 35166072,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 20,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_GetWramBankMaster_B",
+      "binary_offset": 9916,
+      "address": 35166072,
+      "size": 20,
+      "end": 35166092,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 20,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_GetWramBankMaster_C",
+      "binary_offset": 9936,
+      "address": 35166092,
+      "size": 20,
+      "end": 35166112,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 20,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_GetWramBankEnable",
+      "binary_offset": 9956,
+      "address": 35166112,
+      "size": 28,
+      "end": 35166140,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 5,
+      "boundary_candidate_names": [
+        "MI_GetWramBankEnable",
+        "MI_GetWramBankMaster",
+        "MI_GetWramBankOffset",
+        "MI_IsWramSlotLocked",
+        "OS_SetProtectionRegionParam"
+      ]
+    },
+    {
+      "name": "MI_GetWramBankMaster",
+      "binary_offset": 9956,
+      "address": 35166112,
+      "size": 28,
+      "end": 35166140,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 5,
+      "boundary_candidate_names": [
+        "MI_GetWramBankEnable",
+        "MI_GetWramBankMaster",
+        "MI_GetWramBankOffset",
+        "MI_IsWramSlotLocked",
+        "OS_SetProtectionRegionParam"
+      ]
+    },
+    {
+      "name": "MI_GetWramBankOffset",
+      "binary_offset": 9956,
+      "address": 35166112,
+      "size": 28,
+      "end": 35166140,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 5,
+      "boundary_candidate_names": [
+        "MI_GetWramBankEnable",
+        "MI_GetWramBankMaster",
+        "MI_GetWramBankOffset",
+        "MI_IsWramSlotLocked",
+        "OS_SetProtectionRegionParam"
+      ]
+    },
+    {
+      "name": "MI_IsWramSlotLocked",
+      "binary_offset": 9956,
+      "address": 35166112,
+      "size": 28,
+      "end": 35166140,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 5,
+      "boundary_candidate_names": [
+        "MI_GetWramBankEnable",
+        "MI_GetWramBankMaster",
+        "MI_GetWramBankOffset",
+        "MI_IsWramSlotLocked",
+        "OS_SetProtectionRegionParam"
+      ]
+    },
+    {
+      "name": "OS_SetProtectionRegionParam",
+      "binary_offset": 9956,
+      "address": 35166112,
+      "size": 28,
+      "end": 35166140,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libos.TWL.LTD.a",
+          "object": "os_protectionreg"
+        },
+        {
+          "library": "libos.TWL.LTD.thumb.a",
+          "object": "os_protectionreg"
+        }
+      ],
+      "boundary_candidate_count": 5,
+      "boundary_candidate_names": [
+        "MI_GetWramBankEnable",
+        "MI_GetWramBankMaster",
+        "MI_GetWramBankOffset",
+        "MI_IsWramSlotLocked",
+        "OS_SetProtectionRegionParam"
+      ]
+    },
+    {
+      "name": "MI_GetWramMapStart_A",
+      "binary_offset": 9984,
+      "address": 35166140,
+      "size": 32,
+      "end": 35166172,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 32,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_GetWramMapStart_B",
+      "binary_offset": 10016,
+      "address": 35166172,
+      "size": 40,
+      "end": 35166212,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 40,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_GetWramMapStart_C",
+      "binary_offset": 10056,
+      "address": 35166212,
+      "size": 40,
+      "end": 35166252,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 40,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_GetAddress_A",
+      "binary_offset": 10096,
+      "address": 35166252,
+      "size": 20,
+      "end": 35166272,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 16,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_InitWramManager",
+      "binary_offset": 10156,
+      "address": 35166312,
+      "size": 468,
+      "end": 35166780,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 440,
+      "relocation_masked_bytes": 28,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_CallbackForPxi",
+      "binary_offset": 10624,
+      "address": 35166780,
+      "size": 556,
+      "end": 35167336,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 488,
+      "relocation_masked_bytes": 68,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_DoAllocWram",
+      "binary_offset": 11180,
+      "address": 35167336,
+      "size": 320,
+      "end": 35167656,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 296,
+      "relocation_masked_bytes": 24,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_DoAllocWramSlot",
+      "binary_offset": 11500,
+      "address": 35167656,
+      "size": 264,
+      "end": 35167920,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 240,
+      "relocation_masked_bytes": 24,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_DoFreeWram",
+      "binary_offset": 11764,
+      "address": 35167920,
+      "size": 144,
+      "end": 35168064,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 132,
+      "relocation_masked_bytes": 12,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_DoFreeWramSlot",
+      "binary_offset": 11908,
+      "address": 35168064,
+      "size": 148,
+      "end": 35168212,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 136,
+      "relocation_masked_bytes": 12,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_DoSwitchWram",
+      "binary_offset": 12056,
+      "address": 35168212,
+      "size": 144,
+      "end": 35168356,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 132,
+      "relocation_masked_bytes": 12,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_SwitchWramSlot",
+      "binary_offset": 12200,
+      "address": 35168356,
+      "size": 92,
+      "end": 35168448,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 80,
+      "relocation_masked_bytes": 12,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_DoSwitchWramSlot",
+      "binary_offset": 12292,
+      "address": 35168448,
+      "size": 148,
+      "end": 35168596,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 136,
+      "relocation_masked_bytes": 12,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_DoReserveWram",
+      "binary_offset": 12440,
+      "address": 35168596,
+      "size": 264,
+      "end": 35168860,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 248,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_DoReserveWramSlot",
+      "binary_offset": 12704,
+      "address": 35168860,
+      "size": 208,
+      "end": 35169068,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 192,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_DoCancelWram",
+      "binary_offset": 12912,
+      "address": 35169068,
+      "size": 96,
+      "end": 35169164,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 92,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_DoCancelWramSlot",
+      "binary_offset": 13008,
+      "address": 35169164,
+      "size": 96,
+      "end": 35169260,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 92,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_DoGetAllocatableWramSlot",
+      "binary_offset": 13104,
+      "address": 35169260,
+      "size": 108,
+      "end": 35169368,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 104,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_SendToPxi",
+      "binary_offset": 13212,
+      "address": 35169368,
+      "size": 76,
+      "end": 35169444,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 64,
+      "relocation_masked_bytes": 12,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_TakeApartData",
+      "binary_offset": 13288,
+      "address": 35169444,
+      "size": 72,
+      "end": 35169516,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 72,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MI_LockWramManager",
+      "binary_offset": 13360,
+      "address": 35169516,
+      "size": 40,
+      "end": 35169556,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 32,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 2,
+      "boundary_candidate_names": [
+        "MI_LockWramManager",
+        "MI_TryLockWramManager"
+      ]
+    },
+    {
+      "name": "MI_TryLockWramManager",
+      "binary_offset": 13360,
+      "address": 35169516,
+      "size": 40,
+      "end": 35169556,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 32,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 2,
+      "boundary_candidate_names": [
+        "MI_LockWramManager",
+        "MI_TryLockWramManager"
+      ]
+    },
+    {
+      "name": "MI_UnlockWramManager",
+      "binary_offset": 13400,
+      "address": 35169556,
+      "size": 36,
+      "end": 35169592,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 28,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_LockWramManagerDI",
+      "binary_offset": 13436,
+      "address": 35169592,
+      "size": 32,
+      "end": 35169624,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "MIi_UnlockWramManagerRI",
+      "binary_offset": 13468,
+      "address": 35169624,
+      "size": 24,
+      "end": 35169648,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 16,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libmi.TWL.LTD.a",
+          "object": "mi_sharedwram.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "OSi_EnterNDmaCallback_ltdmain",
+      "binary_offset": 13492,
+      "address": 35169648,
+      "size": 72,
+      "end": 35169720,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 56,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libos.TWL.LTD.a",
+          "object": "os_interrupt.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "OSi_InitArenaEx_ltdmain",
+      "binary_offset": 13564,
+      "address": 35169720,
+      "size": 28,
+      "end": 35169748,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 20,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libos.TWL.LTD.a",
+          "object": "os_arena.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "OS_IsAvailableWireless_ltdmain",
+      "binary_offset": 13592,
+      "address": 35169748,
+      "size": 40,
+      "end": 35169788,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 40,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libos.TWL.LTD.a",
+          "object": "os_ownerinfoex.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "OS_IsForceDisableWireless_ltdmain",
+      "binary_offset": 13632,
+      "address": 35169788,
+      "size": 36,
+      "end": 35169824,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 36,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libos.TWL.LTD.a",
+          "object": "os_ownerinfoex.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "OSi_SearchTitleIdFromList",
+      "binary_offset": 13668,
+      "address": 35169824,
+      "size": 144,
+      "end": 35169968,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 144,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libos.TWL.LTD.a",
+          "object": "os_application_j"
+        },
+        {
+          "library": "libos.TWL.LTD.thumb.a",
+          "object": "os_application_j"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "PMi_PreSleepForNdma",
+      "binary_offset": 13812,
+      "address": 35169968,
+      "size": 188,
+      "end": 35170156,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 168,
+      "relocation_masked_bytes": 20,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "PMi_ProceedToExit",
+      "binary_offset": 14000,
+      "address": 35170156,
+      "size": 76,
+      "end": 35170232,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 52,
+      "relocation_masked_bytes": 24,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "FS_ForceToEnableLatencyEmulation",
+      "binary_offset": 14076,
+      "address": 35170232,
+      "size": 16,
+      "end": 35170248,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libfs.TWL.LTD.a",
+          "object": "fs_archive_fatfs"
+        }
+      ],
+      "boundary_candidate_count": 4,
+      "boundary_candidate_names": [
+        "FS_ForceToEnableLatencyEmulation",
+        "OSi_IrqDma1",
+        "PM_ReadyToExit",
+        "RTCi_SetHourFormatAsync"
+      ]
+    },
+    {
+      "name": "OSi_IrqDma1",
+      "binary_offset": 14076,
+      "address": 35170232,
+      "size": 16,
+      "end": 35170248,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libos.TWL.LTD.a",
+          "object": "os_irqtable.o"
+        }
+      ],
+      "boundary_candidate_count": 4,
+      "boundary_candidate_names": [
+        "FS_ForceToEnableLatencyEmulation",
+        "OSi_IrqDma1",
+        "PM_ReadyToExit",
+        "RTCi_SetHourFormatAsync"
+      ]
+    },
+    {
+      "name": "PM_ReadyToExit",
+      "binary_offset": 14076,
+      "address": 35170232,
+      "size": 16,
+      "end": 35170248,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 4,
+      "boundary_candidate_names": [
+        "FS_ForceToEnableLatencyEmulation",
+        "OSi_IrqDma1",
+        "PM_ReadyToExit",
+        "RTCi_SetHourFormatAsync"
+      ]
+    },
+    {
+      "name": "RTCi_SetHourFormatAsync",
+      "binary_offset": 14076,
+      "address": 35170232,
+      "size": 16,
+      "end": 35170248,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "librtc.TWL.LTD.a",
+          "object": "internal.o"
+        }
+      ],
+      "boundary_candidate_count": 4,
+      "boundary_candidate_names": [
+        "FS_ForceToEnableLatencyEmulation",
+        "OSi_IrqDma1",
+        "PM_ReadyToExit",
+        "RTCi_SetHourFormatAsync"
+      ]
+    },
+    {
+      "name": "PMi_FinalizeDebugger",
+      "binary_offset": 14092,
+      "address": 35170248,
+      "size": 60,
+      "end": 35170308,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 48,
+      "relocation_masked_bytes": 12,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "PM_AppendPostExitCallback",
+      "binary_offset": 14152,
+      "address": 35170308,
+      "size": 32,
+      "end": 35170340,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 4,
+      "boundary_candidate_names": [
+        "PM_AppendPostExitCallback",
+        "PM_AppendPostSleepCallback",
+        "PM_AppendPreExitCallback",
+        "PM_AppendPreSleepCallback"
+      ]
+    },
+    {
+      "name": "PM_AppendPostSleepCallback",
+      "binary_offset": 14152,
+      "address": 35170308,
+      "size": 32,
+      "end": 35170340,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 4,
+      "boundary_candidate_names": [
+        "PM_AppendPostExitCallback",
+        "PM_AppendPostSleepCallback",
+        "PM_AppendPreExitCallback",
+        "PM_AppendPreSleepCallback"
+      ]
+    },
+    {
+      "name": "PM_AppendPreExitCallback",
+      "binary_offset": 14152,
+      "address": 35170308,
+      "size": 32,
+      "end": 35170340,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 4,
+      "boundary_candidate_names": [
+        "PM_AppendPostExitCallback",
+        "PM_AppendPostSleepCallback",
+        "PM_AppendPreExitCallback",
+        "PM_AppendPreSleepCallback"
+      ]
+    },
+    {
+      "name": "PM_AppendPreSleepCallback",
+      "binary_offset": 14152,
+      "address": 35170308,
+      "size": 32,
+      "end": 35170340,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 24,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 4,
+      "boundary_candidate_names": [
+        "PM_AppendPostExitCallback",
+        "PM_AppendPostSleepCallback",
+        "PM_AppendPreExitCallback",
+        "PM_AppendPreSleepCallback"
+      ]
+    },
+    {
+      "name": "PMi_InsertPostExitCallbackEx",
+      "binary_offset": 14184,
+      "address": 35170340,
+      "size": 36,
+      "end": 35170376,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 28,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 5,
+      "boundary_candidate_names": [
+        "PMi_InsertPostExitCallbackEx",
+        "PMi_InsertPostSleepCallbackEx",
+        "PMi_InsertPreExitCallbackEx",
+        "PMi_InsertPreSleepCallbackEx",
+        "WBT_MpChildSendHook"
+      ]
+    },
+    {
+      "name": "PMi_InsertPostSleepCallbackEx",
+      "binary_offset": 14184,
+      "address": 35170340,
+      "size": 36,
+      "end": 35170376,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 28,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 5,
+      "boundary_candidate_names": [
+        "PMi_InsertPostExitCallbackEx",
+        "PMi_InsertPostSleepCallbackEx",
+        "PMi_InsertPreExitCallbackEx",
+        "PMi_InsertPreSleepCallbackEx",
+        "WBT_MpChildSendHook"
+      ]
+    },
+    {
+      "name": "PMi_InsertPreExitCallbackEx",
+      "binary_offset": 14184,
+      "address": 35170340,
+      "size": 36,
+      "end": 35170376,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 28,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 5,
+      "boundary_candidate_names": [
+        "PMi_InsertPostExitCallbackEx",
+        "PMi_InsertPostSleepCallbackEx",
+        "PMi_InsertPreExitCallbackEx",
+        "PMi_InsertPreSleepCallbackEx",
+        "WBT_MpChildSendHook"
+      ]
+    },
+    {
+      "name": "PMi_InsertPreSleepCallbackEx",
+      "binary_offset": 14184,
+      "address": 35170340,
+      "size": 36,
+      "end": 35170376,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 28,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 5,
+      "boundary_candidate_names": [
+        "PMi_InsertPostExitCallbackEx",
+        "PMi_InsertPostSleepCallbackEx",
+        "PMi_InsertPreExitCallbackEx",
+        "PMi_InsertPreSleepCallbackEx",
+        "WBT_MpChildSendHook"
+      ]
+    },
+    {
+      "name": "WBT_MpChildSendHook",
+      "binary_offset": 14184,
+      "address": 35170340,
+      "size": 36,
+      "end": 35170376,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 28,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libwbt.TWL.LTD.a",
+          "object": "wbt_api.o"
+        }
+      ],
+      "boundary_candidate_count": 5,
+      "boundary_candidate_names": [
+        "PMi_InsertPostExitCallbackEx",
+        "PMi_InsertPostSleepCallbackEx",
+        "PMi_InsertPreExitCallbackEx",
+        "PMi_InsertPreSleepCallbackEx",
+        "WBT_MpChildSendHook"
+      ]
+    },
+    {
+      "name": "PMi_ExecutePostExitCallbackList",
+      "binary_offset": 14220,
+      "address": 35170376,
+      "size": 24,
+      "end": 35170400,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 16,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 2,
+      "boundary_candidate_names": [
+        "PMi_ExecutePostExitCallbackList",
+        "PMi_ExecutePreExitCallbackList"
+      ]
+    },
+    {
+      "name": "PMi_ExecutePreExitCallbackList",
+      "binary_offset": 14220,
+      "address": 35170376,
+      "size": 24,
+      "end": 35170400,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 16,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 2,
+      "boundary_candidate_names": [
+        "PMi_ExecutePostExitCallbackList",
+        "PMi_ExecutePreExitCallbackList"
+      ]
+    },
+    {
+      "name": "CARDi_CommandBegin",
+      "binary_offset": 14244,
+      "address": 35170400,
+      "size": 16,
+      "end": 35170416,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_spi.o"
+        }
+      ],
+      "boundary_candidate_count": 4,
+      "boundary_candidate_names": [
+        "CARDi_CommandBegin",
+        "NNS_G2dSetSpriteAttrEnable",
+        "OSi_SetDeliverArgState",
+        "PM_SetAutoExit"
+      ]
+    },
+    {
+      "name": "NNS_G2dSetSpriteAttrEnable",
+      "binary_offset": 14244,
+      "address": 35170400,
+      "size": 16,
+      "end": 35170416,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libnnsg2d.TWL.LTD.a",
+          "object": "g2d_softsprite.o"
+        }
+      ],
+      "boundary_candidate_count": 4,
+      "boundary_candidate_names": [
+        "CARDi_CommandBegin",
+        "NNS_G2dSetSpriteAttrEnable",
+        "OSi_SetDeliverArgState",
+        "PM_SetAutoExit"
+      ]
+    },
+    {
+      "name": "OSi_SetDeliverArgState",
+      "binary_offset": 14244,
+      "address": 35170400,
+      "size": 16,
+      "end": 35170416,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libos.TWL.LTD.a",
+          "object": "os_argument.o"
+        }
+      ],
+      "boundary_candidate_count": 4,
+      "boundary_candidate_names": [
+        "CARDi_CommandBegin",
+        "NNS_G2dSetSpriteAttrEnable",
+        "OSi_SetDeliverArgState",
+        "PM_SetAutoExit"
+      ]
+    },
+    {
+      "name": "PM_SetAutoExit",
+      "binary_offset": 14244,
+      "address": 35170400,
+      "size": 16,
+      "end": 35170416,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 4,
+      "boundary_candidate_names": [
+        "CARDi_CommandBegin",
+        "NNS_G2dSetSpriteAttrEnable",
+        "OSi_SetDeliverArgState",
+        "PM_SetAutoExit"
+      ]
+    },
+    {
+      "name": "CARD_IsPulledOut",
+      "binary_offset": 14260,
+      "address": 35170416,
+      "size": 16,
+      "end": 35170432,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_pullout.o"
+        }
+      ],
+      "boundary_candidate_count": 9,
+      "boundary_candidate_names": [
+        "CARD_IsPulledOut",
+        "ENV_GetResourceSetLinkHead",
+        "NNS_G3dGeIsSendDLBusy",
+        "NNS_SndCaptureGetCaptureType",
+        "NNSi_G2dGetOamSoftEmuAutoZOffset",
+        "OS_GetDeliverArgState",
+        "PM_GetAutoExit",
+        "RTC_GetLastSyncSWClockResult",
+        "WMi_GetSystemWork"
+      ]
+    },
+    {
+      "name": "ENV_GetResourceSetLinkHead",
+      "binary_offset": 14260,
+      "address": 35170416,
+      "size": 16,
+      "end": 35170432,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libenv.TWL.LTD.a",
+          "object": "env_system.o"
+        }
+      ],
+      "boundary_candidate_count": 9,
+      "boundary_candidate_names": [
+        "CARD_IsPulledOut",
+        "ENV_GetResourceSetLinkHead",
+        "NNS_G3dGeIsSendDLBusy",
+        "NNS_SndCaptureGetCaptureType",
+        "NNSi_G2dGetOamSoftEmuAutoZOffset",
+        "OS_GetDeliverArgState",
+        "PM_GetAutoExit",
+        "RTC_GetLastSyncSWClockResult",
+        "WMi_GetSystemWork"
+      ]
+    },
+    {
+      "name": "NNS_G3dGeIsSendDLBusy",
+      "binary_offset": 14260,
+      "address": 35170416,
+      "size": 16,
+      "end": 35170432,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libnnsg3d.TWL.LTD.a",
+          "object": "gecom.o"
+        }
+      ],
+      "boundary_candidate_count": 9,
+      "boundary_candidate_names": [
+        "CARD_IsPulledOut",
+        "ENV_GetResourceSetLinkHead",
+        "NNS_G3dGeIsSendDLBusy",
+        "NNS_SndCaptureGetCaptureType",
+        "NNSi_G2dGetOamSoftEmuAutoZOffset",
+        "OS_GetDeliverArgState",
+        "PM_GetAutoExit",
+        "RTC_GetLastSyncSWClockResult",
+        "WMi_GetSystemWork"
+      ]
+    },
+    {
+      "name": "NNS_SndCaptureGetCaptureType",
+      "binary_offset": 14260,
+      "address": 35170416,
+      "size": 16,
+      "end": 35170432,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libnnssnd.TWL.LTD.a",
+          "object": "capture.o"
+        }
+      ],
+      "boundary_candidate_count": 9,
+      "boundary_candidate_names": [
+        "CARD_IsPulledOut",
+        "ENV_GetResourceSetLinkHead",
+        "NNS_G3dGeIsSendDLBusy",
+        "NNS_SndCaptureGetCaptureType",
+        "NNSi_G2dGetOamSoftEmuAutoZOffset",
+        "OS_GetDeliverArgState",
+        "PM_GetAutoExit",
+        "RTC_GetLastSyncSWClockResult",
+        "WMi_GetSystemWork"
+      ]
+    },
+    {
+      "name": "NNSi_G2dGetOamSoftEmuAutoZOffset",
+      "binary_offset": 14260,
+      "address": 35170416,
+      "size": 16,
+      "end": 35170432,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libnnsg2d.TWL.LTD.a",
+          "object": "g2d_oamsoftwares"
+        }
+      ],
+      "boundary_candidate_count": 9,
+      "boundary_candidate_names": [
+        "CARD_IsPulledOut",
+        "ENV_GetResourceSetLinkHead",
+        "NNS_G3dGeIsSendDLBusy",
+        "NNS_SndCaptureGetCaptureType",
+        "NNSi_G2dGetOamSoftEmuAutoZOffset",
+        "OS_GetDeliverArgState",
+        "PM_GetAutoExit",
+        "RTC_GetLastSyncSWClockResult",
+        "WMi_GetSystemWork"
+      ]
+    },
+    {
+      "name": "OS_GetDeliverArgState",
+      "binary_offset": 14260,
+      "address": 35170416,
+      "size": 16,
+      "end": 35170432,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libos.TWL.LTD.a",
+          "object": "os_argument.o"
+        }
+      ],
+      "boundary_candidate_count": 9,
+      "boundary_candidate_names": [
+        "CARD_IsPulledOut",
+        "ENV_GetResourceSetLinkHead",
+        "NNS_G3dGeIsSendDLBusy",
+        "NNS_SndCaptureGetCaptureType",
+        "NNSi_G2dGetOamSoftEmuAutoZOffset",
+        "OS_GetDeliverArgState",
+        "PM_GetAutoExit",
+        "RTC_GetLastSyncSWClockResult",
+        "WMi_GetSystemWork"
+      ]
+    },
+    {
+      "name": "PM_GetAutoExit",
+      "binary_offset": 14260,
+      "address": 35170416,
+      "size": 16,
+      "end": 35170432,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 9,
+      "boundary_candidate_names": [
+        "CARD_IsPulledOut",
+        "ENV_GetResourceSetLinkHead",
+        "NNS_G3dGeIsSendDLBusy",
+        "NNS_SndCaptureGetCaptureType",
+        "NNSi_G2dGetOamSoftEmuAutoZOffset",
+        "OS_GetDeliverArgState",
+        "PM_GetAutoExit",
+        "RTC_GetLastSyncSWClockResult",
+        "WMi_GetSystemWork"
+      ]
+    },
+    {
+      "name": "RTC_GetLastSyncSWClockResult",
+      "binary_offset": 14260,
+      "address": 35170416,
+      "size": 16,
+      "end": 35170432,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "librtc.TWL.LTD.a",
+          "object": "swclock.o"
+        }
+      ],
+      "boundary_candidate_count": 9,
+      "boundary_candidate_names": [
+        "CARD_IsPulledOut",
+        "ENV_GetResourceSetLinkHead",
+        "NNS_G3dGeIsSendDLBusy",
+        "NNS_SndCaptureGetCaptureType",
+        "NNSi_G2dGetOamSoftEmuAutoZOffset",
+        "OS_GetDeliverArgState",
+        "PM_GetAutoExit",
+        "RTC_GetLastSyncSWClockResult",
+        "WMi_GetSystemWork"
+      ]
+    },
+    {
+      "name": "WMi_GetSystemWork",
+      "binary_offset": 14260,
+      "address": 35170416,
+      "size": 16,
+      "end": 35170432,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 12,
+      "relocation_masked_bytes": 4,
+      "sources": [
+        {
+          "library": "libwm.TWL.LTD.a",
+          "object": "wm_system.o"
+        }
+      ],
+      "boundary_candidate_count": 9,
+      "boundary_candidate_names": [
+        "CARD_IsPulledOut",
+        "ENV_GetResourceSetLinkHead",
+        "NNS_G3dGeIsSendDLBusy",
+        "NNS_SndCaptureGetCaptureType",
+        "NNSi_G2dGetOamSoftEmuAutoZOffset",
+        "OS_GetDeliverArgState",
+        "PM_GetAutoExit",
+        "RTC_GetLastSyncSWClockResult",
+        "WMi_GetSystemWork"
+      ]
+    },
+    {
+      "name": "PMi_CallPostExitCallbackAndReset",
+      "binary_offset": 14276,
+      "address": 35170432,
+      "size": 332,
+      "end": 35170764,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 272,
+      "relocation_masked_bytes": 60,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "PMi_TryLockForReset",
+      "binary_offset": 14608,
+      "address": 35170764,
+      "size": 60,
+      "end": 35170824,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 44,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libspi.TWL.LTD.a",
+          "object": "pm.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARDi_ReadCardWithHash",
+      "binary_offset": 14676,
+      "address": 35170832,
+      "size": 28,
+      "end": 35170860,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 20,
+      "relocation_masked_bytes": 8,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_rom.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARDi_ReadCardWithHashInternalAsync",
+      "binary_offset": 14704,
+      "address": 35170860,
+      "size": 112,
+      "end": 35170972,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 92,
+      "relocation_masked_bytes": 20,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_rom.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARDi_InitRomHash",
+      "binary_offset": 14816,
+      "address": 35170972,
+      "size": 296,
+      "end": 35171268,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 212,
+      "relocation_masked_bytes": 84,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_rom.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARD_CalcRomHashBufferLength",
+      "binary_offset": 15176,
+      "address": 35171332,
+      "size": 92,
+      "end": 35171424,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 92,
+      "relocation_masked_bytes": 0,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_hash.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARDi_CompareHash",
+      "binary_offset": 15268,
+      "address": 35171424,
+      "size": 276,
+      "end": 35171700,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 228,
+      "relocation_masked_bytes": 48,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_hash.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARDi_StartLoading",
+      "binary_offset": 15544,
+      "address": 35171700,
+      "size": 224,
+      "end": 35171924,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 212,
+      "relocation_masked_bytes": 12,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_hash.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARD_NotifyRomHashReadAsync",
+      "binary_offset": 15768,
+      "address": 35171924,
+      "size": 108,
+      "end": 35172032,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 92,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_hash.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARDi_TouchRomHashBlock",
+      "binary_offset": 15876,
+      "address": 35172032,
+      "size": 280,
+      "end": 35172312,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 264,
+      "relocation_masked_bytes": 16,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_hash.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARDi_TouchRomHashSector",
+      "binary_offset": 16156,
+      "address": 35172312,
+      "size": 268,
+      "end": 35172580,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 244,
+      "relocation_masked_bytes": 24,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_hash.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARD_InitRomHashContext",
+      "binary_offset": 16424,
+      "address": 35172580,
+      "size": 684,
+      "end": 35173264,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 644,
+      "relocation_masked_bytes": 40,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_hash.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARDi_ReadRomHashImageDirect",
+      "binary_offset": 17108,
+      "address": 35173264,
+      "size": 520,
+      "end": 35173784,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 484,
+      "relocation_masked_bytes": 36,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_hash.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARDi_ReadRomHashImageCaching",
+      "binary_offset": 17628,
+      "address": 35173784,
+      "size": 464,
+      "end": 35174248,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 428,
+      "relocation_masked_bytes": 36,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_hash.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    },
+    {
+      "name": "CARD_ReadRomHashImage",
+      "binary_offset": 18092,
+      "address": 35174248,
+      "size": 196,
+      "end": 35174444,
+      "memory_region_kind": "ltd_autoload",
+      "isa": "ARM",
+      "matched_bytes": 176,
+      "relocation_masked_bytes": 20,
+      "sources": [
+        {
+          "library": "libcard.TWL.LTD.a",
+          "object": "card_hash.o"
+        }
+      ],
+      "boundary_candidate_count": 1
+    }
+  ]
+}

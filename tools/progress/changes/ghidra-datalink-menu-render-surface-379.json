@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-menu-render-surface-379",
+  "summary": "Rapports finalisés intégrés: constructeur et reprise du contrôleur de menu Datalink, remplissage rectangulaire RenderSurface et calcul d'adresse de ligne couvrent 584 octets et portent le registre Ghidra à 379 symboles idempotents; pools, trampoline et littéral Datalink exclus, fonctions voisines 0x020B7488 et 0x020B7528 conservées distinctes",
+  "updated_at": "2026-07-18T03:00:20Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema-v2.json#/$defs/worker",
+  "schema_version": 2,
+  "kind": "worker",
+  "id": "coordinator",
+  "label": "Coordinateur + intégration",
+  "status": "working",
+  "task": "Lot glyphes AE280-AEA17: 19 fonctions / 1768 octets; intégration des gros lots agents",
+  "updated_at": "2026-07-18T05:43:48Z",
+  "section": "arm9"
+}

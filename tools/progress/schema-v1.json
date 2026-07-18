@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.fsae.invalid/progress/schema-v1.json",
+  "title": "Four Swords Anniversary decompilation progress inputs",
+  "type": "object",
+  "$defs": {
+    "counter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["matched", "total"],
+      "properties": {
+        "matched": {"type": "integer", "minimum": 0},
+        "total": {"type": "integer", "minimum": 0}
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["units", "functions", "bytes"],
+      "properties": {
+        "units": {"$ref": "#/$defs/counter"},
+        "functions": {"$ref": "#/$defs/counter"},
+        "bytes": {"$ref": "#/$defs/counter"}
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "dimension", "include_in_total", "optional", "targets"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
+        "label": {"type": "string", "minLength": 1},
+        "dimension": {"enum": ["section", "category"]},
+        "include_in_total": {"type": "boolean"},
+        "optional": {"type": "boolean"},
+        "targets": {"$ref": "#/$defs/metrics"}
+      }
+    },
+    "project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "kind", "project", "refresh_seconds", "worker_stale_seconds", "recent_change_limit", "sections", "inputs", "expected_workers"],
+      "properties": {
+        "$schema": {"type": "string"},
+        "schema_version": {"const": 1},
+        "kind": {"const": "project"},
+        "project": {
+          "type": "object",
+          "required": ["name", "short_name"],
+          "properties": {
+            "name": {"type": "string", "minLength": 1},
+            "short_name": {"type": "string", "minLength": 1}
+          }
+        },
+        "refresh_seconds": {"type": "integer", "minimum": 1},
+        "worker_stale_seconds": {"type": "integer", "minimum": 1},
+        "recent_change_limit": {"type": "integer", "minimum": 1},
+        "sections": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/section"}},
+        "inputs": {
+          "type": "object",
+          "required": ["evidence_globs", "worker_globs", "change_globs"],
+          "properties": {
+            "evidence_globs": {"type": "array", "items": {"type": "string"}},
+            "worker_globs": {"type": "array", "items": {"type": "string"}},
+            "change_globs": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "expected_workers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "label"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
+              "label": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "kind", "id", "section", "metrics", "updated_at"],
+      "properties": {
+        "$schema": {"type": "string"},
+        "schema_version": {"const": 1},
+        "kind": {"const": "evidence"},
+        "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"},
+        "section": {"type": "string"},
+        "category": {"type": "string"},
+        "metrics": {"$ref": "#/$defs/metrics"},
+        "updated_at": {"type": "string", "format": "date-time"},
+        "worker": {"type": "string"},
+        "summary": {"type": "string"}
+      }
+    },
+    "worker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "kind", "id", "label", "status", "task", "updated_at"],
+      "properties": {
+        "$schema": {"type": "string"},
+        "schema_version": {"const": 1},
+        "kind": {"const": "worker"},
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]*$"},
+        "label": {"type": "string", "minLength": 1},
+        "status": {"enum": ["working", "idle", "blocked", "done", "offline"]},
+        "section": {"type": "string"},
+        "task": {"type": "string"},
+        "updated_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "change": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "kind", "id", "summary", "updated_at"],
+      "properties": {
+        "$schema": {"type": "string"},
+        "schema_version": {"const": 1},
+        "kind": {"const": "change"},
+        "id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9_.-]*$"},
+        "summary": {"type": "string", "minLength": 1},
+        "section": {"type": "string"},
+        "worker": {"type": "string"},
+        "updated_at": {"type": "string", "format": "date-time"}
+      }
+    }
+  }
+}

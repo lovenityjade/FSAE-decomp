@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-animation-320",
+  "summary": "Fonction complète Game_UpdateDatalinkControllerAnimation validée et renommée dans Ghidra sur 588 octets : fin confirmée avant le pool 0x020A92B0 et routine 0x020A92E0 exclue, registre ARM9 porté à 320 symboles idempotents",
+  "updated_at": "2026-07-18T02:03:48Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

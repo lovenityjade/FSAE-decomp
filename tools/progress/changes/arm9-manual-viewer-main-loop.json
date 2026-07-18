@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-viewer-main-loop",
+  "summary": "Boucle principale GameManualViewer 0x020bce14..0x020bcfff récupérée: fades 17+17 frames, priorités d'entrée modes 0..4, sommeil, rendu/VBlank, arrêt et shutdown validés",
+  "updated_at": "2026-07-18T02:21:36Z",
+  "section": "arm9",
+  "worker": "binary-map"
+}

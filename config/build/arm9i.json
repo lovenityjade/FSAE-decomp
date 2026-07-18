@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "kind": "arm9i-build-plan",
+  "target": {
+    "path": "build/rom/sections/arm9i.bin",
+    "size": 18324,
+    "sha256": "ab03826fbbe1b15d381008d37ec6d1c284bfb4df26082adda374458caea58f6f"
+  },
+  "signature_map": "config/sdk-signatures-arm9i.json",
+  "layout": {
+    "load_address": 35156160,
+    "file_prefix_size": 4,
+    "payload_file_offset": 4,
+    "payload_size": 18304,
+    "autoload_table_offset": 18308,
+    "autoload_table_words": [35156160, 18304, 35156160, 214048]
+  },
+  "linker": {
+    "model": "ARM9 full-image link emits the Ltdautoload LTDMAIN region; ARM9i is not a standalone executable",
+    "compiler_abi": "mwccarm 4.0 build 1051",
+    "linker_tool": "mwldarm 2.0 build 99",
+    "architecture_flags": ["-proc", "arm946e", "-nothumb", "-nopic", "-nopid", "-interworking"],
+    "system_flags": ["-stdlib", "-map", "closure", "-main", "_start"],
+    "spec_file": "include/twl/specfiles/ARM9-TS.lsf",
+    "lcf_template": "include/twl/specfiles/ARM9-TS.lcf.template",
+    "ltdautoload_name": "LTDMAIN",
+    "ltdautoload_placement": "After $(TARGET_NAME)",
+    "ltdautoload_start": 35156160,
+    "sdk_rule": "build/buildtools/twl/modulerules.cctype.CW",
+    "sdk_flag_source": "build/buildtools/twl/commondefs.cctype.CW",
+    "status": "exact selection/placement known; full ARM9 LCF/response and licensed CodeWarrior link remain external prerequisites"
+  },
+  "archives": [
+    {
+      "name": "libna.TWL.LTD.thumb.a",
+      "path": "lib/ARM9-TS/Rom/libna.TWL.LTD.thumb.a",
+      "sha256": "91f6c32e618e3269da5fa8de4b175b0963f663a4634d06725bf7466e3469dce1"
+    },
+    {
+      "name": "libsyscall.twl.a",
+      "path": "lib/ARM9-TS/etc/libsyscall.twl.a",
+      "sha256": "664198eb8e4977cf46d3e525ee46e8b818a5cedf89b631375d1ffd3592d32df1"
+    },
+    {
+      "name": "libfs.TWL.LTD.a",
+      "path": "lib/ARM9-TS/Rom/libfs.TWL.LTD.a",
+      "sha256": "2a9ac9cfe3370b4572376d14662eaeac3c5bf4006d02fc26b231ec338936bb10"
+    },
+    {
+      "name": "libmi.TWL.LTD.a",
+      "path": "lib/ARM9-TS/Rom/libmi.TWL.LTD.a",
+      "sha256": "43cb8cf9e3ff26f7b65fe4f4f407c1f203ffe1920ea7401fc2a8cb9d7d768c6e"
+    },
+    {
+      "name": "libos.TWL.LTD.a",
+      "path": "lib/ARM9-TS/Rom/libos.TWL.LTD.a",
+      "sha256": "e26963318b46f01c0448b69ffb8d92fc69bff45f6ce3f15b0246a0818f6ef111"
+    },
+    {
+      "name": "libspi.TWL.LTD.a",
+      "path": "lib/ARM9-TS/Rom/libspi.TWL.LTD.a",
+      "sha256": "a6484d23307450557e8249a3cfe0e2298acc4503e0559ce3ca3d402adc544374"
+    },
+    {
+      "name": "libcard.TWL.LTD.a",
+      "path": "lib/ARM9-TS/Rom/libcard.TWL.LTD.a",
+      "sha256": "80a0c4c924153bececc11ed4d1191920fea9f7ba72ea11f181e31d0d735a2088"
+    }
+  ],
+  "object_ranges": [
+    {"offset": 0, "end": 4, "kind": "container_prefix", "label": "repository layout"},
+    {"offset": 4, "end": 36, "kind": "zero_fill", "label": "LTDMAIN start padding"},
+    {"offset": 36, "end": 76, "kind": "sdk_object", "archive": "libna.TWL.LTD.thumb.a", "object": "na_archive.o"},
+    {"offset": 76, "end": 956, "kind": "sdk_object", "archive": "libna.TWL.LTD.thumb.a", "object": "na_rom.o"},
+    {"offset": 956, "end": 1592, "kind": "sdk_object", "archive": "libna.TWL.LTD.thumb.a", "object": "na_shared_font.o"},
+    {"offset": 1592, "end": 1732, "kind": "sdk_object", "archive": "libsyscall.twl.a", "object": "syscall_twl.o"},
+    {"offset": 1732, "end": 8048, "kind": "sdk_object", "archive": "libfs.TWL.LTD.a", "object": "fs_archive_fatfs"},
+    {"offset": 8048, "end": 9544, "kind": "sdk_object", "archive": "libmi.TWL.LTD.a", "object": "mi_ndma.o"},
+    {"offset": 9544, "end": 13492, "kind": "sdk_object", "archive": "libmi.TWL.LTD.a", "object": "mi_sharedwram.o"},
+    {"offset": 13492, "end": 13564, "kind": "sdk_object", "archive": "libos.TWL.LTD.a", "object": "os_interrupt.o"},
+    {"offset": 13564, "end": 13592, "kind": "sdk_object", "archive": "libos.TWL.LTD.a", "object": "os_arena.o"},
+    {"offset": 13592, "end": 13668, "kind": "sdk_object", "archive": "libos.TWL.LTD.a", "object": "os_ownerinfoex.o"},
+    {"offset": 13668, "end": 13812, "kind": "sdk_object", "archive": "libos.TWL.LTD.a", "object": "os_application_j"},
+    {"offset": 13812, "end": 14668, "kind": "sdk_object", "archive": "libspi.TWL.LTD.a", "object": "pm.o"},
+    {"offset": 14668, "end": 14676, "kind": "sdk_object", "archive": "libcard.TWL.LTD.a", "object": "card_utility.o"},
+    {"offset": 14676, "end": 15112, "kind": "sdk_object", "archive": "libcard.TWL.LTD.a", "object": "card_rom.o"},
+    {"offset": 15112, "end": 18288, "kind": "sdk_object", "archive": "libcard.TWL.LTD.a", "object": "card_hash.o"},
+    {"offset": 18288, "end": 18308, "kind": "zero_fill", "label": "LTDMAIN end padding"},
+    {"offset": 18308, "end": 18324, "kind": "autoload_table", "label": "repository layout"}
+  ],
+  "previously_uncovered_ranges": [
+    {"offset": 4, "end": 36, "sha256": "66687aadf862bd776c8fc18b8e9f8e20089714856ee233b3902a591d0d5f2925", "classification": "zero_fill"},
+    {"offset": 1592, "end": 1732, "sha256": "8cdf3e34c13aaf8a525d35e71cc5f063ee2b03e35504815dc75b638965a38a3f", "classification": "libsyscall selected sections"},
+    {"offset": 3864, "end": 4156, "sha256": "9e06d73deabc1fd52982a32eeff4a27942cb6c479af43c3355a9f0242f672d71", "classification": "fs_archive_fatfs functions"},
+    {"offset": 4316, "end": 4608, "sha256": "959e7797c3f8ab46fac4266df0d07287616cd653806fcbaf96ed55c8fd0c44d8", "classification": "fs_archive_fatfs functions"},
+    {"offset": 5108, "end": 5212, "sha256": "e2dcc75305f88ff109c4f0b7283d06440da05f5bd23a12d8b93d8c3a3255d408", "classification": "fs_archive_fatfs function"},
+    {"offset": 7120, "end": 7224, "sha256": "349d891b433c956c810000d9308746374517fc2d36b3af97d4bfd998043b63c1", "classification": "fs_archive_fatfs function"},
+    {"offset": 7648, "end": 7672, "sha256": "6e1e0ca804cb50de1c2a4a6c4d79d772c4ae70a9e19909d7b5f9aab5bb346818", "classification": "fs_archive_fatfs functions"},
+    {"offset": 9532, "end": 9580, "sha256": "472093e6b057429f3450d7fdc62adc6d7fe69b0683d294455b4a1912d1ebc4ea", "classification": "mi_ndma thunk plus mi_sharedwram dispatch tables"},
+    {"offset": 9712, "end": 9744, "sha256": "d42da076cdc6c069c719973b83073ea19a98fdf10a62e05e84413e947a0ec20a", "classification": "mi_sharedwram function"},
+    {"offset": 9864, "end": 9896, "sha256": "12bd784d4795641bdb2aa70225e0030ab1c41f3f947eedb50549a16ab55a248f", "classification": "mi_sharedwram function"},
+    {"offset": 10116, "end": 10156, "sha256": "c770e603fd7d404833f27682aba3ddebef97f60378b34809f55849fa7ca33b19", "classification": "mi_sharedwram functions"},
+    {"offset": 14668, "end": 14676, "sha256": "168d8f529cc3480d145a090056a3bfc71fda871c49a4f032c101676cf1d43d08", "classification": "card_utility CARDiDmaUsingNew"},
+    {"offset": 15112, "end": 15176, "sha256": "3441621494866b99ee641cb1e4b45f92f9cf53a68e68192cff1f967e90513a72", "classification": "card_hash CARDiHmacKey"},
+    {"offset": 18288, "end": 18308, "sha256": "de47c9b27eb8d300dbb5f2c353e632c393262cf06340c4fa7f1b40c4cbd36f90", "classification": "zero_fill"}
+  ],
+  "recovered_functions": [
+    {"offset": 1592, "size": 4, "isa": "Thumb", "archive": "libsyscall.twl.a", "object": "syscall_twl.o", "name": "SVCi_InitSignHeapCore"},
+    {"offset": 1596, "size": 4, "isa": "Thumb", "archive": "libsyscall.twl.a", "object": "syscall_twl.o", "name": "SVCi_DecryptSignCoreRaw"},
+    {"offset": 1600, "size": 12, "isa": "Thumb", "archive": "libsyscall.twl.a", "object": "syscall_twl.o", "name": "SVCi_SHA1InitCore"},
+    {"offset": 1612, "size": 4, "isa": "Thumb", "archive": "libsyscall.twl.a", "object": "syscall_twl.o", "name": "SVCi_SHA1UpdateCore"},
+    {"offset": 1616, "size": 10, "isa": "Thumb", "archive": "libsyscall.twl.a", "object": "syscall_twl.o", "name": "SVCi_SHA1GetHashCore"},
+    {"offset": 1628, "size": 4, "isa": "Thumb", "archive": "libsyscall.twl.a", "object": "syscall_twl.o", "name": "SVCi_CalcSHA1Core"},
+    {"offset": 1632, "size": 4, "isa": "Thumb", "archive": "libsyscall.twl.a", "object": "syscall_twl.o", "name": "SVCi_CompareSHA1Core"},
+    {"offset": 1636, "size": 92, "isa": "ARM", "archive": "libsyscall.twl.a", "object": "syscall_twl.o", "name": "SVCi_DecryptSignCore"},
+    {"offset": 3864, "size": 120, "isa": "ARM", "archive": "libfs.TWL.LTD.a", "object": "fs_archive_fatfs", "name": "FSi_FATFS_DeleteFile"},
+    {"offset": 3984, "size": 172, "isa": "ARM", "archive": "libfs.TWL.LTD.a", "object": "fs_archive_fatfs", "name": "FSi_FATFS_RenameFile"},
+    {"offset": 4316, "size": 120, "isa": "ARM", "archive": "libfs.TWL.LTD.a", "object": "fs_archive_fatfs", "name": "FSi_FATFS_DeleteDirectory"},
+    {"offset": 4436, "size": 172, "isa": "ARM", "archive": "libfs.TWL.LTD.a", "object": "fs_archive_fatfs", "name": "FSi_FATFS_RenameDirectory"},
+    {"offset": 5108, "size": 104, "isa": "ARM", "archive": "libfs.TWL.LTD.a", "object": "fs_archive_fatfs", "name": "FSi_FATFS_CloseFile"},
+    {"offset": 7120, "size": 104, "isa": "ARM", "archive": "libfs.TWL.LTD.a", "object": "fs_archive_fatfs", "name": "FSi_FATFS_CloseDirectory"},
+    {"offset": 7648, "size": 12, "isa": "ARM", "archive": "libfs.TWL.LTD.a", "object": "fs_archive_fatfs", "name": "FSi_SleepProcedure"},
+    {"offset": 7660, "size": 12, "isa": "ARM", "archive": "libfs.TWL.LTD.a", "object": "fs_archive_fatfs", "name": "FSi_ShutdownProcedure"},
+    {"offset": 9532, "size": 12, "isa": "ARM", "archive": "libmi.TWL.LTD.a", "object": "mi_ndma.o", "name": "MI_Card_NDmaCopy"},
+    {"offset": 9712, "size": 32, "isa": "ARM", "archive": "libmi.TWL.LTD.a", "object": "mi_sharedwram.o", "name": "MIi_SetWramBankMaster"},
+    {"offset": 9864, "size": 32, "isa": "ARM", "archive": "libmi.TWL.LTD.a", "object": "mi_sharedwram.o", "name": "MIi_SetWramBankEnable"},
+    {"offset": 10116, "size": 20, "isa": "ARM", "archive": "libmi.TWL.LTD.a", "object": "mi_sharedwram.o", "name": "MIi_GetAddress_B"},
+    {"offset": 10136, "size": 20, "isa": "ARM", "archive": "libmi.TWL.LTD.a", "object": "mi_sharedwram.o", "name": "MIi_GetAddress_C"}
+  ],
+  "expected_analysis": {
+    "function_boundaries": 146,
+    "function_bytes": 18138,
+    "byte_exact_reference_boundaries": 37,
+    "byte_exact_reference_bytes": 1710,
+    "relocation_masked_reference_boundaries": 109,
+    "relocation_masked_reference_bytes": 16428,
+    "non_function_payload_bytes": 166,
+    "proprietary_game_bytes": 0
+  },
+  "layout_object": {
+    "source": "src/arm9i/layout.S",
+    "path": "build/arm9i/layout.o",
+    "sections": [
+      {"name": ".arm9i.prefix", "target_offset": 0, "size": 4},
+      {"name": ".ltdmain.start_padding", "target_offset": 4, "size": 32},
+      {"name": ".ltdmain.end_padding", "target_offset": 18288, "size": 20},
+      {"name": ".arm9i.autoload", "target_offset": 18308, "size": 16}
+    ]
+  },
+  "output": {
+    "analysis_proof": "build/arm9i/analysis.json",
+    "matching_proof": "build/arm9i/matching.json",
+    "matching_progress": "build/arm9i/matching.progress.json"
+  }
+}

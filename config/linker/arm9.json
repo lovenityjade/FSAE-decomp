@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "kind": "arm9-link-layout",
+  "targets": {
+    "arm9": {
+      "path": "build/rom/sections/arm9.bin",
+      "size": 1193472,
+      "sha256": "8bee49eedfb268c79ab371d3d2152c4e25f433d46daecd5dab2c0378a27300aa"
+    },
+    "arm9i": {
+      "path": "build/rom/sections/arm9i.bin",
+      "size": 18324,
+      "sha256": "ab03826fbbe1b15d381008d37ec6d1c284bfb4df26082adda374458caea58f6f"
+    }
+  },
+  "static": {
+    "load_address": 33570816,
+    "entry_address": 33572864,
+    "initialized_size": 1192576,
+    "initialized_end": 34763392,
+    "bss_start": 34763392,
+    "bss_size": 392768,
+    "bss_end": 35156160
+  },
+  "autoload": {
+    "payload_file_offset": 1192576,
+    "table_file_offset": 1193440,
+    "table_size": 32,
+    "records": [
+      {
+        "destination": 33521664,
+        "size": 704,
+        "end": 33522368,
+        "static_init_start": 33521664,
+        "bss_size": 0,
+        "bss_end": 33522368
+      },
+      {
+        "destination": 50200576,
+        "size": 160,
+        "end": 50200736,
+        "static_init_start": 50200576,
+        "bss_size": 2400,
+        "bss_end": 50203136
+      }
+    ]
+  },
+  "ltdautoload": {
+    "name": "LTDMAIN",
+    "placement": "After main",
+    "file_prefix_size": 4,
+    "payload_file_offset": 4,
+    "payload_size": 18304,
+    "table_file_offset": 18308,
+    "table_size": 16,
+    "records": [
+      {
+        "destination": 35156160,
+        "size": 18304,
+        "end": 35174464,
+        "static_init_start": 35156160,
+        "bss_size": 214048,
+        "bss_end": 35388512
+      }
+    ]
+  },
+  "toolchain": {
+    "compiler": "Freescale CodeWarrior ARM 4.0 build 1051",
+    "linker": "Metrowerks Linker for Embedded ARM 2.0 build 99",
+    "makelcf_format": "-V4",
+    "specification": "tools/linker/fixtures/smoke.lsf",
+    "production_specification": "include/twl/specfiles/ARM9-TS.lsf",
+    "production_template": "include/twl/specfiles/ARM9-TS.lcf.template"
+  }
+}

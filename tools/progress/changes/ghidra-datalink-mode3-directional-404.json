@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-mode3-directional-404",
+  "summary": "Quatre animations directionnelles Datalink mode trois finalisées sur 1008 octets, validées en hôte et ARM946E-S puis appliquées dans Ghidra, portant le registre à 404 symboles idempotents; quatre pools de littéraux et contrôleur suivant 0x020ABB58 exclus",
+  "updated_at": "2026-07-18T03:35:15Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

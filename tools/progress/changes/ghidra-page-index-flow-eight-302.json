@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-page-index-flow-eight-302",
+  "summary": "Huit symboles Ghidra page-index/page-flow validés et appliqués sur 988 octets : sept renommages, une callback créée sous garde stricte et registre ARM9 porté à 302 symboles idempotents",
+  "updated_at": "2026-07-18T01:41:40Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "change-7862602282cc",
+  "summary": "Pipeline Windows livré: sync publique sûre/idempotente, 9 tests locaux, 8 tests distants, probes CodeWarrior et propagation fidèle des échecs de build",
+  "updated_at": "2026-07-17T16:02:44Z",
+  "section": "arm9",
+  "worker": "rom-pipeline"
+}

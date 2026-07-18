@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-tween-state-stack-442",
+  "summary": "442 noms ARM9 idempotents dans Ghidra; mini-lot Datalink tween/easing/state-stack intégré: 6 fonctions, 532 octets catalogue validés sans linker",
+  "updated_at": "2026-07-18T05:09:28Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

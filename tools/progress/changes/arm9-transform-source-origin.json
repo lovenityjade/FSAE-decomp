@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-transform-source-origin",
+  "summary": "NtmvM2d_ComputeSourceOrigin_020B76D0 récupérée: calcule l'origine source depuis les facteurs signés du transform et la taille bitmap, ordre d'axes transposés conservé; tests hôte et ARM946E-S syntax-only validés sans linking",
+  "updated_at": "2026-07-18T02:50:40Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-page-factories-375",
+  "summary": "Dernière passe différentielle: la fabrique de panes et ses quatre fabriques typées Window, TextBox, Picture et Pane couvrent 592 octets, compilent strictement pour ARM946E-S et portent le registre Ghidra à 375 symboles idempotents; pool de signatures à 0x020B5414 exclu, transforms déjà présents et externs/helpers non autonomes laissés hors registre",
+  "updated_at": "2026-07-18T02:56:50Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

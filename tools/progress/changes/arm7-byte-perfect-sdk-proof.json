@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm7-byte-perfect-sdk-proof",
+  "summary": "ARM7 et ARM7i reproduits à 100% depuis racoon TwlSDK externe avec preuve byte-for-byte",
+  "updated_at": "2026-07-17T16:02:23Z",
+  "section": "arm7",
+  "worker": "binary-map"
+}

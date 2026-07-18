@@ -1,0 +1,25 @@
+{
+  "$schema": "../schema-v1.json#/$defs/evidence",
+  "schema_version": 1,
+  "kind": "evidence",
+  "id": "binary-map-arm7-official-symbols",
+  "section": "arm7",
+  "metrics": {
+    "units": {
+      "matched": 973,
+      "total": 973
+    },
+    "functions": {
+      "matched": 973,
+      "total": 973
+    },
+    "bytes": {
+      "matched": 153695,
+      "total": 153696
+    }
+  },
+  "updated_at": "2026-07-17T15:45:08Z",
+  "category": "sdk",
+  "worker": "binary-map",
+  "summary": "Official patch-5 racoon FLX map; target differs only at SDK patch byte and omits an external footer"
+}

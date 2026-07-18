@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-selection-336",
+  "summary": "Game_UpdateDatalinkControllerSelection validée sur son corps complet de 1448 octets à 0x020A94B4, avec le pool 0x020A9A5C..0x020A9A9F et la fonction suivante à 0x020A9AA0 exclus; registre ARM9 porté à 336 symboles Ghidra idempotents",
+  "updated_at": "2026-07-18T02:22:42Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

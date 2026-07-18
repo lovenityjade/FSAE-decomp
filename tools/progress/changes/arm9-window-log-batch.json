@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-window-log-batch",
+  "summary": "Window et ses sept slots virtuels, le format buffer et Game_LogFormat ont été décompilés; 71 fonctions ARM9 sémantiques sont maintenant mesurées",
+  "updated_at": "2026-07-17T22:43:14Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-finalized-manual-page-participant-action-370",
+  "summary": "Rapports finalisés intégrés: GameManualPage_Load, NtmvM2dPage_AllocateResourceArray et Game_UpdateDatalinkControllerParticipantAction couvrent 2296 octets et portent le registre ARM9 à 370 symboles idempotents; pool de 20 mots, dispatcher et stub après 0x020AA4AC explicitement exclus, NtmvM2d_ComputeSourceOrigin déjà présent",
+  "updated_at": "2026-07-18T02:52:58Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "../schema-v2.json#/$defs/evidence",
+  "schema_version": 2,
+  "kind": "evidence",
+  "id": "binary-map-arm9-sdk-signatures",
+  "track": "analysis",
+  "section": "arm9",
+  "metrics": {
+    "units": {
+      "covered": 942,
+      "total": 942
+    },
+    "functions": {
+      "covered": 942,
+      "total": 942
+    },
+    "bytes": {
+      "covered": 111094,
+      "total": 111094
+    }
+  },
+  "updated_at": "2026-07-17T15:54:32Z",
+  "category": "sdk",
+  "worker": "binary-map",
+  "summary": "942 unique relocation-masked SDK/TwlSystem function boundaries across 104 Rom archives; category total is limited to the proven SDK ranges"
+}

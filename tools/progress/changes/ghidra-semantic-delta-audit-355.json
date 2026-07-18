@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-semantic-delta-audit-355",
+  "summary": "Audit du delta source sémantique/registre: huit plus gros vrais corps catalogués, uniquement annotés et testés, validés sur 4180 octets et renommés dans Ghidra; dépendances externes, pools et entrées ambiguës exclus, registre ARM9 porté à 355 symboles idempotents",
+  "updated_at": "2026-07-18T02:42:09Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

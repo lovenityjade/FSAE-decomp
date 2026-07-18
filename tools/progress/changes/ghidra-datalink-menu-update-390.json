@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-menu-update-390",
+  "summary": "Game_UpdateDatalinkMenuController finalisé sur son corps huit-phases de 784 octets et appliqué dans Ghidra, portant le registre à 390 symboles; pool de neuf mots à 0x020AB4A0 exclu et fonction suivante 0x020AB4C4 conservée hors du lot",
+  "updated_at": "2026-07-18T03:15:38Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

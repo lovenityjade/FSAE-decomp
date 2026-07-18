@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-semantic-first-modules",
+  "summary": "Première reprise sémantique ARM9: assert interne, DataManager, huit fonctions DatalinkReader, classe RTTI Page et 20 classes/81 slots virtuels catalogués",
+  "updated_at": "2026-07-17T22:20:31Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

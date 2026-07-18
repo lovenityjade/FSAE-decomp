@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-page-index-init",
+  "summary": "Initialisation de l’index du manuel récupérée: allocation fixe, chargement de manual, installation TOC et sélection/fallback validés sans linking",
+  "updated_at": "2026-07-18T00:39:03Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

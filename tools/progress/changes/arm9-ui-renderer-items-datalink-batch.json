@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-ui-renderer-items-datalink-batch",
+  "summary": "UiRenderer complet, état graphique, upload circulaire, fin ItemsPanel et nouveaux lots Datalink repris; 49 tests de décompilation passent",
+  "updated_at": "2026-07-17T23:47:52Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

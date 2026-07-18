@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-datalink-slot-cleanup-semantic-address",
+  "summary": "Game_CleanupDatalinkPlayerSlots 0x020A88A8 reliée au compteur sémantique sur 88 octets: le corps déjà récupéré parcourt les trois slots Datalink, persiste le statut 6, réinitialise les statuts 6/8, efface +0x47 et commit l'état persistant sans linking",
+  "updated_at": "2026-07-18T03:40:13Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

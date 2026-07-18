@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-tween-433",
+  "summary": "Trois helpers Datalink tween finalisés sans linking: Game_ClampDatalinkSignedByte 0x020AC898 sur 28 octets, Game_DatalinkInterpolateVectorLinear 0x020ACAB4 sur 80 octets et Game_AdvanceDatalinkTween_020ACC7C sur 36 octets; hashes ROM, harness hôte, ARM946E-S et Ghidra 433 idempotent validés",
+  "updated_at": "2026-07-18T04:50:38Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

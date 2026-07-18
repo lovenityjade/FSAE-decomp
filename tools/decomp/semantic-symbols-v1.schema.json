@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.fsae.invalid/decomp/semantic-symbols-v1.schema.json",
+  "title": "ARM9 semantic function names",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "image",
+    "program",
+    "program_sha256",
+    "target_image_sha256",
+    "purpose",
+    "symbols"
+  ],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema_version": {"const": 1},
+    "image": {"const": "arm9"},
+    "program": {"const": "arm9.analysis.elf"},
+    "program_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "target_image_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "purpose": {"const": "analysis-only semantic function names; never matching evidence"},
+    "symbols": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["address", "name", "expected_names", "confidence", "rationale"],
+        "properties": {
+          "address": {"type": "string", "pattern": "^0x[0-9a-fA-F]{8}$"},
+          "name": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"},
+          "expected_names": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"}
+          },
+          "confidence": {"enum": ["verified", "descriptive", "provisional"]},
+          "rationale": {"type": "string", "minLength": 1},
+          "create_if_missing": {"const": true}
+        }
+      }
+    }
+  }
+}

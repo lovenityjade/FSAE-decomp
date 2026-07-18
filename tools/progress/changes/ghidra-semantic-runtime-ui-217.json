@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-semantic-runtime-ui-217",
+  "summary": "UiRenderer, graphics_state, Datalink runtime/slots/descripteurs/positions/modes, callback et configuration TOC ainsi que l'upload circulaire vérifiés puis intégrés; registre Ghidra à 217 symboles avec dry-run 217/217 inchangé",
+  "updated_at": "2026-07-17T23:54:06Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

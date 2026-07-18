@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-text-box-line-clip",
+  "summary": "NtmvM2dTextBox_LineIntersectsClip 0x020B7488 récupérée comme vraie fonction: écrit le rectangle de clip local, préserve zéro hors intersection, utilisée par TextBox_Draw et validée en hôte + ARM syntax-only sans linking",
+  "updated_at": "2026-07-18T02:47:11Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

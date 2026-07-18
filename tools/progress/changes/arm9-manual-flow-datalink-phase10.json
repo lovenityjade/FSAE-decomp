@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-flow-datalink-phase10",
+  "summary": "Flux de langue/page/affichage du manuel, audio, cluster ItemsPanel complet et sous-unités Datalink phase 10 récupérés; suite publique complète et 63 tests de décompilation réussis sans linking",
+  "updated_at": "2026-07-18T00:26:56Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

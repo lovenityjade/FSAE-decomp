@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "sdk_version_markers": [
+    {
+      "image": "arm9",
+      "module_params_binary_offset": 4068,
+      "version_word_binary_offset": 4092,
+      "version_magic_binary_offset": 4096,
+      "version_word": 84243764,
+      "decoded": "TwlSDK 5.5 release 4",
+      "confidence": "exact"
+    },
+    {
+      "image": "arm7",
+      "module_params_binary_offset": 1348,
+      "version_word_binary_offset": 1372,
+      "version_magic_binary_offset": 1376,
+      "version_word": 84243764,
+      "decoded": "TwlSDK 5.5 release 4",
+      "confidence": "exact"
+    }
+  ],
+  "local_reference_packages": [
+    {
+      "name": "TwlSDK-5_5-20100715a.zip",
+      "sha256": "4df838fde941e6240abe1dd0f3aa1b4ade56f42ac235101753105973d84d64b7"
+    },
+    {
+      "name": "TwlSDK-5_5_patch5-20111213.zip",
+      "sha256": "983314422fc1867f15dceb4dfc98410c8c3993412866bc6d5341fb45ecac5563"
+    },
+    {
+      "name": "TwlSystem-2_2_0-20090805.zip",
+      "sha256": "847d7793c2e54128bc7dc678b0a4a665ac144a32fbcfe54d51377ab5769f63c2"
+    }
+  ],
+  "arm7_component": {
+    "name": "racoon",
+    "variant": "ARM7-TS.LTD/Rom, ARM code generation",
+    "confidence": "exact",
+    "reference_tef_sha256": "ea3a326cd0f9c6a68cdb7c32acb9105bcfe037496e97dce2317f66db160a6747",
+    "arm7i": {
+      "reference": "racoon.TWL.LTD.sbin from TwlSDK 5.5 patch 5",
+      "target_sha256": "3703c27125294aa754fb4bc64f6f78e6cac93ae0b4eb4d72cafbcc591aaaa3ef",
+      "reference_sha256": "3703c27125294aa754fb4bc64f6f78e6cac93ae0b4eb4d72cafbcc591aaaa3ef",
+      "comparison": "byte-identical",
+      "mapped_function_symbols": 1550
+    },
+    "arm7": {
+      "reference": "racoon.TWL.FLX.sbin from TwlSDK 5.5 patch 5",
+      "target_sha256": "a96394d986dced7cbe6f3b3d2f82464b3970b82f336e3d26500419dbe380de1c",
+      "reference_sha256": "7959818fcc91766fcdd19f55ed0f73f968186f324ab8e38b364bd54146a5d55a",
+      "target_size": 153696,
+      "reference_size": 153712,
+      "comparison": "the target prefix differs only at binary offset 0x55c, where the SDK release byte is 4 rather than 5; the reference has one extra 16-byte footer",
+      "equal_target_bytes": 153695,
+      "mapped_function_symbols": 973
+    }
+  },
+  "arm9_library_scan": {
+    "result": "config/sdk-signatures-arm9.json",
+    "method": "unique relocation-masked function matches against TwlSDK/TwlSystem Rom libraries",
+    "archives_scanned": 104,
+    "functions_scanned": 9731,
+    "matched_name_candidates": 1021,
+    "unique_function_boundaries": 942,
+    "covered_bytes": 111094,
+    "twlsystem_name_candidates": 278,
+    "twlsystem_unique_boundaries": 259,
+    "twlsystem_covered_bytes": 30804,
+    "confidence": "high for dense clusters; isolated short matches remain candidates"
+  },
+  "arm9i_library_scan": {
+    "result": "config/sdk-signatures-arm9i.json",
+    "method": "unique relocation-masked function matches against TwlSDK/TwlSystem Rom libraries",
+    "archives_scanned": 104,
+    "functions_scanned": 9731,
+    "matched_name_candidates": 154,
+    "unique_function_boundaries": 125,
+    "covered_bytes": 17072,
+    "initialized_payload_bytes": 18304,
+    "initialized_payload_coverage_ratio": 0.932692,
+    "confidence": "high; matches cover nearly the entire initialized LTD payload"
+  },
+  "non_sdk_observations": [
+    {
+      "image": "arm9",
+      "kind": "source_file_string",
+      "value": "DataManager.cpp",
+      "binary_offsets": [1141556, 1141580]
+    },
+    {
+      "image": "arm9",
+      "kind": "source_file_string",
+      "value": "DatalinkReader.cpp",
+      "binary_offsets": [1182356, 1182388]
+    },
+    {
+      "image": "arm9",
+      "kind": "internal_library_namespace",
+      "value": "nt::mv::m2d",
+      "evidence": "mangled class names and M2M:/M2U: resource paths near the end of the static image",
+      "status": "not found in the supplied TwlSDK or TwlSystem references"
+    }
+  ]
+}

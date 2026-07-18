@@ -1,0 +1,27 @@
+# Public makelcf smoke specification.  Paths are supplied at runtime.
+
+Static main
+{
+    Address 0x02004000
+    Object $(STATIC_OBJECT)
+    StackSize 0 0
+}
+
+Autoload ITCM
+{
+    Address 0x01ff8000
+    Object * (.itcm)
+}
+
+Autoload DTCM
+{
+    Address 0x02fe0000
+    Object * (.dtcm)
+}
+
+Ltdautoload LTDMAIN
+{
+    After main
+    Object * (.ltdmain)
+    Object $(LTD_OBJECT)
+}

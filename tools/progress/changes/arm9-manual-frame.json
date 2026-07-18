@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-frame",
+  "summary": "Boucle de rendu du manuel récupérée: audio, tick/upload du buffer, synchronisation des indicateurs, mise à jour TOC et rendu des deux racines validés sans linking",
+  "updated_at": "2026-07-18T01:08:30Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

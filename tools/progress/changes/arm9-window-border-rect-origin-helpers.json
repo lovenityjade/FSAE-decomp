@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-window-border-rect-origin-helpers",
+  "summary": "Sept helpers Window de bordure récupérés/publiés sur 364 octets: rectangles top/right/left/bottom, wrapper top source-origin, source-origin right et destructeur de bordure no-op; boundaries ROM, catalogue, tests hôte et ARM946E-S validés sans linking",
+  "updated_at": "2026-07-18T03:12:38Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

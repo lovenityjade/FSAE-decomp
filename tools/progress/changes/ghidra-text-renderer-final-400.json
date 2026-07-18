@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-text-renderer-final-400",
+  "summary": "Lot Text Renderer finalisé sur quatre fonctions et 692 octets: l'initialiseur manquant 0x020B6870 ajouté, trois entrées existantes confirmées et leurs preuves promues, puis registre Ghidra concurrent validé idempotent à 400 symboles; littéraux 0x020B68C4/0x020B69E0, TCLi SDK et fonction suivante exclus",
+  "updated_at": "2026-07-18T03:29:59Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

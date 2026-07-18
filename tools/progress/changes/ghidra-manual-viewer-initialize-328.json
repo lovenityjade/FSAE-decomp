@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-manual-viewer-initialize-328",
+  "summary": "Initialiseur complet GameManualViewer validé et renommé dans Ghidra sur 112 octets jusqu'à la frontière exacte 0x020BC8BC : registre ARM9 porté à 328 symboles idempotents",
+  "updated_at": "2026-07-18T02:13:08Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

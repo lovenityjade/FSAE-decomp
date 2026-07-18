@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-menu-animation-384",
+  "summary": "Quatre animations directionnelles du menu Datalink finalisées sur 1008 octets et appliquées dans Ghidra, portant le registre de 380 à 384 symboles; quatre pools de constantes exclus et contrôleur voisin à 0x020AB190 laissé au rapport rom_pipeline",
+  "updated_at": "2026-07-18T03:06:48Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

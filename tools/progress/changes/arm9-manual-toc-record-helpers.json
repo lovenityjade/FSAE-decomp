@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-toc-record-helpers",
+  "summary": "Deux helpers Manual TOC/Items récupérés sur 132 octets: scan de hit-test jumeau 0x020b8e88 sur 112 octets et sélection enfant initiale 0/-1 à 0x020b8ef8 sur 20 octets; constructeur ItemsPanel 0x020b8f0c préservé comme frontière distincte",
+  "updated_at": "2026-07-18T03:33:22Z",
+  "section": "arm9",
+  "worker": "binary-map"
+}

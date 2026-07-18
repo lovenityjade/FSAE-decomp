@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-input-sound-261",
+  "summary": "16 fonctions input_state et SoundManager vérifiées sur 1516 octets puis intégrées; ItemsPanel tardif confirmé et registre Ghidra à 261 symboles avec dry-run 261/261 inchangé",
+  "updated_at": "2026-07-18T00:13:03Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

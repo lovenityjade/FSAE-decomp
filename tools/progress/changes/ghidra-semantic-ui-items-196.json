@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-semantic-ui-items-196",
+  "summary": "UiRenderer et UIStatic finalisés avec leurs anciens noms gardés pour migration, AnimateScroll ItemsPanel intégré; registre Ghidra à 196 symboles et dry-run 196/196 inchangé",
+  "updated_at": "2026-07-17T23:42:41Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

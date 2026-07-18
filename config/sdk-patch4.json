@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "target": {
+    "name": "TwlSDK 5.5 patch4 deterministic reconstruction",
+    "official_patch_date": "2011-07-12",
+    "release_step": 30004,
+    "version_word_little_endian_hex": "34750505"
+  },
+  "archives": {
+    "base": {
+      "name": "TwlSDK-5_5-20100715a.zip",
+      "sha256": "4df838fde941e6240abe1dd0f3aa1b4ade56f42ac235101753105973d84d64b7",
+      "root_prefix": "TwlSDK-5_5-20100715a/TwlSDK/",
+      "file_count": 6377,
+      "uncompressed_size": 375695297
+    },
+    "patch5": {
+      "name": "TwlSDK-5_5_patch5-20111213.zip",
+      "sha256": "983314422fc1867f15dceb4dfc98410c8c3993412866bc6d5341fb45ecac5563",
+      "root_prefix": "TwlSDK-5_5_patch5-20111213/TwlSDK/",
+      "file_count": 202,
+      "uncompressed_size": 127767012
+    }
+  },
+  "overlay": {
+    "expected_applied_files": 180,
+    "expected_skipped_files": 22,
+    "skip_patch5_only": [
+      {
+        "pattern": "bin/ARM9-TS/Rom/mb_child_TWL.srl",
+        "expected_matches": 1,
+        "reason": "patch5 TOOL debug-log fix"
+      },
+      {
+        "pattern": "build/demos.TWL/snd/Makefile",
+        "expected_matches": 1,
+        "reason": "patch5 removed the speaker IIR demo"
+      },
+      {
+        "pattern": "build/libraries/snd/ARM9.TWL/src/sndex.c",
+        "expected_matches": 1,
+        "reason": "patch5 SNDEX target-value implementation"
+      },
+      {
+        "pattern": "include/twl/snd/ARM9/sndex.h",
+        "expected_matches": 1,
+        "reason": "patch5 SNDEX public API"
+      },
+      {
+        "pattern": "man/en_US/snd/sndex/SNDEX*.html",
+        "expected_matches": 3,
+        "reason": "patch5 SNDEX documentation"
+      },
+      {
+        "pattern": "lib/ARM9-TS/*/libsndex*.a",
+        "expected_matches": 12,
+        "reason": "patch5 SNDEX rebuilt libraries"
+      },
+      {
+        "pattern": "man/en_US/main.html",
+        "expected_matches": 1,
+        "reason": "patch5 documentation issue marker"
+      },
+      {
+        "pattern": "changelog-TwlSDK-5_5_patch5-20111213.txt",
+        "expected_matches": 1,
+        "reason": "patch5 package metadata has no patch4 byte-exact substitute"
+      },
+      {
+        "pattern": "Readme-TwlSDK-5_5_patch5-20111213.txt",
+        "expected_matches": 1,
+        "reason": "patch5 package metadata has no patch4 byte-exact substitute"
+      }
+    ]
+  },
+  "version_headers": [
+    {
+      "path": "include/nitro/version.h",
+      "replacements": [
+        {"from": "2020111209", "to": "2020110712", "expected_count": 2},
+        {"from": "20111209", "to": "20110712", "expected_count": 1},
+        {"from": "30005", "to": "30004", "expected_count": 2}
+      ]
+    },
+    {
+      "path": "include/twl/version.h",
+      "replacements": [
+        {"from": "2020111209", "to": "2020110712", "expected_count": 2},
+        {"from": "20111209", "to": "20110712", "expected_count": 1},
+        {"from": "30005", "to": "30004", "expected_count": 2}
+      ]
+    }
+  ],
+  "binary_release_marker": {
+    "from_hex": "35750505",
+    "to_hex": "34750505",
+    "base_hex": "30750505",
+    "expected_files": 35,
+    "expected_occurrences": 37
+  },
+  "expected_tree": {
+    "file_count": 6378,
+    "total_size": 375712225,
+    "sha256": "6e8c23a00893920743f0ddc625bf5d0e5ccc6254cf3aea4631da81844f785d7b"
+  },
+  "target_game_evidence": {
+    "arm7": {
+      "size": 153696,
+      "sha256": "a96394d986dced7cbe6f3b3d2f82464b3970b82f336e3d26500419dbe380de1c",
+      "sdk_artifact": "components/racoon/ARM7-TS.LTD/Rom/racoon.TWL.FLX.sbin",
+      "sdk_artifact_size": 153712,
+      "sdk_artifact_sha256": "dd6ec0629aa1e6536b3c08657716d6e2efd5cc8509b8ba22a9dcd2adbc6af393",
+      "match": "first 153696 bytes; SDK artifact has a 16-byte footer"
+    },
+    "arm7i": {
+      "size": 300816,
+      "sha256": "3703c27125294aa754fb4bc64f6f78e6cac93ae0b4eb4d72cafbcc591aaaa3ef",
+      "sdk_artifact": "components/racoon/ARM7-TS.LTD/Rom/racoon.TWL.LTD.sbin",
+      "sdk_artifact_size": 300816,
+      "sdk_artifact_sha256": "3703c27125294aa754fb4bc64f6f78e6cac93ae0b4eb4d72cafbcc591aaaa3ef",
+      "match": "complete file"
+    }
+  },
+  "evidence": {
+    "proved": [
+      "The two archive identities and complete member structures are fixed by SHA-256.",
+      "The official cumulative patch5 changelog identifies fixes 1 through 4 and the later patch5 SNDEX and mb_child changes.",
+      "ARM9 and ARM7 in the target game contain release step 30004.",
+      "The normalized patch5 racoon Rom FLX payload agrees with the target ARM7 outside its documented footer."
+    ],
+    "inferred": [
+      "The patch4 header date encoding is derived from the official 2011-07-12 patch date and the format used by the base and patch5 headers.",
+      "Patch5-only SNDEX and mb_child files are restored from the base because fixes 1 through 4 do not list changes to them.",
+      "Rebuilt patch5 artifacts not affected by SNDEX or mb_child are treated as cumulative patch4 artifacts after release-marker normalization.",
+      "No official patch4 archive hash is available, so the final tree digest proves this reconstruction policy, not identity with an unavailable official archive."
+    ]
+  }
+}

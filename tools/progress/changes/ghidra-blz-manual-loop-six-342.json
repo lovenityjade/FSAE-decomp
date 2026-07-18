@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-blz-manual-loop-six-342",
+  "summary": "Six corps complets BLZ et GameManualViewer validés sur 976 octets et renommés dans Ghidra; 0x020BCD60, le littéral 0x020BCE10 et les littéraux 0x020BD000..0x020BD008 restent exclus, registre ARM9 porté à 342 symboles idempotents",
+  "updated_at": "2026-07-18T02:26:02Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

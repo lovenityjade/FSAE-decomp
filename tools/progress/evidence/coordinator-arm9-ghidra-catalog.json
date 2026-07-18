@@ -1,0 +1,26 @@
+{
+  "$schema": "../schema-v2.json#/$defs/evidence",
+  "schema_version": 2,
+  "kind": "evidence",
+  "id": "coordinator-arm9-ghidra-catalog",
+  "track": "analysis",
+  "section": "arm9",
+  "metrics": {
+    "units": {
+      "covered": 169,
+      "total": 169
+    },
+    "functions": {
+      "covered": 4169,
+      "total": 7338
+    },
+    "bytes": {
+      "covered": 645624,
+      "total": 1082378
+    }
+  },
+  "updated_at": "2026-07-18T05:56:46Z",
+  "category": "game",
+  "worker": "coordinator",
+  "summary": "Ghidra exported 3669 game candidates; 500 functions / 72596 body bytes now have reviewed semantic C"
+}

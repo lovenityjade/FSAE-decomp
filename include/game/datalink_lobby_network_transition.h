@@ -1,0 +1,6 @@
+#ifndef GAME_DATALINK_LOBBY_NETWORK_TRANSITION_H
+#define GAME_DATALINK_LOBBY_NETWORK_TRANSITION_H
+
+void Game_CompleteDatalinkLobbyNetworkTransition_020b2ab0(void);
+
+#endif

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-ntmv-page-pane-factories",
+  "summary": "Cinq factories ntmv::m2d récupérées sur 592 octets: dispatcher pan1/pic1/txt1/wnd1 0x020b5318 et allocations Window/TextBox/Picture/Pane 0x020b5424..0x020b5577, tailles et échecs validés sans inclure le pool de tags",
+  "updated_at": "2026-07-18T02:56:29Z",
+  "section": "arm9",
+  "worker": "binary-map"
+}

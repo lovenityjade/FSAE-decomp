@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "change-8779509feb6f",
+  "summary": "ARM9i analysis complete: all 18324 bytes classified, 146 SDK function boundaries proved, 1232 former gap bytes resolved, zero proprietary glue; matching remains 72 structural bytes pending licensed full ARM9 link",
+  "updated_at": "2026-07-17T16:29:40Z",
+  "section": "arm9i",
+  "worker": "binary-map"
+}

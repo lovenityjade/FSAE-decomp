@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>FSAE — Progression de la décompilation</title>
+    <link rel="stylesheet" href="/styles.css?v=__DASHBOARD_ASSET_VERSION__">
+    <script src="/app.js?v=__DASHBOARD_ASSET_VERSION__" defer></script>
+  </head>
+  <body>
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">Projet de décompilation</p>
+        <h1 id="project-name">Four Swords Anniversary Edition</h1>
+      </div>
+      <div class="live-state" id="live-state" aria-live="polite">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span id="live-label">Connexion…</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="overall-heading">
+        <div class="hero-main">
+          <p class="section-kicker">Reconstruction byte-matching vérifiée</p>
+          <h2 id="overall-heading">
+            <span class="visually-hidden">Progression byte-matching linkée : </span>
+            <span id="overall-percent">0,00</span><span class="percent-sign">%</span>
+          </h2>
+          <p class="muted" id="updated-at">En attente du premier relevé</p>
+          <p class="phase-note">
+            Seules les unités rattachées à une preuve de linkage exacte augmentent
+            cette valeur. L’analyse et les fallbacks restent exclus.
+          </p>
+        </div>
+        <div class="hero-details">
+          <div class="overall-metrics" id="overall-metrics"></div>
+          <div class="analysis-summary" aria-labelledby="analysis-heading">
+            <div class="analysis-summary-top">
+              <span id="analysis-heading">Couverture d’analyse</span>
+              <strong id="analysis-percent">0,00 %</strong>
+            </div>
+            <progress id="analysis-progress" max="100" value="0" aria-label="Couverture totale d’analyse"></progress>
+            <p id="analysis-bytes">En attente du relevé d’analyse</p>
+            <p class="analysis-note">Cette mesure aide à planifier le travail, sans prétendre que les octets sont reconstruits.</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="binaries-heading">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Byte-matching des exécutables</p>
+            <h2 id="binaries-heading">Progression par section</h2>
+          </div>
+          <p class="muted">Mesure principale : octets reconstruits et linkés · analyse affichée séparément</p>
+        </div>
+        <div class="section-grid" id="binary-sections"></div>
+      </section>
+
+      <section id="categories-panel" aria-labelledby="categories-heading" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Classification</p>
+            <h2 id="categories-heading">SDK, code du jeu et données</h2>
+          </div>
+          <p class="muted">Vue transversale — exclue du total pour éviter le double comptage</p>
+        </div>
+        <div class="section-grid" id="category-sections"></div>
+      </section>
+
+      <div class="lower-grid">
+        <section class="panel" aria-labelledby="workers-heading">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker">Équipe</p>
+              <h2 id="workers-heading">État des workers</h2>
+            </div>
+          </div>
+          <div id="workers" class="worker-list"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="changes-heading">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker">Journal</p>
+              <h2 id="changes-heading">Derniers changements</h2>
+            </div>
+          </div>
+          <ol id="changes" class="change-list"></ol>
+        </section>
+      </div>
+
+      <section class="panel publication-panel" aria-labelledby="publication-heading">
+        <div class="panel-heading">
+          <div>
+            <p class="section-kicker">Publication atomique</p>
+            <h2 id="publication-heading">Provenance et validation</h2>
+          </div>
+          <p class="muted">Le dernier bloc validé reste servi si une publication échoue.</p>
+        </div>
+        <div class="publication-grid">
+          <div class="publication-item">
+            <span class="publication-label">Build ID</span>
+            <strong class="publication-value" id="build-id">Non publié</strong>
+          </div>
+          <div class="publication-item">
+            <span class="publication-label">Commit</span>
+            <strong class="publication-value" id="build-commit">Inconnu</strong>
+          </div>
+          <div class="publication-item">
+            <span class="publication-label">Publié</span>
+            <strong class="publication-value" id="published-at">Vue live non publiée</strong>
+          </div>
+        </div>
+        <div class="publication-details">
+          <p id="provenance-counts">Source 0 · SDK 0 · Fallback 0 · Non apparié 0</p>
+          <p id="pipeline-units">0 probe · 0 promues · 0 rejetées</p>
+        </div>
+        <p class="publication-error" id="last-publication-error" role="status" hidden></p>
+      </section>
+
+      <section class="issues" id="issues-panel" aria-labelledby="issues-heading" hidden>
+        <h2 id="issues-heading">Entrées ignorées</h2>
+        <ul id="issues"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <span>Schéma de progression v<span id="schema-version">1</span></span>
+      <span id="source-counts">0 preuves · 0 workers · 0 changements</span>
+    </footer>
+  </body>
+</html>

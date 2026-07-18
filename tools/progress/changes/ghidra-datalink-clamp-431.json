@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-clamp-431",
+  "summary": "Game_ClampDatalinkSignedByte 0x020AC898 finalisé sans linking sur 28 octets: clamp signé int8 min/max, SHA ROM 484bcdbe19509b533fcdb3775dd219a8390667f4a799847ab23307b41e2c31b8, tests hôte/ROM/ARM946E-S validés, Ghidra 431 idempotent",
+  "updated_at": "2026-07-18T04:46:58Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

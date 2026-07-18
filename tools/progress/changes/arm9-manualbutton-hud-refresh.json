@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manualbutton-hud-refresh",
+  "summary": "ManualButton, chargeurs G2D et pipeline HUD quatre joueurs intégrés; 156 fonctions ARM9 sémantiques mesurées",
+  "updated_at": "2026-07-17T23:16:58Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-objbutton-texel-hud-stack",
+  "summary": "ObjButton, les trois TexelPicker et deux rangées HUD supplémentaires sont repris; 114 fonctions ARM9 sémantiques sont mesurées",
+  "updated_at": "2026-07-17T22:59:25Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

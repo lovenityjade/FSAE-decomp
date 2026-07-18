@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-extended-menu-controller-398",
+  "summary": "Constructeur et reprise du contrôleur de menu Datalink étendu finalisés sur 380 octets, validés en hôte et ARM946E-S puis appliqués dans Ghidra, portant le registre à 398 symboles idempotents; pools 0x020AB5E0/0x020AB6B8, stub 0x020AB6CC et animation suivante exclus",
+  "updated_at": "2026-07-18T03:24:53Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

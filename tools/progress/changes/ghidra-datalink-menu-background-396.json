@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-menu-background-396",
+  "summary": "Game_ClearDatalinkMenuBackground finalisé sur 88 octets, validé en hôte et ARM946E-S puis appliqué dans Ghidra, portant le registre à 396 symboles idempotents; littéral 0x020AB51C, stub 0x020AB520 et fonction suivante 0x020AB524 exclus",
+  "updated_at": "2026-07-18T03:18:20Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-semantic-delta-audit-2-363",
+  "summary": "Deuxième audit borné source/catalog: huit fonctions ManualTocPanel entièrement annotées et testées validées sur 708 octets et renommées dans Ghidra; nouveaux corps non directement testés, externs, trampolines et littéraux exclus, registre ARM9 porté à 363 symboles idempotents",
+  "updated_at": "2026-07-18T02:46:59Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

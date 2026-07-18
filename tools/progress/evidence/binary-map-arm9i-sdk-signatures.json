@@ -1,0 +1,26 @@
+{
+  "$schema": "../schema-v2.json#/$defs/evidence",
+  "schema_version": 2,
+  "kind": "evidence",
+  "id": "binary-map-arm9i-sdk-signatures",
+  "track": "analysis",
+  "section": "arm9i",
+  "metrics": {
+    "units": {
+      "covered": 19,
+      "total": 19
+    },
+    "functions": {
+      "covered": 146,
+      "total": 146
+    },
+    "bytes": {
+      "covered": 18324,
+      "total": 18324
+    }
+  },
+  "updated_at": "2026-07-17T16:20:15Z",
+  "category": "sdk",
+  "worker": "binary-map",
+  "summary": "ARM9i fully classified: 146 SDK function boundaries, all 1232 former gap bytes resolved, zero game glue"
+}

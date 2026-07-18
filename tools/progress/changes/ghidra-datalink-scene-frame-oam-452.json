@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-scene-frame-oam-452",
+  "summary": "Cinq fonctions ARM9 Datalink scène finalisées sans linking: state-stack serialize/deserialize 0x020ACE9C/0x020ACF5C, init table tween 0x020AD020, update frame 0x020AD87C et OAM visible 0x020AD9A4; 960 octets récupérés, 452 symboles Ghidra idempotents, tests decomp 177/177 et dashboard 14/14 validés",
+  "updated_at": "2026-07-18T05:28:43Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-ntmv-textbox-draw-text-until",
+  "summary": "NtmvM2dTextBox_DrawTextUntil_020b6b3c publié et finalisé sur 188 octets: décodage borné, contrôles texte, espacement et rendu des glyphes; constructeur 0x020b6bf8 déjà récupéré, littéral vtable 0x020b6cc0 et UpdatePosition 0x020b6cc4 préservés hors décompte",
+  "updated_at": "2026-07-18T03:41:22Z",
+  "section": "arm9",
+  "worker": "binary-map"
+}

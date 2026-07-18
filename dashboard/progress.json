@@ -1,0 +1,759 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-07-18T07:25:16Z",
+  "build": {
+    "id": "foundation-linkage-20260718",
+    "commit": "pending-initial-commit",
+    "published_at": "2026-07-18T07:25:16Z",
+    "last_error": null
+  },
+  "project": {
+    "name": "Four Swords Anniversary Edition",
+    "short_name": "FSAE"
+  },
+  "refresh_seconds": 5,
+  "overall": {
+    "percent": 73.79,
+    "basis": "bytes",
+    "metrics": {
+      "units": {
+        "covered": 3682,
+        "total": 3682
+      },
+      "functions": {
+        "covered": 7780,
+        "total": 10949
+      },
+      "bytes": {
+        "covered": 1229553,
+        "total": 1666308
+      }
+    },
+    "matching": {
+      "percent": 27.28,
+      "basis": "bytes",
+      "metrics": {
+        "units": {
+          "matched": 2,
+          "total": 3
+        },
+        "functions": {
+          "matched": 0,
+          "total": 0
+        },
+        "bytes": {
+          "matched": 454584,
+          "total": 1666308
+        }
+      }
+    },
+    "analysis": {
+      "percent": 73.79,
+      "basis": "bytes",
+      "metrics": {
+        "units": {
+          "covered": 3682,
+          "total": 3682
+        },
+        "functions": {
+          "covered": 7780,
+          "total": 10949
+        },
+        "bytes": {
+          "covered": 1229553,
+          "total": 1666308
+        }
+      }
+    },
+    "provenance": {
+      "source": 4,
+      "sdk": 2,
+      "fallback": 0,
+      "unmatched": 3682
+    },
+    "pipeline_units": {
+      "probe": 3688,
+      "promoted": 6,
+      "rejected": 0
+    },
+    "matching_rejected": 0,
+    "total_sections": 4
+  },
+  "sections": [
+    {
+      "id": "arm9",
+      "label": "ARM9",
+      "dimension": "section",
+      "include_in_total": true,
+      "optional": false,
+      "available": true,
+      "percent": 63.4,
+      "basis": "bytes",
+      "metrics": {
+        "units": {
+          "covered": 1140,
+          "total": 1140
+        },
+        "functions": {
+          "covered": 5111,
+          "total": 8280
+        },
+        "bytes": {
+          "covered": 756718,
+          "total": 1193472
+        }
+      },
+      "matching": {
+        "percent": 0.0,
+        "basis": "bytes",
+        "metrics": {
+          "units": {
+            "matched": 0,
+            "total": 0
+          },
+          "functions": {
+            "matched": 0,
+            "total": 0
+          },
+          "bytes": {
+            "matched": 0,
+            "total": 1193472
+          }
+        },
+        "evidence_records": 0
+      },
+      "analysis": {
+        "percent": 63.4,
+        "basis": "bytes",
+        "metrics": {
+          "units": {
+            "covered": 1140,
+            "total": 1140
+          },
+          "functions": {
+            "covered": 5111,
+            "total": 8280
+          },
+          "bytes": {
+            "covered": 756718,
+            "total": 1193472
+          }
+        },
+        "evidence_records": 3
+      },
+      "provenance": {
+        "source": 0,
+        "sdk": 0,
+        "fallback": 0,
+        "unmatched": 1140
+      },
+      "pipeline_units": {
+        "probe": 1140,
+        "promoted": 0,
+        "rejected": 0
+      },
+      "matching_rejected": 0
+    },
+    {
+      "id": "arm7",
+      "label": "ARM7",
+      "dimension": "section",
+      "include_in_total": true,
+      "optional": false,
+      "available": true,
+      "percent": 99.99,
+      "basis": "bytes",
+      "metrics": {
+        "units": {
+          "covered": 973,
+          "total": 973
+        },
+        "functions": {
+          "covered": 973,
+          "total": 973
+        },
+        "bytes": {
+          "covered": 153695,
+          "total": 153696
+        }
+      },
+      "matching": {
+        "percent": 100.0,
+        "basis": "bytes",
+        "metrics": {
+          "units": {
+            "matched": 1,
+            "total": 1
+          },
+          "functions": {
+            "matched": 0,
+            "total": 0
+          },
+          "bytes": {
+            "matched": 153696,
+            "total": 153696
+          }
+        },
+        "evidence_records": 1
+      },
+      "analysis": {
+        "percent": 99.99,
+        "basis": "bytes",
+        "metrics": {
+          "units": {
+            "covered": 973,
+            "total": 973
+          },
+          "functions": {
+            "covered": 973,
+            "total": 973
+          },
+          "bytes": {
+            "covered": 153695,
+            "total": 153696
+          }
+        },
+        "evidence_records": 1
+      },
+      "provenance": {
+        "source": 0,
+        "sdk": 1,
+        "fallback": 0,
+        "unmatched": 973
+      },
+      "pipeline_units": {
+        "probe": 974,
+        "promoted": 1,
+        "rejected": 0
+      },
+      "matching_rejected": 0
+    },
+    {
+      "id": "arm9i",
+      "label": "ARM9i",
+      "dimension": "section",
+      "include_in_total": true,
+      "optional": false,
+      "available": true,
+      "percent": 100.0,
+      "basis": "bytes",
+      "metrics": {
+        "units": {
+          "covered": 19,
+          "total": 19
+        },
+        "functions": {
+          "covered": 146,
+          "total": 146
+        },
+        "bytes": {
+          "covered": 18324,
+          "total": 18324
+        }
+      },
+      "matching": {
+        "percent": 0.39,
+        "basis": "bytes",
+        "metrics": {
+          "units": {
+            "matched": 0,
+            "total": 1
+          },
+          "functions": {
+            "matched": 0,
+            "total": 0
+          },
+          "bytes": {
+            "matched": 72,
+            "total": 18324
+          }
+        },
+        "evidence_records": 1
+      },
+      "analysis": {
+        "percent": 100.0,
+        "basis": "bytes",
+        "metrics": {
+          "units": {
+            "covered": 19,
+            "total": 19
+          },
+          "functions": {
+            "covered": 146,
+            "total": 146
+          },
+          "bytes": {
+            "covered": 18324,
+            "total": 18324
+          }
+        },
+        "evidence_records": 1
+      },
+      "provenance": {
+        "source": 4,
+        "sdk": 0,
+        "fallback": 0,
+        "unmatched": 19
+      },
+      "pipeline_units": {
+        "probe": 23,
+        "promoted": 4,
+        "rejected": 0
+      },
+      "matching_rejected": 0
+    },
+    {
+      "id": "arm7i",
+      "label": "ARM7i",
+      "dimension": "section",
+      "include_in_total": true,
+      "optional": false,
+      "available": true,
+      "percent": 100.0,
+      "basis": "bytes",
+      "metrics": {
+        "units": {
+          "covered": 1550,
+          "total": 1550
+        },
+        "functions": {
+          "covered": 1550,
+          "total": 1550
+        },
+        "bytes": {
+          "covered": 300816,
+          "total": 300816
+        }
+      },
+      "matching": {
+        "percent": 100.0,
+        "basis": "bytes",
+        "metrics": {
+          "units": {
+            "matched": 1,
+            "total": 1
+          },
+          "functions": {
+            "matched": 0,
+            "total": 0
+          },
+          "bytes": {
+            "matched": 300816,
+            "total": 300816
+          }
+        },
+        "evidence_records": 1
+      },
+      "analysis": {
+        "percent": 100.0,
+        "basis": "bytes",
+        "metrics": {
+          "units": {
+            "covered": 1550,
+            "total": 1550
+          },
+          "functions": {
+            "covered": 1550,
+            "total": 1550
+          },
+          "bytes": {
+            "covered": 300816,
+            "total": 300816
+          }
+        },
+        "evidence_records": 1
+      },
+      "provenance": {
+        "source": 0,
+        "sdk": 1,
+        "fallback": 0,
+        "unmatched": 1550
+      },
+      "pipeline_units": {
+        "probe": 1551,
+        "promoted": 1,
+        "rejected": 0
+      },
+      "matching_rejected": 0
+    },
+    {
+      "id": "sdk",
+      "label": "SDK",
+      "dimension": "category",
+      "include_in_total": false,
+      "optional": true,
+      "available": true,
+      "percent": 99.99,
+      "basis": "bytes",
+      "metrics": {
+        "units": {
+          "covered": 3484,
+          "total": 3484
+        },
+        "functions": {
+          "covered": 3611,
+          "total": 3611
+        },
+        "bytes": {
+          "covered": 583929,
+          "total": 583930
+        }
+      },
+      "matching": {
+        "percent": 96.14,
+        "basis": "bytes",
+        "metrics": {
+          "units": {
+            "matched": 2,
+            "total": 3
+          },
+          "functions": {
+            "matched": 0,
+            "total": 0
+          },
+          "bytes": {
+            "matched": 454584,
+            "total": 472836
+          }
+        },
+        "evidence_records": 3
+      },
+      "analysis": {
+        "percent": 99.99,
+        "basis": "bytes",
+        "metrics": {
+          "units": {
+            "covered": 3484,
+            "total": 3484
+          },
+          "functions": {
+            "covered": 3611,
+            "total": 3611
+          },
+          "bytes": {
+            "covered": 583929,
+            "total": 583930
+          }
+        },
+        "evidence_records": 4
+      },
+      "provenance": {
+        "source": 4,
+        "sdk": 2,
+        "fallback": 0,
+        "unmatched": 3484
+      },
+      "pipeline_units": {
+        "probe": 3490,
+        "promoted": 6,
+        "rejected": 0
+      },
+      "matching_rejected": 0
+    },
+    {
+      "id": "game",
+      "label": "Game code",
+      "dimension": "category",
+      "include_in_total": false,
+      "optional": true,
+      "available": true,
+      "percent": 59.65,
+      "basis": "bytes",
+      "metrics": {
+        "units": {
+          "covered": 169,
+          "total": 169
+        },
+        "functions": {
+          "covered": 4169,
+          "total": 7338
+        },
+        "bytes": {
+          "covered": 645624,
+          "total": 1082378
+        }
+      },
+      "matching": {
+        "percent": 0.0,
+        "basis": "unmeasured",
+        "metrics": {
+          "units": {
+            "matched": 0,
+            "total": 0
+          },
+          "functions": {
+            "matched": 0,
+            "total": 0
+          },
+          "bytes": {
+            "matched": 0,
+            "total": 0
+          }
+        },
+        "evidence_records": 0
+      },
+      "analysis": {
+        "percent": 59.65,
+        "basis": "bytes",
+        "metrics": {
+          "units": {
+            "covered": 169,
+            "total": 169
+          },
+          "functions": {
+            "covered": 4169,
+            "total": 7338
+          },
+          "bytes": {
+            "covered": 645624,
+            "total": 1082378
+          }
+        },
+        "evidence_records": 1
+      },
+      "provenance": {
+        "source": 0,
+        "sdk": 0,
+        "fallback": 0,
+        "unmatched": 169
+      },
+      "pipeline_units": {
+        "probe": 169,
+        "promoted": 0,
+        "rejected": 0
+      },
+      "matching_rejected": 0
+    },
+    {
+      "id": "data",
+      "label": "Data",
+      "dimension": "category",
+      "include_in_total": false,
+      "optional": true,
+      "available": true,
+      "percent": 100.0,
+      "basis": "units",
+      "metrics": {
+        "units": {
+          "covered": 29,
+          "total": 29
+        },
+        "functions": {
+          "covered": 0,
+          "total": 0
+        },
+        "bytes": {
+          "covered": 0,
+          "total": 0
+        }
+      },
+      "matching": {
+        "percent": 0.0,
+        "basis": "unmeasured",
+        "metrics": {
+          "units": {
+            "matched": 0,
+            "total": 0
+          },
+          "functions": {
+            "matched": 0,
+            "total": 0
+          },
+          "bytes": {
+            "matched": 0,
+            "total": 0
+          }
+        },
+        "evidence_records": 0
+      },
+      "analysis": {
+        "percent": 100.0,
+        "basis": "units",
+        "metrics": {
+          "units": {
+            "covered": 29,
+            "total": 29
+          },
+          "functions": {
+            "covered": 0,
+            "total": 0
+          },
+          "bytes": {
+            "covered": 0,
+            "total": 0
+          }
+        },
+        "evidence_records": 1
+      },
+      "provenance": {
+        "source": 0,
+        "sdk": 0,
+        "fallback": 0,
+        "unmatched": 29
+      },
+      "pipeline_units": {
+        "probe": 29,
+        "promoted": 0,
+        "rejected": 0
+      },
+      "matching_rejected": 0
+    }
+  ],
+  "workers": [
+    {
+      "id": "progress-site",
+      "label": "ARM9 0x020AEA40",
+      "status": "offline",
+      "reported_status": "working",
+      "section": "arm9",
+      "task": "Récupération du pilote de menu glyphes 0x020AEA40 (1504 octets)",
+      "updated_at": "2026-07-18T05:43:48Z",
+      "age_seconds": 6088,
+      "stale": true
+    },
+    {
+      "id": "binary-map",
+      "label": "ARM9 0x020B19D8",
+      "status": "done",
+      "reported_status": "done",
+      "section": "arm9",
+      "task": "Récupération sémantique et tests de la fonction 0x020B19D8 (1944 octets) terminés",
+      "updated_at": "2026-07-18T06:19:35Z",
+      "age_seconds": 3941,
+      "stale": true
+    },
+    {
+      "id": "rom-pipeline",
+      "label": "Code jeu ARM9",
+      "status": "offline",
+      "reported_status": "working",
+      "section": "arm9",
+      "task": "B2190-B2A90: analyse bloc contigu, 13 fonctions",
+      "updated_at": "2026-07-18T06:07:10Z",
+      "age_seconds": 4686,
+      "stale": true
+    },
+    {
+      "id": "coordinator",
+      "label": "Coordinateur + intégration",
+      "status": "offline",
+      "reported_status": "working",
+      "section": "arm9",
+      "task": "Lot glyphes AE280-AEA17: 19 fonctions / 1768 octets; intégration des gros lots agents",
+      "updated_at": "2026-07-18T05:43:48Z",
+      "age_seconds": 6088,
+      "stale": true
+    }
+  ],
+  "recent_changes": [
+    {
+      "id": "evidence:coordinator-arm9-ghidra-catalog",
+      "summary": "Ghidra exported 3669 game candidates; 500 functions / 72596 body bytes now have reviewed semantic C",
+      "section": "arm9",
+      "worker": "coordinator",
+      "track": "analysis",
+      "updated_at": "2026-07-18T05:56:46Z",
+      "source": "evidence",
+      "provenance": "unmatched",
+      "matching_credited": false
+    },
+    {
+      "id": "ghidra-datalink-scene-frame-oam-452",
+      "summary": "Cinq fonctions ARM9 Datalink scène finalisées sans linking: state-stack serialize/deserialize 0x020ACE9C/0x020ACF5C, init table tween 0x020AD020, update frame 0x020AD87C et OAM visible 0x020AD9A4; 960 octets récupérés, 452 symboles Ghidra idempotents, tests decomp 177/177 et dashboard 14/14 validés",
+      "section": "arm9",
+      "worker": "coordinator",
+      "updated_at": "2026-07-18T05:28:43Z",
+      "source": "change"
+    },
+    {
+      "id": "ghidra-datalink-tween-scene-447",
+      "summary": "447 noms ARM9 idempotents dans Ghidra; batch Datalink tween/state-stack/scene intégré: 5 fonctions, 340 octets catalogue validés sans linker",
+      "section": "arm9",
+      "worker": "coordinator",
+      "updated_at": "2026-07-18T05:18:59Z",
+      "source": "change"
+    },
+    {
+      "id": "ghidra-datalink-tween-state-stack-442",
+      "summary": "442 noms ARM9 idempotents dans Ghidra; mini-lot Datalink tween/easing/state-stack intégré: 6 fonctions, 532 octets catalogue validés sans linker",
+      "section": "arm9",
+      "worker": "coordinator",
+      "updated_at": "2026-07-18T05:09:28Z",
+      "source": "change"
+    },
+    {
+      "id": "ghidra-datalink-sprite-oam-436",
+      "summary": "Game_SubmitDatalinkSpriteOams 0x020AC8B4 finalisé sans linking sur 504 octets: génération CellToOAM, priorité OAM, clipping/bornes écran et soumission OAM manager; SHA ROM 1727e1810c72ef22ab7061193606fc064141b311adf52551093f70f9e74d2211, tests hôte/ARM946E-S, suite decomp 161/161, progress 14/14 et Ghidra 436 idempotent validés",
+      "section": "arm9",
+      "worker": "coordinator",
+      "updated_at": "2026-07-18T04:55:25Z",
+      "source": "change"
+    },
+    {
+      "id": "ghidra-datalink-runtime-helpers-435",
+      "summary": "Deux helpers runtime Datalink finalisés sans linking: Game_GetDatalinkTweenProgress 0x020ACD74 sur 36 octets et Game_DatalinkStateStack_Init_020ACD98 sur 24 octets; hashes ROM, tests hôte/ROM/ARM946E-S, Ghidra 435 idempotent validés",
+      "section": "arm9",
+      "worker": "coordinator",
+      "updated_at": "2026-07-18T04:52:15Z",
+      "source": "change"
+    },
+    {
+      "id": "ghidra-datalink-tween-433",
+      "summary": "Trois helpers Datalink tween finalisés sans linking: Game_ClampDatalinkSignedByte 0x020AC898 sur 28 octets, Game_DatalinkInterpolateVectorLinear 0x020ACAB4 sur 80 octets et Game_AdvanceDatalinkTween_020ACC7C sur 36 octets; hashes ROM, harness hôte, ARM946E-S et Ghidra 433 idempotent validés",
+      "section": "arm9",
+      "worker": "coordinator",
+      "updated_at": "2026-07-18T04:50:38Z",
+      "source": "change"
+    },
+    {
+      "id": "ghidra-datalink-clamp-431",
+      "summary": "Game_ClampDatalinkSignedByte 0x020AC898 finalisé sans linking sur 28 octets: clamp signé int8 min/max, SHA ROM 484bcdbe19509b533fcdb3775dd219a8390667f4a799847ab23307b41e2c31b8, tests hôte/ROM/ARM946E-S validés, Ghidra 431 idempotent",
+      "section": "arm9",
+      "worker": "coordinator",
+      "updated_at": "2026-07-18T04:46:58Z",
+      "source": "change"
+    },
+    {
+      "id": "ghidra-datalink-graphics-linkop-430",
+      "summary": "Sept symboles ARM9 finalisés sans linking: Game_LoadDatalinkBackgroundResources 0x020AC428 sur 364 octets, helpers Datalink graphics 0x020AC594/0x020AC64C/0x020AC6B0/0x020AC7DC sur 772 octets, et LinkOperation 0x020B2A90/0x020B2AAC sur 28 octets; hashes ROM, harness hôte, ARM946E-S, Ghidra 430 idempotent et tests decomp/progress validés",
+      "section": "arm9",
+      "worker": "coordinator",
+      "updated_at": "2026-07-18T04:43:29Z",
+      "source": "change"
+    },
+    {
+      "id": "ghidra-datalink-manualtoc-items-423",
+      "summary": "Huit symboles ARM9 finalisés sans linking: Game_ChangeDatalinkState 0x020AC038 sur 632 octets, wrappers Datalink resource 0x020AC3D0/0x020AC40C sur 80 octets, helpers ItemsPanel free 0x020B9350/0x020B9368 sur 48 octets et trois factories ManualToc 0x020BA71C/0x020BA774/0x020BA7E0 sur 196 octets; tests hôte/ROM/ARM946E-S validés, Ghidra appliqué puis dry-run idempotent à 423 symboles",
+      "section": "arm9",
+      "worker": "coordinator",
+      "updated_at": "2026-07-18T04:29:30Z",
+      "source": "change"
+    },
+    {
+      "id": "ghidra-glyph-datalink-items-415",
+      "summary": "Trois blocs ARM9 finalisés sans linking: NtmvM2dGlyphRenderer_DrawBitmap_020b64fc sur 872 octets, Game_CommitDatalinkScreenUpdate 0x020AC308 sur 192 octets et NtmvM2dItemsPanel_Configure 0x020B8F68 sur 744 octets; ROM, hôte et ARM946E-S validés, Ghidra appliqué puis dry-run idempotent à 415 symboles",
+      "section": "arm9",
+      "worker": "coordinator",
+      "updated_at": "2026-07-18T04:17:20Z",
+      "source": "change"
+    },
+    {
+      "id": "arm9-ntmv-transformed-blit-final",
+      "summary": "NtmvM2d_BlitTransformed_020b786c finalisé sur 656 octets: clipping, axes transposés, steps signés, clamp source, TexelPicker et écriture alpha validés; corps 0x020B786C..0x020B7AFB, SHA-256 ROM 08484e75c3a87458df0046f5a5a93396952c65c66e8edccbd678a6351eb7d484, pool 0x020B7AFC et voisin 0x020B7B00 exclus, tests blit/transform/render/inline validés sans linking",
+      "section": "arm9",
+      "worker": "binary-map",
+      "updated_at": "2026-07-18T04:07:52Z",
+      "source": "change"
+    }
+  ],
+  "issues": [],
+  "sources": {
+    "evidence": 9,
+    "workers": 4,
+    "changes": 137,
+    "legacy_inputs": 4,
+    "matching_linked": 3,
+    "matching_rejected": 0,
+    "proof_links": 3
+  }
+}

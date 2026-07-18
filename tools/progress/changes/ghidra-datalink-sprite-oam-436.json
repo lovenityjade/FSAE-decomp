@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-sprite-oam-436",
+  "summary": "Game_SubmitDatalinkSpriteOams 0x020AC8B4 finalisé sans linking sur 504 octets: génération CellToOAM, priorité OAM, clipping/bornes écran et soumission OAM manager; SHA ROM 1727e1810c72ef22ab7061193606fc064141b311adf52551093f70f9e74d2211, tests hôte/ARM946E-S, suite decomp 161/161, progress 14/14 et Ghidra 436 idempotent validés",
+  "updated_at": "2026-07-18T04:55:25Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

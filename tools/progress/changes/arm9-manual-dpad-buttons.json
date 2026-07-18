@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-dpad-buttons",
+  "summary": "Contrôles D-pad et boutons du manuel récupérés avec priorités Left/Right/Select/A/Start, répétition du défilement et feedback sonore validés sans linking",
+  "updated_at": "2026-07-18T01:04:06Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

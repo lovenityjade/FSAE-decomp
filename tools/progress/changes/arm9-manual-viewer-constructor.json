@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-viewer-constructor",
+  "summary": "Constructeur de l'état du visualiseur de manuel récupéré: audio, défilement, tactile, deux accesseurs, pointeurs, historique et drapeaux initialisés aux offsets exacts sans linking",
+  "updated_at": "2026-07-18T01:53:26Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

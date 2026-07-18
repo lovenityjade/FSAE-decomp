@@ -1,0 +1,26 @@
+{
+  "$schema": "../schema-v2.json#/$defs/evidence",
+  "schema_version": 2,
+  "kind": "evidence",
+  "id": "binary-map-nitrofs-inventory",
+  "track": "analysis",
+  "section": "arm9",
+  "metrics": {
+    "units": {
+      "covered": 29,
+      "total": 29
+    },
+    "functions": {
+      "covered": 0,
+      "total": 0
+    },
+    "bytes": {
+      "covered": 0,
+      "total": 0
+    }
+  },
+  "updated_at": "2026-07-17T15:54:20Z",
+  "category": "data",
+  "worker": "binary-map",
+  "summary": "FNT/FAT fully inventoried: 29 root files, hashes and ROM ranges validated"
+}

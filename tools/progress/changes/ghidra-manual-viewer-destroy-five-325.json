@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-manual-viewer-destroy-five-325",
+  "summary": "Cinq destructeurs complets du viewer validés et renommés dans Ghidra sur 392 octets contigus : registre ARM9 porté à 325 symboles, second dry-run idempotent avec 325 inchangés",
+  "updated_at": "2026-07-18T02:06:39Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

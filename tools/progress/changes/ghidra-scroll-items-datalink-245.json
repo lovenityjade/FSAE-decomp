@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-scroll-items-datalink-245",
+  "summary": "28 fonctions ScrollableTileBuffer, ItemsPanel et Datalink vérifiées sur 2960 octets puis intégrées; registre Ghidra à 245 symboles avec dry-run 245/245 inchangé",
+  "updated_at": "2026-07-18T00:09:12Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

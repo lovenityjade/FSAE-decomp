@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-manual-locale-pointer-269",
+  "summary": "GameManualViewer_SetLocale et ItemsPanel_HandlePointer vérifiées sur 644 octets avec table ja/en/fr/de/it/es/zh/ko et type manuel exacts; registre Ghidra à 269 symboles et dry-run 269/269 inchangé",
+  "updated_at": "2026-07-18T00:20:29Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

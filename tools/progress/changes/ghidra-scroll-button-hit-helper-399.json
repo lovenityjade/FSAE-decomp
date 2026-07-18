@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-scroll-button-hit-helper-399",
+  "summary": "NtmvM2dUIElementArray_FindContainingPoint_020b8398 finalisé sur 112 octets, validé par bornes ROM, appel direct depuis ScrollButton_HandlePointer, comportement hôte et syntaxe ARM946E-S, puis ajouté au registre sémantique sans linking",
+  "updated_at": "2026-07-18T03:26:06Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

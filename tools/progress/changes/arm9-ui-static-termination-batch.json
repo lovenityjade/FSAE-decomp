@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-ui-static-termination-batch",
+  "summary": "UIStatic et le sous-système de terminaison ont été repris; 80 fonctions ARM9 sémantiques sont mesurées et les 26 tests de décompilation passent",
+  "updated_at": "2026-07-17T22:47:34Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

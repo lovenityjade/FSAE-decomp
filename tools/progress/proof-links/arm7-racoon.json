@@ -1,0 +1,17 @@
+{
+  "$schema": "../schema-v2.json#/$defs/proofLink",
+  "schema_version": 2,
+  "kind": "proof-link",
+  "id": "arm7-racoon-byte-perfect",
+  "evidence_id": "arm7-match-arm7",
+  "proof": "build/match/arm7.proof.json",
+  "proof_sha256": "ae2110887a8b2b90f583c10f3c34c5eec62c777760c1722ca04061ae62878754",
+  "provenance": "sdk",
+  "build_id": "racoon-arm7-20260717",
+  "commit": "unknown",
+  "units": {
+    "probe": 1,
+    "promoted": 1,
+    "rejected": 0
+  }
+}

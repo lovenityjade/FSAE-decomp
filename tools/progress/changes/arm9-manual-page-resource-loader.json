@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-page-resource-loader",
+  "summary": "Chargeur NTPG GameManualPage 0x020b4f00 et allocation 0x020b51c8 récupérés sur 764 octets: pools nap1/txp1, fichiers txl1/ntff, définition pag1, arbre pan/pic/txt/wnd avec pas1/pae1 et sémantique d'échec originale validés",
+  "updated_at": "2026-07-18T02:48:40Z",
+  "section": "arm9",
+  "worker": "binary-map"
+}

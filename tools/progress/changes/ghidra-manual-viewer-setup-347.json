@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-manual-viewer-setup-347",
+  "summary": "GameManualViewer_Setup_020bc99c validée sur son corps complet de 872 octets; douze littéraux 0x020BCD04..0x020BCD30 exclus et factory 0x020BCD34 conservée distincte, registre ARM9 porté à 347 symboles Ghidra idempotents",
+  "updated_at": "2026-07-18T02:36:45Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

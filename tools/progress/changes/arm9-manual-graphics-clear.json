@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-graphics-clear",
+  "summary": "Nettoyage graphique du manuel récupéré: mapping LCDC, remise à zéro de toute la VRAM, désactivation des banques et initialisation des OAM/palettes principale et secondaire validés sans linking",
+  "updated_at": "2026-07-18T01:15:04Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

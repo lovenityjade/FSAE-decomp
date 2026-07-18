@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-datalink-tilemaps-343",
+  "summary": "Game_RefreshDatalinkControllerTilemaps validée sur son corps complet de 560 octets à 0x020A9AA0; pool 0x020A9CD0..0x020A9CDF et fonction suivante 0x020A9CE0 exclus, registre ARM9 porté à 343 symboles Ghidra idempotents",
+  "updated_at": "2026-07-18T02:29:10Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

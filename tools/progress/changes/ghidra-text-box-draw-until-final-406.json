@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-text-box-draw-until-final-406",
+  "summary": "NtmvM2dTextBox_DrawTextUntil_020b6b3c finalisé en place sur 188 octets avec SHA-256 ROM 2f6582ac659c860724d97f3275f4923432449f4b95e25d0ae6136911bc656a4f, validé par six tests TextBox/Renderer et renommé dans Ghidra sans doublon; constructeur, littéral vtable et UpdatePosition préservés distincts, registre maintenu idempotent à 406 symboles",
+  "updated_at": "2026-07-18T03:44:20Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

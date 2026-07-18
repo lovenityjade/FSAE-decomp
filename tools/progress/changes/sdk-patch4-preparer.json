@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "sdk-patch4-preparer",
+  "summary": "Préparateur externe TwlSDK 5.5 patch4: archives verrouillées, 180 fichiers cumulatifs appliqués, 22 changements patch5 exclus, étape 30004 et digest complet validés",
+  "updated_at": "2026-07-17T16:16:37Z",
+  "section": "sdk",
+  "worker": "rom-pipeline"
+}

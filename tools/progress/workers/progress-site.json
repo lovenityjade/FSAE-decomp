@@ -1,0 +1,11 @@
+{
+  "$schema": "../schema-v2.json#/$defs/worker",
+  "schema_version": 2,
+  "kind": "worker",
+  "id": "progress-site",
+  "label": "ARM9 0x020AEA40",
+  "status": "working",
+  "task": "Récupération du pilote de menu glyphes 0x020AEA40 (1504 octets)",
+  "updated_at": "2026-07-18T05:43:48Z",
+  "section": "arm9"
+}

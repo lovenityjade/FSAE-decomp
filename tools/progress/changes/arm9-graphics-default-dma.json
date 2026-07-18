@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-graphics-default-dma",
+  "summary": "Validation du canal DMA graphique par défaut récupérée sur les valeurs encodées 0 à 7, avec cas invalides et frontières ROM vérifiés sans linking",
+  "updated_at": "2026-07-18T01:32:19Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

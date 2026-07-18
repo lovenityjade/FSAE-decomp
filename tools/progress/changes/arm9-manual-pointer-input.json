@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-pointer-input",
+  "summary": "Gestion tactile du sommaire et des contrôles de défilement récupérée: actions, sons, modes press/release et requêtes de page validés sans linking",
+  "updated_at": "2026-07-18T00:59:25Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

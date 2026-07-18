@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-manual-display-items-276",
+  "summary": "Six routines GameManualViewer et ItemsPanel_UpdatePageButtonLocks vérifiées sur 652 octets; registre Ghidra à 276 symboles, création gardée de l'îlot 0x020b97d4 et dry-run 276/276 inchangé",
+  "updated_at": "2026-07-18T00:26:49Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

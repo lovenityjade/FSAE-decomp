@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "change-e0633470b59c",
+  "summary": "mwccarm 4.0 build 1051 et mwldarm 2.0 build 99 détectés; compilation réelle bloquée par licence FLEXlm Win32_Plugins_ARM expirée (-10,32)",
+  "updated_at": "2026-07-17T16:01:29Z",
+  "section": "arm9",
+  "worker": "rom-pipeline"
+}

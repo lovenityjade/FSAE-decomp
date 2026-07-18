@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-inline-object-datalink-controller-408",
+  "summary": "NtmvM2d_DrawInlineObject_020b771c et Game_UpdateDatalinkExtendedMenuController finalisés sur 1312 octets: blitter inline validé ROM/comportement/ARM946E-S, contrôleur Datalink 0x020ABB58 validé en harness hôte et ARM strict, puis appliqués dans Ghidra; registre porté à 408 symboles idempotents sans linking ni matching",
+  "updated_at": "2026-07-18T03:53:08Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

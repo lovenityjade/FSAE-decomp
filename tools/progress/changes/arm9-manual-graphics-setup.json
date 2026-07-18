@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-graphics-setup",
+  "summary": "Configuration graphique du manuel récupérée: banques VRAM, modes BG des deux écrans, OBJ/palettes étendues, plans visibles, luminosité et masques de fenêtres validés sans linking",
+  "updated_at": "2026-07-18T01:27:47Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

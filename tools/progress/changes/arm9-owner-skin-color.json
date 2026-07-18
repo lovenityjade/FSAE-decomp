@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-owner-skin-color",
+  "summary": "Ntmv_GetSkinColor_020B7B00 récupérée sur 28 octets: lit OS_GetOwnerInfo et retourne le byte couleur à +0x01 utilisé par le chemin change_color_%02u.NCLR; tests ROM, hôte/UI renderer et ARM946E-S validés sans linking",
+  "updated_at": "2026-07-18T03:15:45Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

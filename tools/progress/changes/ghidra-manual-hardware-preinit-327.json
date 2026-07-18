@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-manual-hardware-preinit-327",
+  "summary": "Initialisation matérielle du viewer et hook graphique no-op validés et renommés dans Ghidra sur 220 octets : littéraux 0x020BC994/998 exclus, registre ARM9 porté à 327 symboles idempotents",
+  "updated_at": "2026-07-18T02:10:37Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

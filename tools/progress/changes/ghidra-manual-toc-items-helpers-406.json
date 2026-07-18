@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-manual-toc-items-helpers-406",
+  "summary": "Deux helpers Manual TOC/Items finalisés sur 132 octets: hit-test jumeau d'éléments UI et sélection initiale de child, validés par ROM, comportement hôte, ARM946E-S et régression panneau puis appliqués dans Ghidra; registre porté à 406 symboles idempotents, ItemsPanel_Construct à 0x020B8F0C préservé sans duplication",
+  "updated_at": "2026-07-18T03:36:52Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-scroll-touch-items-datalink-batch",
+  "summary": "Gestionnaire de tuiles défilantes et entrée boutons/tactile récupérés; configuration/pagination ItemsPanel et nouvelles phases Datalink intégrées; suite publique complète à 53 tests de décompilation réussis",
+  "updated_at": "2026-07-18T00:06:54Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

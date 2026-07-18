@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "source": {
+    "size": 14848000,
+    "sha256": "070edd820627d25749c1d24817c36fcb08a082e87cd3f4e0ad39ac41af84ded8",
+    "encrypted_comparison_sha256": "3a880dce73ace38f923eb2c3f3e497ca00749c7349ab14c99ad88710c45a8be8"
+  },
+  "identity": {
+    "title": "ZELDA 4SWORD",
+    "game_code": "KQ9V",
+    "maker_code": "01",
+    "unit_code": 3,
+    "device_capacity_code": 7,
+    "revision": 0,
+    "header_size": 16384,
+    "ntr_application_end": 14528000
+  },
+  "executables": [
+    {
+      "id": "arm9",
+      "processor": "ARM946E-S",
+      "role": "NTR-compatible main image",
+      "rom": {
+        "offset": 16384,
+        "size": 1193472,
+        "end": 1209856,
+        "sha256": "8bee49eedfb268c79ab371d3d2152c4e25f433d46daecd5dab2c0378a27300aa"
+      },
+      "memory": {
+        "load_address": 33570816,
+        "loaded_end": 34764288,
+        "entry_address": 33572864,
+        "entry_binary_offset": 2048
+      },
+      "entry_isa": "ARM",
+      "module_params": {
+        "binary_offset": 4068,
+        "memory_address": 33574884,
+        "autoload_list_start": 34764256,
+        "autoload_list_end": 34764288,
+        "autoload_data_start": 34763392,
+        "static_bss_start": 34763392,
+        "static_bss_end": 35156160,
+        "compressed_static_end": 0,
+        "sdk_version_word": 84243764,
+        "sdk_version": {
+          "major": 5,
+          "minor": 5,
+          "release_step": 30004,
+          "release_class": "release",
+          "release_number": 4
+        },
+        "version_magic_be": 3737126433,
+        "version_magic_le": 554090718,
+        "autoload_records": [
+          {
+            "destination": 33521664,
+            "size": 704,
+            "end": 33522368,
+            "static_init_start": 33521664,
+            "bss_size": 0,
+            "bss_end": 33522368
+          },
+          {
+            "destination": 50200576,
+            "size": 160,
+            "end": 50200736,
+            "static_init_start": 50200576,
+            "bss_size": 2400,
+            "bss_end": 50203136
+          }
+        ]
+      },
+      "encryption": {
+        "scheme": "NTR secure-area Blowfish",
+        "secure_area_size": 16384,
+        "encrypted_prefix_size": 2048,
+        "state": "decrypted input required"
+      },
+      "encrypted_sha256": "337cf5fc9364ea0b3856496a06b2b1f21876b99572465fb714493d2d7f708684",
+      "encrypted_comparison": {
+        "first_difference": 0,
+        "last_difference_inclusive": 2047,
+        "different_byte_count": 2043
+      }
+    },
+    {
+      "id": "arm7",
+      "processor": "ARM7TDMI",
+      "role": "NTR-compatible sub image",
+      "rom": {
+        "offset": 1209856,
+        "size": 153696,
+        "end": 1363552,
+        "sha256": "a96394d986dced7cbe6f3b3d2f82464b3970b82f336e3d26500419dbe380de1c"
+      },
+      "memory": {
+        "load_address": 37224448,
+        "loaded_end": 37378144,
+        "entry_address": 37224448,
+        "entry_binary_offset": 0
+      },
+      "entry_isa": "ARM",
+      "module_params": {
+        "binary_offset": 1348,
+        "memory_address": 37225796,
+        "autoload_list_start": 37378128,
+        "autoload_list_end": 37378144,
+        "autoload_data_start": 37225908,
+        "static_bss_start": 37225908,
+        "static_bss_end": 37225908,
+        "compressed_static_end": 0,
+        "sdk_version_word": 84243764,
+        "sdk_version": {
+          "major": 5,
+          "minor": 5,
+          "release_step": 30004,
+          "release_class": "release",
+          "release_number": 4
+        },
+        "version_magic_be": 3737126433,
+        "version_magic_le": 554090718,
+        "autoload_records": [
+          {
+            "destination": 58458112,
+            "size": 152220,
+            "end": 58610332,
+            "static_init_start": 58578224,
+            "bss_size": 113828,
+            "bss_end": 58724160
+          }
+        ]
+      },
+      "encryption": {
+        "scheme": null,
+        "state": "plaintext in retail SRL"
+      },
+      "encrypted_sha256": "a96394d986dced7cbe6f3b3d2f82464b3970b82f336e3d26500419dbe380de1c",
+      "encrypted_comparison": null
+    },
+    {
+      "id": "arm9i",
+      "processor": "ARM946E-S",
+      "role": "TWL/LTD main extension staging image",
+      "rom": {
+        "offset": 14528512,
+        "size": 18324,
+        "end": 14546836,
+        "sha256": "ab03826fbbe1b15d381008d37ec6d1c284bfb4df26082adda374458caea58f6f"
+      },
+      "memory": {
+        "staging_load_address": 37748736,
+        "staging_loaded_end": 37767060
+      },
+      "header_reserved_or_entry_word": 0,
+      "initial_isa": "Thumb",
+      "initial_code_binary_offset": 32,
+      "ltd_autoload": {
+        "table_binary_offset": 18308,
+        "table_size": 16,
+        "payload_size": 18304,
+        "alignment_gap": 4,
+        "records": [
+          {
+            "destination": 35156160,
+            "size": 18304,
+            "end": 35174464,
+            "static_init_start": 35156160,
+            "bss_size": 214048,
+            "bss_end": 35388512
+          }
+        ]
+      },
+      "encryption": {
+        "scheme": "TWL modcrypt area 0 (AES-CTR)",
+        "encrypted_region": {
+          "offset": 14528512,
+          "size": 18336,
+          "end": 14546848
+        },
+        "state": "decrypted input required"
+      },
+      "encrypted_sha256": "4b108a7e8c21c7940da635b313789b87e7a06ab63197eba1c116d1e055d84e57",
+      "encrypted_comparison": {
+        "first_difference": 0,
+        "last_difference_inclusive": 18323,
+        "different_byte_count": 18246
+      }
+    },
+    {
+      "id": "arm7i",
+      "processor": "ARM7TDMI",
+      "role": "TWL/LTD sub extension staging image",
+      "rom": {
+        "offset": 14546944,
+        "size": 300816,
+        "end": 14847760,
+        "sha256": "3703c27125294aa754fb4bc64f6f78e6cac93ae0b4eb4d72cafbcc591aaaa3ef"
+      },
+      "memory": {
+        "staging_load_address": 48758784,
+        "staging_loaded_end": 49059600
+      },
+      "header_reserved_or_entry_word": 58724160,
+      "initial_isa": "ARM",
+      "initial_code_binary_offset": 4,
+      "ltd_autoload": {
+        "table_binary_offset": 300784,
+        "table_size": 32,
+        "payload_size": 300780,
+        "alignment_gap": 4,
+        "records": [
+          {
+            "destination": 50593792,
+            "size": 16208,
+            "end": 50610000,
+            "static_init_start": 50609524,
+            "bss_size": 15176,
+            "bss_end": 50625176
+          },
+          {
+            "destination": 49840128,
+            "size": 284572,
+            "end": 50124700,
+            "static_init_start": 50117328,
+            "bss_size": 109172,
+            "bss_end": 50233872
+          }
+        ]
+      },
+      "encryption": {
+        "scheme": "TWL modcrypt area 1 (AES-CTR)",
+        "encrypted_region": {
+          "offset": 14546944,
+          "size": 300816,
+          "end": 14847760
+        },
+        "state": "decrypted input required"
+      },
+      "encrypted_sha256": "0d37910259025531915f258c75d78932e5ecb90969aeb62bca269a7ea1ea02cc",
+      "encrypted_comparison": {
+        "first_difference": 0,
+        "last_difference_inclusive": 300815,
+        "different_byte_count": 299596
+      }
+    }
+  ],
+  "overlays": {
+    "arm9": {
+      "table": {
+        "offset": 0,
+        "size": 0,
+        "end": 0
+      },
+      "count": 0
+    },
+    "arm7": {
+      "table": {
+        "offset": 0,
+        "size": 0,
+        "end": 0
+      },
+      "count": 0
+    }
+  },
+  "filesystem": {
+    "fnt": {
+      "offset": 1363968,
+      "size": 437,
+      "end": 1364405
+    },
+    "fat": {
+      "offset": 1364480,
+      "size": 232,
+      "end": 1364712
+    },
+    "file_count": 29,
+    "directory_count": 1,
+    "root_directory_id": 61440,
+    "root_subtable_offset": 8,
+    "root_first_file_id": 0
+  },
+  "digests": {
+    "ntr_covered_region": {
+      "offset": 16384,
+      "size": 14218240,
+      "end": 14234624
+    },
+    "twl_covered_region": {
+      "offset": 14528512,
+      "size": 319488,
+      "end": 14848000
+    },
+    "sector_hash_table": {
+      "offset": 14234624,
+      "size": 284160,
+      "end": 14518784
+    },
+    "block_hash_table": {
+      "offset": 14518784,
+      "size": 8880,
+      "end": 14527664
+    },
+    "sector_size": 1024,
+    "block_sector_count": 32
+  },
+  "modcrypt": {
+    "area_0": {
+      "offset": 14528512,
+      "size": 18336,
+      "end": 14546848
+    },
+    "area_1": {
+      "offset": 14546944,
+      "size": 300816,
+      "end": 14847760
+    }
+  },
+  "layout": [
+    {
+      "id": "header",
+      "offset": 0,
+      "size": 16384,
+      "end": 16384,
+      "kind": "metadata"
+    },
+    {
+      "id": "arm9",
+      "offset": 16384,
+      "size": 1193472,
+      "end": 1209856,
+      "kind": "executable"
+    },
+    {
+      "id": "arm7",
+      "offset": 1209856,
+      "size": 153696,
+      "end": 1363552,
+      "kind": "executable"
+    },
+    {
+      "id": "fnt",
+      "offset": 1363968,
+      "size": 437,
+      "end": 1364405,
+      "kind": "filesystem_table"
+    },
+    {
+      "id": "fat",
+      "offset": 1364480,
+      "size": 232,
+      "end": 1364712,
+      "kind": "filesystem_table"
+    },
+    {
+      "id": "banner",
+      "offset": 1364992,
+      "size": 9152,
+      "end": 1374144,
+      "kind": "metadata"
+    },
+    {
+      "id": "nitrofs_payload_span",
+      "offset": 1374208,
+      "size": 12859612,
+      "end": 14233820,
+      "kind": "filesystem_payload"
+    },
+    {
+      "id": "digest_sector_hash_table",
+      "offset": 14234624,
+      "size": 284160,
+      "end": 14518784,
+      "kind": "digest"
+    },
+    {
+      "id": "digest_block_hash_table",
+      "offset": 14518784,
+      "size": 8880,
+      "end": 14527664,
+      "kind": "digest"
+    },
+    {
+      "id": "arm9i",
+      "offset": 14528512,
+      "size": 18324,
+      "end": 14546836,
+      "kind": "executable"
+    },
+    {
+      "id": "arm7i",
+      "offset": 14546944,
+      "size": 300816,
+      "end": 14847760,
+      "kind": "executable"
+    }
+  ],
+  "observations": [
+    "All NTR and TWL overlay table sizes are zero.",
+    "ARM9/ARM7 module parameters contain the TwlSDK version marker.",
+    "ARM9i/ARM7i are staging images whose tail tables describe LTD autoload destinations.",
+    "ISA labels identify confirmed entry/initial code only; interworking inside images remains to map."
+  ]
+}

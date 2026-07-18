@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-ui-element-recovery",
+  "summary": "UIElement décompilé: layout 0x14, cinq slots virtuels, position/visibilité, clipping écran et hit-test; 56 fonctions ARM9 sémantiques mesurées",
+  "updated_at": "2026-07-17T22:38:11Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

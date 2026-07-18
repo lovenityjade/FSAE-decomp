@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-manual-ui-page-pointer-346",
+  "summary": "Factory GameManualUIPanel et gestionnaire GameManualViewer PagePointer validés sur 960 octets et renommés dans Ghidra; pool 0x020BD808..0x020BD82C et fonction 0x020BD830 exclus, registre ARM9 porté à 346 symboles idempotents",
+  "updated_at": "2026-07-18T02:34:16Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

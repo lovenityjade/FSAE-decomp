@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-ntmv-pane-draw-tree",
+  "summary": "Walker de dessin récursif ntmv::m2d::Pane 0x020b57f4 récupéré sur 76 octets; terminaison du cluster 0x020b57c8..0x020b584b cartographiée, littéral RTTI et constructeur Picture voisin exclus",
+  "updated_at": "2026-07-18T03:07:01Z",
+  "section": "arm9",
+  "worker": "binary-map"
+}

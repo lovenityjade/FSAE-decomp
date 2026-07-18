@@ -1,0 +1,25 @@
+{
+  "$schema": "../schema-v1.json#/$defs/evidence",
+  "schema_version": 1,
+  "kind": "evidence",
+  "id": "binary-map-arm7i-exact-component",
+  "section": "arm7i",
+  "metrics": {
+    "units": {
+      "matched": 1550,
+      "total": 1550
+    },
+    "functions": {
+      "matched": 1550,
+      "total": 1550
+    },
+    "bytes": {
+      "matched": 300816,
+      "total": 300816
+    }
+  },
+  "updated_at": "2026-07-17T15:45:08Z",
+  "category": "sdk",
+  "worker": "binary-map",
+  "summary": "Decrypted ARM7i is SHA-256-identical to official TwlSDK 5.5 patch-5 racoon LTD Rom component"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-semantic-symbols-192",
+  "summary": "26 entrées ManualTocPanel, ItemsPanel, PageHeaderPanel et Datalink vérifiées puis intégrées dans Ghidra; registre porté à 192 symboles avec dry-run 192/192 inchangé",
+  "updated_at": "2026-07-17T23:36:39Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

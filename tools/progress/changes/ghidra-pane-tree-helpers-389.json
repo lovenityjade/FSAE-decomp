@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-pane-tree-helpers-389",
+  "summary": "Cinq helpers autonomes de l'arbre Pane finalisés sur 296 octets, validés par ROM, comportement hôte et compilation ARM946E-S puis appliqués dans Ghidra; registre porté à 389 symboles idempotents et voisin NtmvM2dPane_UpdatePosition à 0x020B57C8 conservé distinct",
+  "updated_at": "2026-07-18T03:06:48Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}

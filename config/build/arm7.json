@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "kind": "arm7-match-config",
+  "section": "arm7",
+  "reference": {
+    "path": "components/racoon/ARM7-TS.LTD/Rom/racoon.TWL.FLX.sbin",
+    "size": 153712,
+    "sha256": "dd6ec0629aa1e6536b3c08657716d6e2efd5cc8509b8ba22a9dcd2adbc6af393"
+  },
+  "target": {
+    "path": "build/rom/sections/arm7.bin",
+    "size": 153696,
+    "sha256": "a96394d986dced7cbe6f3b3d2f82464b3970b82f336e3d26500419dbe380de1c"
+  },
+  "normalization": [
+    {
+      "type": "strip_static_footer",
+      "footer_hex": "2106c0de44050000000000002c050000",
+      "fields": {
+        "magic": "0xdec00621",
+        "module_params_offset": 1348,
+        "digest_offset": 0,
+        "ltd_module_params_offset": 1324
+      }
+    }
+  ],
+  "normalized": {
+    "size": 153696,
+    "sha256": "a96394d986dced7cbe6f3b3d2f82464b3970b82f336e3d26500419dbe380de1c"
+  },
+  "output": {
+    "artifact": "build/match/arm7.bin",
+    "proof": "build/match/arm7.proof.json",
+    "progress": "build/match/arm7.progress.json"
+  }
+}

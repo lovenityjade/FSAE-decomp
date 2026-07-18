@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-page-transition",
+  "summary": "Transition de page du manuel récupérée: OAM, fenêtres, matrices affines des deux écrans, upload circulaire BG3 et synchronisation des plages validés sans linking",
+  "updated_at": "2026-07-18T01:20:00Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

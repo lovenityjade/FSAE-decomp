@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-scrollable-content-datalink-primary-413",
+  "summary": "Cinq symboles finalisés et appliqués dans Ghidra sans linking: quatre helpers GameScrollableTileContent 0x020B5214..0x020B5317 sur 260 octets et Game_PrepareDatalinkExtendedMenuPrimaryAction 0x020ABF5C sur 176 octets; tests ROM, hôte et ARM946E-S validés, registre porté à 413 symboles idempotents",
+  "updated_at": "2026-07-18T04:03:23Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

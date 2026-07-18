@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "arm9-manual-page-factory",
+  "summary": "Fabrique de page du manuel récupérée avec allocation exacte de 0x20 octets, initialisation et chemin nul validés sans linking",
+  "updated_at": "2026-07-18T00:51:25Z",
+  "section": "arm9",
+  "worker": "coordinator"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v1.json#/$defs/change",
+  "schema_version": 1,
+  "kind": "change",
+  "id": "progress-dashboard-foundation",
+  "summary": "Tableau de bord live, schéma v1 et validation automatisée ajoutés",
+  "updated_at": "2026-07-17T15:46:53Z",
+  "section": "data",
+  "worker": "progress-site"
+}

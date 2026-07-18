@@ -1,0 +1,10 @@
+{
+  "$schema": "../schema-v2.json#/$defs/change",
+  "schema_version": 2,
+  "kind": "change",
+  "id": "ghidra-export-semantic-154",
+  "summary": "Réexport ARM9 vérifié: 4678 fonctions, 154 noms présents, catalogues et RTTI régénérés sans linker",
+  "updated_at": "2026-07-17T23:16:58Z",
+  "section": "arm9",
+  "worker": "progress-site"
+}
