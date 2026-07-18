@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-18T07:36:50Z",
+  "generated_at": "2026-07-18T07:41:51Z",
   "build": {
-    "id": "initial-public-f93526e",
-    "commit": "f93526e5896e0ea257fa09e3fe17132c3f964535",
-    "published_at": "2026-07-18T07:36:50Z",
+    "id": "arm9-02061818-31f-8848b",
+    "commit": "59cc0efc4405753c02642daf6fdabad3a99c0807",
+    "published_at": "2026-07-18T07:41:51Z",
     "last_error": null
   },
   "project": {
@@ -13,19 +13,19 @@
   },
   "refresh_seconds": 5,
   "overall": {
-    "percent": 73.79,
+    "percent": 74.8,
     "basis": "bytes",
     "metrics": {
       "units": {
-        "covered": 3682,
-        "total": 3682
+        "covered": 3694,
+        "total": 3694
       },
       "functions": {
-        "covered": 7780,
+        "covered": 7823,
         "total": 10949
       },
       "bytes": {
-        "covered": 1229553,
+        "covered": 1246453,
         "total": 1666308
       }
     },
@@ -48,19 +48,19 @@
       }
     },
     "analysis": {
-      "percent": 73.79,
+      "percent": 74.8,
       "basis": "bytes",
       "metrics": {
         "units": {
-          "covered": 3682,
-          "total": 3682
+          "covered": 3694,
+          "total": 3694
         },
         "functions": {
-          "covered": 7780,
+          "covered": 7823,
           "total": 10949
         },
         "bytes": {
-          "covered": 1229553,
+          "covered": 1246453,
           "total": 1666308
         }
       }
@@ -69,10 +69,10 @@
       "source": 4,
       "sdk": 2,
       "fallback": 0,
-      "unmatched": 3682
+      "unmatched": 3694
     },
     "pipeline_units": {
-      "probe": 3688,
+      "probe": 3700,
       "promoted": 6,
       "rejected": 0
     },
@@ -87,19 +87,19 @@
       "include_in_total": true,
       "optional": false,
       "available": true,
-      "percent": 63.4,
+      "percent": 64.82,
       "basis": "bytes",
       "metrics": {
         "units": {
-          "covered": 1140,
-          "total": 1140
+          "covered": 1152,
+          "total": 1152
         },
         "functions": {
-          "covered": 5111,
+          "covered": 5154,
           "total": 8280
         },
         "bytes": {
-          "covered": 756718,
+          "covered": 773618,
           "total": 1193472
         }
       },
@@ -123,19 +123,19 @@
         "evidence_records": 0
       },
       "analysis": {
-        "percent": 63.4,
+        "percent": 64.82,
         "basis": "bytes",
         "metrics": {
           "units": {
-            "covered": 1140,
-            "total": 1140
+            "covered": 1152,
+            "total": 1152
           },
           "functions": {
-            "covered": 5111,
+            "covered": 5154,
             "total": 8280
           },
           "bytes": {
-            "covered": 756718,
+            "covered": 773618,
             "total": 1193472
           }
         },
@@ -145,10 +145,10 @@
         "source": 0,
         "sdk": 0,
         "fallback": 0,
-        "unmatched": 1140
+        "unmatched": 1152
       },
       "pipeline_units": {
-        "probe": 1140,
+        "probe": 1152,
         "promoted": 0,
         "rejected": 0
       },
@@ -457,19 +457,19 @@
       "include_in_total": false,
       "optional": true,
       "available": true,
-      "percent": 59.65,
+      "percent": 61.21,
       "basis": "bytes",
       "metrics": {
         "units": {
-          "covered": 169,
-          "total": 169
+          "covered": 181,
+          "total": 181
         },
         "functions": {
-          "covered": 4169,
+          "covered": 4212,
           "total": 7338
         },
         "bytes": {
-          "covered": 645624,
+          "covered": 662524,
           "total": 1082378
         }
       },
@@ -493,19 +493,19 @@
         "evidence_records": 0
       },
       "analysis": {
-        "percent": 59.65,
+        "percent": 61.21,
         "basis": "bytes",
         "metrics": {
           "units": {
-            "covered": 169,
-            "total": 169
+            "covered": 181,
+            "total": 181
           },
           "functions": {
-            "covered": 4169,
+            "covered": 4212,
             "total": 7338
           },
           "bytes": {
-            "covered": 645624,
+            "covered": 662524,
             "total": 1082378
           }
         },
@@ -515,10 +515,10 @@
         "source": 0,
         "sdk": 0,
         "fallback": 0,
-        "unmatched": 169
+        "unmatched": 181
       },
       "pipeline_units": {
-        "probe": 169,
+        "probe": 181,
         "promoted": 0,
         "rejected": 0
       },
@@ -608,7 +608,7 @@
       "section": "arm9",
       "task": "Récupération du pilote de menu glyphes 0x020AEA40 (1504 octets)",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 6782,
+      "age_seconds": 7083,
       "stale": true
     },
     {
@@ -619,7 +619,7 @@
       "section": "arm9",
       "task": "Récupération sémantique et tests de la fonction 0x020B19D8 (1944 octets) terminés",
       "updated_at": "2026-07-18T06:19:35Z",
-      "age_seconds": 4635,
+      "age_seconds": 4936,
       "stale": true
     },
     {
@@ -630,7 +630,7 @@
       "section": "arm9",
       "task": "B2190-B2A90: analyse bloc contigu, 13 fonctions",
       "updated_at": "2026-07-18T06:07:10Z",
-      "age_seconds": 5380,
+      "age_seconds": 5681,
       "stale": true
     },
     {
@@ -641,21 +641,29 @@
       "section": "arm9",
       "task": "Lot glyphes AE280-AEA17: 19 fonctions / 1768 octets; intégration des gros lots agents",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 6782,
+      "age_seconds": 7083,
       "stale": true
     }
   ],
   "recent_changes": [
     {
       "id": "evidence:coordinator-arm9-ghidra-catalog",
-      "summary": "Ghidra exported 3669 game candidates; 500 functions / 72596 body bytes now have reviewed semantic C",
+      "summary": "Ghidra exported 3669 game candidates; 543 functions / 92368 body bytes now have reviewed semantic C",
       "section": "arm9",
       "worker": "coordinator",
       "track": "analysis",
-      "updated_at": "2026-07-18T05:56:46Z",
+      "updated_at": "2026-07-18T07:41:09Z",
       "source": "evidence",
       "provenance": "unmatched",
       "matching_credited": false
+    },
+    {
+      "id": "change-9fa7f525025d",
+      "summary": "Bloc ARM9 0x02061818: 31 fonctions / 8848 octets récupérés et vérifiés; linkage en attente",
+      "section": "arm9",
+      "worker": "progress-site",
+      "updated_at": "2026-07-18T07:41:09Z",
+      "source": "change"
     },
     {
       "id": "ghidra-datalink-scene-frame-oam-452",
@@ -736,21 +744,13 @@
       "worker": "coordinator",
       "updated_at": "2026-07-18T04:17:20Z",
       "source": "change"
-    },
-    {
-      "id": "arm9-ntmv-transformed-blit-final",
-      "summary": "NtmvM2d_BlitTransformed_020b786c finalisé sur 656 octets: clipping, axes transposés, steps signés, clamp source, TexelPicker et écriture alpha validés; corps 0x020B786C..0x020B7AFB, SHA-256 ROM 08484e75c3a87458df0046f5a5a93396952c65c66e8edccbd678a6351eb7d484, pool 0x020B7AFC et voisin 0x020B7B00 exclus, tests blit/transform/render/inline validés sans linking",
-      "section": "arm9",
-      "worker": "binary-map",
-      "updated_at": "2026-07-18T04:07:52Z",
-      "source": "change"
     }
   ],
   "issues": [],
   "sources": {
     "evidence": 9,
     "workers": 4,
-    "changes": 137,
+    "changes": 138,
     "legacy_inputs": 4,
     "matching_linked": 3,
     "matching_rejected": 0,
