@@ -4069,6 +4069,223 @@
       "expected_names": ["FUN_0200a5dc", "Game_MultiplyRuntimeDecimals_0200a5dc"],
       "confidence": "verified",
       "rationale": "The complete decimal multiplication helper retains at most 32 digits and rounds a discarded product tail to even."
+    },
+    {
+      "address": "0x0200a75c",
+      "name": "Game_RuntimeDecimalFromDigitString_0200a75c",
+      "expected_names": ["FUN_0200a75c", "Game_RuntimeDecimalFromDigitString_0200a75c"],
+      "confidence": "verified",
+      "rationale": "The complete helper imports a decimal digit string into the 32-digit runtime record and applies the recovered discarded-tail rounding policy."
+    },
+    {
+      "address": "0x0200a7f8",
+      "name": "Game_RuntimeDecimalPowerOfTwo_0200a7f8",
+      "expected_names": ["FUN_0200a7f8", "Game_RuntimeDecimalPowerOfTwo_0200a7f8"],
+      "confidence": "verified",
+      "rationale": "The complete power-of-two decimal generator uses the adjacent decimal multiplication helper and owns the 21-entry literal string table."
+    },
+    {
+      "address": "0x0200ab78",
+      "name": "Game_RuntimeDecimalFromDouble_0200ab78",
+      "expected_names": ["FUN_0200ab78", "Game_RuntimeDecimalFromDouble_0200ab78"],
+      "confidence": "verified",
+      "rationale": "The complete IEEE-754 conversion path handles zero, finite magnitudes, infinities, NaNs and sign before producing the internal numeric decimal record."
+    },
+    {
+      "address": "0x0200acf8",
+      "name": "Game_ConvertDoubleToDecimal_0200acf8",
+      "expected_names": ["FUN_0200acf8", "Game_ConvertDoubleToDecimal_0200acf8"],
+      "confidence": "verified",
+      "rationale": "The complete established formatter helper rounds the internal decimal record to the requested precision and converts its digits to ASCII."
+    },
+    {
+      "address": "0x0200ada4",
+      "name": "Game_CopyDoubleSign_0200ada4",
+      "expected_names": ["FUN_0200ada4", "Game_CopyDoubleSign_0200ada4"],
+      "confidence": "verified",
+      "rationale": "The complete copysign-shaped helper preserves the first double magnitude and imports only the second double sign bit."
+    },
+    {
+      "address": "0x0200adcc",
+      "name": "Game_AbsoluteDouble_0200adcc",
+      "expected_names": ["FUN_0200adcc", "Game_AbsoluteDouble_0200adcc"],
+      "confidence": "verified",
+      "rationale": "The complete fabs-shaped helper clears the IEEE-754 sign bit and preserves every magnitude bit."
+    },
+    {
+      "address": "0x0200adec",
+      "name": "Game_NormalizeDoubleFraction_0200adec",
+      "expected_names": ["FUN_0200adec", "Game_NormalizeDoubleFraction_0200adec"],
+      "confidence": "verified",
+      "rationale": "The complete frexp-shaped helper normalizes finite double magnitudes and returns their binary exponent through the recovered output pointer."
+    },
+    {
+      "address": "0x0200aeac",
+      "name": "Game_ScaleDoubleByPowerOfTwo_0200aeac",
+      "expected_names": ["FUN_0200aeac", "Game_ScaleDoubleByPowerOfTwo_0200aeac"],
+      "confidence": "verified",
+      "rationale": "The complete ldexp-shaped helper rescales finite doubles across normal, subnormal, overflow and underflow boundaries."
+    },
+    {
+      "address": "0x0200b10c",
+      "name": "Game_RuntimeNoOpThunk_0200b10c",
+      "expected_names": ["thunk_FUN_0200b128", "Game_RuntimeNoOpThunk_0200b10c"],
+      "confidence": "verified",
+      "rationale": "The exact eight-byte indirect veneer targets the no-op body at 0x0200B128 through its following literal."
+    },
+    {
+      "address": "0x0200b118",
+      "name": "Game_RuntimeInputBegin_0200b118",
+      "expected_names": ["FUN_0200b118", "Game_RuntimeInputBegin_0200b118"],
+      "confidence": "descriptive",
+      "rationale": "The exact four-byte no-op hook is invoked by the recovered runtime line finalizer."
+    },
+    {
+      "address": "0x0200b11c",
+      "name": "Game_RuntimeInputEnd_0200b11c",
+      "expected_names": ["FUN_0200b11c", "Game_RuntimeInputEnd_0200b11c"],
+      "confidence": "descriptive",
+      "rationale": "The exact four-byte no-op hook brackets the recovered runtime line finalization path."
+    },
+    {
+      "address": "0x0200b120",
+      "name": "Game_RuntimeReadByte_0200b120",
+      "expected_names": ["FUN_0200b120", "Game_RuntimeReadByte_0200b120"],
+      "confidence": "descriptive",
+      "rationale": "The complete eight-byte input hook returns zero to the adjacent bounded line reader."
+    },
+    {
+      "address": "0x0200b128",
+      "name": "Game_RuntimeNoOp_0200b128",
+      "expected_names": ["FUN_0200b128", "Game_RuntimeNoOp_0200b128"],
+      "confidence": "verified",
+      "rationale": "The exact four-byte BX LR body is the target of the indirect veneer at 0x0200B10C."
+    },
+    {
+      "address": "0x0200b12c",
+      "name": "Game_ReadRuntimeLine_0200b12c",
+      "expected_names": ["FUN_0200b12c", "Game_ReadRuntimeLine_0200b12c"],
+      "confidence": "descriptive",
+      "rationale": "The complete bounded reader stores bytes from the adjacent runtime hook and stops after a carriage return or newline."
+    },
+    {
+      "address": "0x0200b17c",
+      "name": "Game_FinalizeRuntimeLine_0200b17c",
+      "expected_names": ["FUN_0200b17c", "Game_FinalizeRuntimeLine_0200b17c"],
+      "confidence": "descriptive",
+      "rationale": "The complete line finalizer temporarily removes a trailing byte around the two recovered input hooks and excludes the following return-zero veneer from its body."
+    },
+    {
+      "address": "0x0200b1c8",
+      "name": "Game_DecodeSignedUnwindValue_0200b1c8",
+      "expected_names": ["FUN_0200b1c8", "Game_DecodeSignedUnwindValue_0200b1c8"],
+      "confidence": "verified",
+      "rationale": "The complete compact signed-value decoder consumes one through four bytes according to the low tag bits."
+    },
+    {
+      "address": "0x0200b24c",
+      "name": "Game_DecodeUnsignedUnwindValue_0200b24c",
+      "expected_names": ["FUN_0200b24c", "Game_DecodeUnsignedUnwindValue_0200b24c"],
+      "confidence": "verified",
+      "rationale": "The complete compact unsigned-value decoder consumes one through four bytes according to the low tag bits."
+    },
+    {
+      "address": "0x0200b2d0",
+      "name": "Game_FindUnwindCodeRange_0200b2d0",
+      "expected_names": ["FUN_0200b2d0", "Game_FindUnwindCodeRange_0200b2d0"],
+      "confidence": "verified",
+      "rationale": "The complete binary search returns the twelve-byte unwind range record whose inclusive extent owns the requested address."
+    },
+    {
+      "address": "0x0200b334",
+      "name": "Game_LoadUnwindDescriptor_0200b334",
+      "expected_names": ["FUN_0200b334", "Game_LoadUnwindDescriptor_0200b334"],
+      "confidence": "verified",
+      "rationale": "The complete descriptor loader locates the code-range record and walks its compact extent/gap program for the active address."
+    },
+    {
+      "address": "0x0200b43c",
+      "name": "Game_GetUnwindOpcode_0200b43c",
+      "expected_names": ["FUN_0200b43c", "Game_GetUnwindOpcode_0200b43c"],
+      "confidence": "verified",
+      "rationale": "The complete accessor returns the low five opcode bits at the current cleanup cursor or zero for an empty cursor."
+    },
+    {
+      "address": "0x0200b458",
+      "name": "Game_AdvanceUnwindOpcode_0200b458",
+      "expected_names": ["FUN_0200b458", "Game_AdvanceUnwindOpcode_0200b458"],
+      "confidence": "verified",
+      "rationale": "The complete compact-program scanner skips every recovered cleanup operand layout and follows chained opcode-one records."
+    },
+    {
+      "address": "0x0200b714",
+      "name": "Game_ExecuteUnwindCleanup_0200b714",
+      "expected_names": ["FUN_0200b714", "Game_ExecuteUnwindCleanup_0200b714"],
+      "confidence": "verified",
+      "rationale": "The complete cleanup interpreter executes the recovered scalar, conditional, array and catch-record unwind opcodes for one frame."
+    },
+    {
+      "address": "0x0200bf48",
+      "name": "Game_FindUnwindCatchTarget_0200bf48",
+      "expected_names": ["FUN_0200bf48", "Game_FindUnwindCatchTarget_0200bf48"],
+      "confidence": "verified",
+      "rationale": "The complete scanner finds opcode thirteen, restores the saved exception record and reports its frame address, or stops at the abort opcode."
+    },
+    {
+      "address": "0x0200c09c",
+      "name": "Game_UnwindMatchesTypeList_0200c09c",
+      "expected_names": ["FUN_0200c09c", "Game_UnwindMatchesTypeList_0200c09c"],
+      "confidence": "verified",
+      "rationale": "The complete predicate tests the active exception type against every type identifier in an encoded catch list."
+    },
+    {
+      "address": "0x0200c11c",
+      "name": "Game_InstallUnwindCatchContext_0200c11c",
+      "expected_names": ["FUN_0200c11c", "Game_InstallUnwindCatchContext_0200c11c"],
+      "confidence": "verified",
+      "rationale": "The complete helper executes cleanup through a landing pad, writes the saved catch-frame context and commits the next unwind program address."
+    },
+    {
+      "address": "0x0200c17c",
+      "name": "Game_FindUnwindLandingPad_0200c17c",
+      "expected_names": ["FUN_0200c17c", "Game_FindUnwindLandingPad_0200c17c"],
+      "confidence": "verified",
+      "rationale": "The complete compact-program scanner resolves direct and list-based catch records for the active exception type."
+    },
+    {
+      "address": "0x0200c358",
+      "name": "Game_WriteUnwindFrameRecord_0200c358",
+      "expected_names": ["FUN_0200c358", "Game_WriteUnwindFrameRecord_0200c358"],
+      "confidence": "verified",
+      "rationale": "The complete helper writes the exception object, type, state and adjusted object address into a stack-frame catch record."
+    },
+    {
+      "address": "0x0200c3b4",
+      "name": "Game_UnwindOneFrame_0200c3b4",
+      "expected_names": ["FUN_0200c3b4", "Game_UnwindOneFrame_0200c3b4"],
+      "confidence": "verified",
+      "rationale": "The complete frame driver loads unwind metadata, restores or locates the catch state, runs cleanup and commits the landing context."
+    },
+    {
+      "address": "0x0200c4a8",
+      "name": "Game_InvokeUnwindDestructor_0200c4a8",
+      "expected_names": ["FUN_0200c4a8", "Game_InvokeUnwindDestructor_0200c4a8"],
+      "confidence": "verified",
+      "rationale": "The complete helper invokes the destructor stored in an active exception context with reason minus one."
+    },
+    {
+      "address": "0x0200c4d0",
+      "name": "Game_RunStaticInitializerTable_0200c4d0",
+      "expected_names": ["FUN_0200c4d0", "Game_RunStaticInitializerTable_0200c4d0"],
+      "confidence": "verified",
+      "rationale": "The complete initializer dispatcher calls each non-null function in the table rooted at 0x020DF56C until its terminator."
+    },
+    {
+      "address": "0x0200c544",
+      "name": "Game_HandleFatalAssertionThunk_0200c544",
+      "expected_names": ["Game_HandleFatalAssertion", "Game_HandleFatalAssertionThunk_0200c544"],
+      "confidence": "verified",
+      "rationale": "The exact eight-byte veneer targets the established fatal assertion implementation at 0x02005488; the following veneer and literal occupy the extent before 0x0200C55C."
     }
   ]
 }
