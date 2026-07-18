@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-18T08:21:47Z",
+  "generated_at": "2026-07-18T08:25:03Z",
   "build": {
-    "id": "arm9-source-provider-0206c850",
-    "commit": "ca8cbbe608e497df731a7a355ffaa39e0eeb81b3",
-    "published_at": "2026-07-18T08:21:47Z",
+    "id": "arm9-raw-0206d8f0-32func",
+    "commit": "eecfd81e214ee8bf0615084425e440132fea1137",
+    "published_at": "2026-07-18T08:25:03Z",
     "last_error": null
   },
   "project": {
@@ -608,7 +608,7 @@
       "section": "arm9",
       "task": "Récupération du pilote de menu glyphes 0x020AEA40 (1504 octets)",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 9479,
+      "age_seconds": 9675,
       "stale": true
     },
     {
@@ -619,7 +619,7 @@
       "section": "arm9",
       "task": "Récupération sémantique et tests de la fonction 0x020B19D8 (1944 octets) terminés",
       "updated_at": "2026-07-18T06:19:35Z",
-      "age_seconds": 7332,
+      "age_seconds": 7528,
       "stale": true
     },
     {
@@ -630,7 +630,7 @@
       "section": "arm9",
       "task": "B2190-B2A90: analyse bloc contigu, 13 fonctions",
       "updated_at": "2026-07-18T06:07:10Z",
-      "age_seconds": 8077,
+      "age_seconds": 8273,
       "stale": true
     },
     {
@@ -641,7 +641,7 @@
       "section": "arm9",
       "task": "Lot glyphes AE280-AEA17: 19 fonctions / 1768 octets; intégration des gros lots agents",
       "updated_at": "2026-07-18T05:43:48Z",
-      "age_seconds": 9479,
+      "age_seconds": 9675,
       "stale": true
     }
   ],
