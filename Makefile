@@ -21,7 +21,7 @@ ARM_OBJECT_COMPILER ?= $(FSAE_ARM_OBJECT_COMPILER)
 MAKELCF ?= $(FSAE_MAKELCF)
 MWCCARM ?= $(FSAE_MWCCARM)
 MWLDARM ?= $(FSAE_MWLDARM)
-ARM9_SOURCE_PROMOTIONS ?= $(FSAE_ARM9_SOURCE_PROMOTIONS)
+ARM9_SOURCE_PROMOTIONS ?= $(if $(FSAE_ARM9_SOURCE_PROMOTIONS),$(FSAE_ARM9_SOURCE_PROMOTIONS),config/linker/arm9-source-promotions.v1.json)
 ARM9_SOURCE_CANDIDATES ?= build/linker/source-provider/candidates
 
 PRIVATE_INPUT_ENV = FSAE_ROM="$(ROM)" FSAE_BIOS7="$(BIOS7)" TWLTOOL_ZIP="$(TWLTOOL)"
@@ -65,7 +65,7 @@ help:
 	@echo "  make arm9i-sdk-inventory  Verify required external SDK archive members"
 	@echo "  make arm9i-sdk-extract    Stage only selected ARM9i SDK members under build/"
 	@echo "  make arm9i-sdk-validate   Validate the staged ARM9i SDK member set"
-	@echo "  make arm9-source-plan     Plan one <=16 KiB public ARM9 source batch"
+	@echo "  make arm9-source-plan     Plan the default <=16 KiB public ARM9 source batch"
 	@echo "  make arm9-source-compile  Compile the planned C inputs with mwccarm"
 	@echo "  make arm9-source-stage    Stage linked raw units and run probe only"
 	@echo "  make windows-check     Check an explicitly configured Windows host"

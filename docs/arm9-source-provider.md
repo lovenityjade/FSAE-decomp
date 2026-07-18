@@ -47,6 +47,15 @@ a small, reviewable promotion manifest supplied with `--promotions`:
 }
 ```
 
+The first checked-in promotion is
+`config/linker/arm9-source-promotions.v1.json`. It selects exactly
+`static-main-u023`, the 16 KiB ARM9 interval
+`0x02060000..0x02064000`, from
+`src/arm9/game/arm9_middle_02061818_raw.c` and its public recovery proof.
+It is the safe default used by the Make targets; set
+`ARM9_SOURCE_PROMOTIONS` or `FSAE_ARM9_SOURCE_PROMOTIONS` to select another
+reviewed manifest explicitly.
+
 Every source must be owned by an existing public
 `arm9-raw-recovery-block` proof whose target SHA-256 matches the ARM9 target in
 the unit manifest. The source, proof, and proof-owned header hashes are pinned
@@ -103,17 +112,18 @@ mutated managed files, extra files, stale metadata and symbolic links are
 rejected. Consequently `probe` sees all previously staged exact source units
 without allowing an unregistered artifact to enter the provider tree.
 
-Equivalent Make entry points use `ARM9_SOURCE_PROMOTIONS` and optionally
-`ARM9_SOURCE_CANDIDATES`:
+Equivalent Make entry points default to the checked-in `static-main-u023`
+promotion and optionally use `ARM9_SOURCE_CANDIDATES`:
 
 ```sh
-make arm9-source-plan \
-  ARM9_SOURCE_PROMOTIONS=config/linker/my-source-promotions.v1.json
-make arm9-source-compile \
-  ARM9_SOURCE_PROMOTIONS=config/linker/my-source-promotions.v1.json
-make arm9-source-stage \
-  ARM9_SOURCE_PROMOTIONS=config/linker/my-source-promotions.v1.json
+make arm9-source-plan
+make arm9-source-compile MWCCARM=/private/path/mwccarm
+make arm9-source-stage
 ```
+
+Override `ARM9_SOURCE_PROMOTIONS` on any command to use a different reviewed
+batch. The compile target still requires a valid private CodeWarrior compiler
+and license; the default manifest does not weaken that boundary.
 
 The stage report records `exact` and the provider selected by `probe`, but its
 `credited_matching_bytes` and `fallback_credited_bytes` remain zero. Only a

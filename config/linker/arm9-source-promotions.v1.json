@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "kind": "arm9-source-promotions",
+  "units": [
+    {
+      "image": "arm9",
+      "unit_id": "static-main-u023",
+      "include_dirs": [
+        "include"
+      ],
+      "defines": [],
+      "sources": [
+        {
+          "path": "src/arm9/game/arm9_middle_02061818_raw.c",
+          "proof": "config/decomp/arm9-middle-02061818.json"
+        }
+      ]
+    }
+  ]
+}
